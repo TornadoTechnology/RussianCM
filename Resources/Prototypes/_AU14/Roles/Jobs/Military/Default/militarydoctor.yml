@@ -69,8 +69,6 @@
 - type: startingGear
   id: AU14GearGOVFORMilitaryDoctor
   equipment:
-    jumpsuit: AU14ScrubsGreenDoctorSurgical
-    head: CMHeadCapSurgGreen
     shoes: CMBootsBlackFilled
     belt: CMUBeltMedicBagSupportSynth
     pocket1: AU14PouchFirstResponderFilledMilitaryDoctor
@@ -79,7 +77,6 @@
     outerClothing: RMCLabcoat
     ears: AU14HeadsetGOVFORAux
     ears2: RMCM5CameraGear
-    id: AU14IDCardGOVFORDoctor
     neck: ClothingNeckStethoscope
     eyes: RMCGlassesMedicalHUDGlasses
   inhand:
@@ -99,10 +96,8 @@
 - type: startingGear
   id: AU14GearGOVFORMilitaryDoctorDummy
   equipment:
-    jumpsuit: AU14ScrubsGreenDoctorSurgical
     shoes: CMBootsBlackFilled
     belt: CMUBeltMedicBagSupportSynth
     back: CMSatchelMarine
     outerClothing: RMCLabcoat
-    id: AU14IDCardGOVFORDoctor
     neck: ClothingNeckStethoscope
