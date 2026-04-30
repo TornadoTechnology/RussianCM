@@ -31,7 +31,7 @@
   joinNotifyCrew: false
   supervisors: au14-job-supervisors-govfor
   accessGroups:
-  - AU14GovforCommand
+  - AU14GovforSecurity
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial
@@ -81,7 +81,6 @@
     ears: RMCM5CameraGear
     ears2: AU14HeadsetSectionLeader
     outerClothing: AU14ArmorM3JungleThree
-
 - type: playTimeTracker
   id: AU14JobGOVFORMilitaryPoliceMan
   isHumanoid: true
