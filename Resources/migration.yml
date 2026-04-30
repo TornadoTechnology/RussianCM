@@ -1494,7 +1494,9 @@ RMCMagazineSMGP90: RMCMagazineSMGPDW90
 CMWebbingSurgicalGreen: RMCWebbingSurgicalGreen
 CMWebbingSurgicalBlue: RMCWebbingSurgicalBlue
 
-
-# 2026-04-023 - CMU
+# 2026-04-23 - CMU
 CMVendorMedical: AU14GeneralMedicalVendor
 CMVendorBlood: AU14VendorBlood
+
+# 2026-04-29 - CMU
+ColMarTechMarineMedical: AU14GeneralMedicalVendorLight
