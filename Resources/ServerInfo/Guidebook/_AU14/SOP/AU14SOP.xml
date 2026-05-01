@@ -1,14 +1,14 @@
 ﻿<Document>
-  # Standard Operating Procedure
+  # Стандартная операционная процедура
 
-  These are sets of regulations and polices used by GOVFOR/OPFOR and all relevant military factions.
-  \nFailure to follow the Standard Operating Procedure may result in [bold]Failure to Follow Procedure[/bold] charges under the UCMJ.
+  Это набор регламентов и правил, используемых GOVFOR/OPFOR и всеми соответствующими военными фракциями.
+  \nНесоблюдение Стандартной операционной процедуры может привести к обвинению в [bold]Нарушении процедуры[/bold] согласно UCMJ.
 
- ## Categories
-  - [textlink="Command" link="AI14SOPCommand"]
-  - [textlink="Rank Structure" link="AU14SOPRankStructure"]
-  - [textlink="Rules of Engagement" link="AI14SOPRulesofEngagement"]
-  - [textlink="Equipment and Personnel" link="AI14SOPEquipmentAndPersonnel"]
-  - [textlink="Dropships and Aircraft" link="AI14SOPDropshipsandAircraft"]
-  - [textlink="Third-Party Regulations" link="AU14SOPThirdParty"]
+ ## Категории
+  - [textlink="Командование" link="AI14SOPCommand"]
+  - [textlink="Структура званий" link="AU14SOPRankStructure"]
+  - [textlink="Правила применения силы" link="AI14SOPRulesofEngagement"]
+  - [textlink="Снаряжение и личный состав" link="AI14SOPEquipmentAndPersonnel"]
+  - [textlink="Десантные корабли и авиация" link="AI14SOPDropshipsandAircraft"]
+  - [textlink="Правила для третьих сторон" link="AU14SOPThirdParty"]
 </Document>
