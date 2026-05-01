@@ -195,7 +195,7 @@
 - type: radioChannel
   id: RoyalMarine
   name: chat-radio-royal-marine
-  keycode: "н"
+  keycode: "*"
   frequency: 1551
   color: "#e1580e"
   longRange: true
