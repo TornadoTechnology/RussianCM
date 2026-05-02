@@ -965,6 +965,10 @@
   - type: FixedItemSizeStorage
   - type: StorageFill
     contents:
+<<<<<<< HEAD
+    #- PICT System
+=======
+>>>>>>> upstream/master
     - id: CMScalpel
     - id: CMHemostat
     - id: CMRetractor
@@ -974,8 +978,13 @@
     - id: CMSurgicalDrill
     - id: CMBoneGel
     - id: CMBonesetter
+<<<<<<< HEAD
+    #- FixOVein
+    #- Nanopaste
+=======
     - id: CMUBoneGraftItem
     - id: CMUOrganClampItem
+>>>>>>> upstream/master
     - id: CMSurgicalLine
     - id: CMSynthGraft
 
@@ -989,6 +998,8 @@
   - type: Sprite
     sprite: _RMC14/Objects/Clothing/Webbing/webbing_surgical_blue.rsi
     state: webbing
+<<<<<<< HEAD
+=======
   - type: Webbing
     components:
     - type: Storage
@@ -1030,6 +1041,7 @@
     - id: CMUOrganClampItem
     - id: CMSurgicalLine
     - id: CMSynthGraft
+>>>>>>> upstream/master
 
 - type: entity
   parent: CMWebbing
