@@ -135,32 +135,31 @@ class GitHubClient:
         Использует compare API: сравнивает тег с SHA.
         """
         try:
-            # Получаем список тегов
-            refs = self._get_json("/git/refs/tags", params={"per_page": 100})
-            if not refs:
+            # /tags возвращает name + commit SHA сразу
+            tags = self._get_json("/tags", params={"per_page": 100})
+            if not tags:
                 return ""
 
-            tag_names = [
-                r["ref"].replace("refs/tags/", "")
-                for r in refs
-                if r["ref"].startswith("refs/tags/")
-            ]
+            tag_list = []
+            for t in tags:
+                commit_sha = t.get("commit", {}).get("sha", "")
+                if commit_sha:
+                    tag_list.append((t["name"], commit_sha))
 
-            # Для каждого тега — получить его commit SHA
-            for tag_name in reversed(tag_names):
+            # Sort by tag version (newest last)
+            def parse_tag(name: str) -> tuple:
+                parts = re.split(r"[.\-_]", name.lstrip("vV"))
+                return tuple(int(m) if m.isdigit() else m for m in parts)
+
+            tag_list.sort(key=lambda x: parse_tag(x[0]))
+
+            # Найти ближайший тег где ahead_by == 0 (тег <= sha)
+            for tag_name, tag_sha in tag_list:
                 try:
-                    tag_ref = self._get_json(f"/git/refs/tags/{tag_name}")
-                    tag_sha = tag_ref["object"]["sha"]
-
-                    # Сравнить: tag_sha...sha (base...head)
                     comp = self._get_json(
                         f"/compare/{tag_sha}...{sha}",
                         params={"per_page": 1},
                     )
-
-                    # statuses: ahead, behind, identical
-                    # ahead = 0  → тег <= sha (подходит как верхняя граница)
-                    # behind > 0 → тег > sha
                     if comp.get("ahead_by", -1) == 0:
                         print(f"  [GITHUB] Nearest tag for {sha[:8]}: {tag_name}")
                         return tag_name
@@ -180,20 +179,50 @@ class GitHubClient:
         base — старый (от последнего run), head — новый (текущий HEAD).
         Возвращает список коммитов с их данными.
         """
-        if not base_sha:
-            print("  [GITHUB] No base SHA, fetching commits from last 100...")
-            base_sha = "HEAD~100"
+        # GitHub API не понимает HEAD~N — нужен реальный SHA
+        # Попробуем локально (git), если не получится — через API
+        working_base = base_sha
+        if base_sha.startswith("HEAD") or not all(c in "0123456789abcdef" for c in base_sha[:8]):
+            # Попробовать локальный git
+            resolved = _resolve_git_ref(base_sha)
+            if resolved and all(c in "0123456789abcdef" for c in resolved[:8]):
+                working_base = resolved
+                print(f"  [GIT] Base resolved: {base_sha} -> {working_base[:8]}")
+            else:
+                # Fallback: получить N коммитов назад через GitHub API
+                n = 10  # по умолчанию HEAD~10
+                match = re.match(r"HEAD~(\d+)", base_sha)
+                if match:
+                    n = int(match.group(1))
+
+                print(f"  [GITHUB] Fetching commits via API, going back {n} commits...")
+                try:
+                    # Получить N коммитов и взять последний как base
+                    all_commits = self._get_json("/commits", params={"per_page": n + 1})
+                    if all_commits and len(all_commits) >= n + 1:
+                        working_base = all_commits[n]["sha"]
+                        print(f"  [GITHUB] Base from API: {working_base[:8]}")
+                    elif all_commits:
+                        working_base = all_commits[-1]["sha"]
+                        print(f"  [GITHUB] Base from API (limited): {working_base[:8]}")
+                except Exception as e:
+                    print(f"  [GITHUB] API fetch failed: {e}")
 
         try:
-            comp = self._get_json(f"/compare/{base_sha}...{head_sha}")
+            # Если base всё ещё не SHA — скип
+            if not all(c in "0123456789abcdef" for c in working_base[:8]):
+                print(f"  [GITHUB] Cannot resolve base SHA: {base_sha}")
+                return []
+
+            comp = self._get_json(f"/compare/{working_base}...{head_sha}")
             commits = comp.get("commits", [])
             ahead = comp.get("ahead_by", 0)
             behind = comp.get("behind_by", 0)
-            print(f"  [GITHUB] Compare {base_sha[:8]}...{head_sha[:8]}: "
+            print(f"  [GITHUB] Compare {working_base[:8]}...{head_sha[:8]}: "
                   f"ahead={ahead}, behind={behind}, total_commits={len(commits)}")
             return commits
         except Exception as e:
-            print(f"  [GITHUB] Compare API failed: {e}, falling back to recent commits")
+            print(f"  [GITHUB] Compare API failed: {e}")
             return []
 
     # ── Получение PR по номерам коммитов ───────────────────────────────────────
@@ -377,15 +406,11 @@ class GitHubClient:
     def get_latest_tag(self) -> str:
         """Получить самый новый тег (по семантической версии)."""
         try:
-            refs = self._get_json("/git/refs/tags", params={"per_page": 100})
+            refs = self._get_json("/tags", params={"per_page": 100})
             if not refs:
                 return ""
 
-            tag_names = [
-                r["ref"].replace("refs/tags/", "")
-                for r in refs
-                if r["ref"].startswith("refs/tags/")
-            ]
+            tag_names = [r["name"] for r in refs]
 
             # Семантическая сортировка
             def parse_tag(name: str) -> tuple:
@@ -798,7 +823,8 @@ def main():
 
     github = GitHubClient(token, repo)
 
-    # ── HEAD SHA ────────────────────────────────────────────────────────────────
+    tag_name = ""  # инициализация чтобы не было UnboundLocalError
+    base_sha = ""  # явная инициализация
     head_sha = os.environ.get("GITHUB_SHA", "").strip()
     head_input = os.environ.get("INPUT_HEAD_SHA", "").strip()
     if head_input:
@@ -813,6 +839,16 @@ def main():
             print(f"[GIT] HEAD resolved: {head_sha[:8]}")
         except Exception:
             pass
+
+    if not head_sha:
+        # GitHub API: получить последний коммит на default branch
+        try:
+            commits = github._get_json("/commits", params={"per_page": 1})
+            if commits and isinstance(commits, list):
+                head_sha = commits[0]["sha"]
+                print(f"[GITHUB] HEAD from API: {head_sha[:8]}")
+        except Exception as e:
+            print(f"[GITHUB] HEAD from API failed: {e}")
 
     if not head_sha:
         print("[GITHUB] HEAD SHA не определена, пропуск")
@@ -841,8 +877,8 @@ def main():
                     base_sha = ""
 
     if not base_sha:
-        print("[GITHUB] Base SHA не определена, пропуск")
-        return
+        print("[GITHUB] Нет предыдущего run и тегов — использую HEAD~10")
+        base_sha = "HEAD~10"
 
     # Разрешить git-ссылки (HEAD~N, теги и т.д.)
     if base_sha.startswith("HEAD") or not all(c in "0123456789abcdef" for c in base_sha[:8]):
