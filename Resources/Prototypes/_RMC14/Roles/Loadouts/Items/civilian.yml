@@ -29,11 +29,11 @@
   inhand:
     - RMCPatchTSE
 
-- type: loadout
-  id: PatchMSCRMC
-  cost: 1
-  inhand:
-    - RMCPatchSPPMSC
+# - type: loadout
+#   id: PatchMSCRMC
+#   cost: 1
+#   inhand:
+#     - RMCPatchSPPMSC
 
 - type: loadout
   id: PatchCLFRMC
