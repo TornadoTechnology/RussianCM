@@ -2010,6 +2010,9 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
 
     private void OnXenoComponentInit(Entity<XenoComponent> ent, ref ComponentInit args)
     {
+        if (!TryComp<HiveComponent>(TheHive, out _))
+            return;
+
         _hive.SetHive(ent.Owner, TheHive);
         if (!_queenBuildingBoostEnabled)
             return;
