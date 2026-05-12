@@ -13,6 +13,9 @@ namespace Content.Tests.Shared.Administration
         [TestCase("ADMIN,DEBUG", AdminFlags.Admin | AdminFlags.Debug)]
         [TestCase("ADMIN,DEBUG,HOST", AdminFlags.Admin | AdminFlags.Debug | AdminFlags.Host)]
         [TestCase("", AdminFlags.None)]
+        [TestCase("RMCMAINTAINER", AdminFlags.RMCMaintainer)]
+        [TestCase("ADMINGHOST", AdminFlags.AdminGhost)]
+        [TestCase("HOST,ADMINGHOST", AdminFlags.Host | AdminFlags.AdminGhost)]
         public void TestNamesToFlags(string namesConcat, AdminFlags flags)
         {
             var names = namesConcat.Split(",", StringSplitOptions.RemoveEmptyEntries);
@@ -25,6 +28,9 @@ namespace Content.Tests.Shared.Administration
         [TestCase("ADMIN,DEBUG", AdminFlags.Admin | AdminFlags.Debug)]
         [TestCase("ADMIN,DEBUG,HOST", AdminFlags.Admin | AdminFlags.Debug | AdminFlags.Host)]
         [TestCase("", AdminFlags.None)]
+        [TestCase("RMCMAINTAINER", AdminFlags.RMCMaintainer)]
+        [TestCase("ADMINGHOST", AdminFlags.AdminGhost)]
+        [TestCase("ADMINGHOST,HOST", AdminFlags.AdminGhost | AdminFlags.Host)]
         public void TestFlagsToNames(string namesConcat, AdminFlags flags)
         {
             var names = namesConcat.Split(",", StringSplitOptions.RemoveEmptyEntries);
