@@ -52,12 +52,11 @@ SKIP_KEYWORDS: Final[list[str]] = [
     "[internal]",
 ]
 
-# ─── Gemini ────────────────────────────────────────────────────────────────────
+# ─── Mistral ────────────────────────────────────────────────────────────────────
 
-GEMINI_MODEL: Final[str] = "gemini-2.0-flash"
-GEMINI_API_URL: Final[str] = (
-    f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
-)
+MISTRAL_API_KEY: Final[str] = os.environ.get("MISTRAL_API_KEY", "")
+MISTRAL_MODEL: Final[str] = "mistral-small-latest"
+MISTRAL_API_URL: Final[str] = "https://api.mistral.ai/v1/chat/completions"
 
 # ─── Discord ────────────────────────────────────────────────────────────────────
 
