@@ -24,6 +24,7 @@ using Content.Shared.StepTrigger.Components;
 using Content.Shared.Traits.Assorted;
 using Content.Shared.Verbs;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Localization;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
 
@@ -92,17 +93,21 @@ public sealed class YautjaTrophyTrapTest
                 Assert.That(entMan.GetComponent<YautjaTrophyComponent>(humanSkull).Polished, Is.True);
                 Assert.That(record.PolishedTrophies, Is.EqualTo(1));
                 Assert.That(record.Score, Is.EqualTo(4));
-                Assert.That(entMan.GetComponent<MetaDataComponent>(humanSkull).EntityName, Does.StartWith("polished "));
+                Assert.That(entMan.GetComponent<MetaDataComponent>(humanSkull).EntityName,
+                    Does.StartWith(Loc.GetString("cmu-yautja-trophy-polished-name", ("name", string.Empty))));
 
                 Assert.That(trophySystem.TryHarvestTrophy(hunter, xeno, YautjaTrophyKind.HumanSkull, out _), Is.False);
                 Assert.That(trophySystem.TryHarvestTrophy(hunter, xeno, YautjaTrophyKind.XenoSkull, out var xenoSkull), Is.True);
                 Assert.That(entMan.GetComponent<YautjaTrophyComponent>(xenoSkull).Kind, Is.EqualTo(YautjaTrophyKind.XenoSkull));
-                Assert.That(entMan.GetComponent<MetaDataComponent>(xenoSkull).EntityName, Is.EqualTo("Runner skull trophy"));
+                var runner = Loc.GetString("cm-job-name-xeno-runner");
+                Assert.That(entMan.GetComponent<MetaDataComponent>(xenoSkull).EntityName,
+                    Is.EqualTo(Loc.GetString("cmu-yautja-xeno-skull-name", ("caste", runner))));
                 Assert.That(unrevivable.IsUnrevivable(xeno), Is.True);
                 Assert.That(entMan.GetComponent<UnrevivableComponent>(xeno).Analyzable, Is.False);
                 Assert.That(trophySystem.TryHarvestTrophy(hunter, xeno, YautjaTrophyKind.XenoPelt, out var xenoPelt), Is.True);
                 Assert.That(entMan.GetComponent<YautjaTrophyComponent>(xenoPelt).Kind, Is.EqualTo(YautjaTrophyKind.XenoPelt));
-                Assert.That(entMan.GetComponent<MetaDataComponent>(xenoPelt).EntityName, Is.EqualTo("Runner pelt trophy"));
+                Assert.That(entMan.GetComponent<MetaDataComponent>(xenoPelt).EntityName,
+                    Is.EqualTo(Loc.GetString("cmu-yautja-xeno-pelt-name", ("caste", runner))));
                 Assert.That(entMan.GetComponent<YautjaTrophySourceComponent>(xeno).TakenTrophies, Does.Contain(YautjaTrophyKind.XenoSkull));
                 Assert.That(entMan.GetComponent<YautjaTrophySourceComponent>(xeno).TakenTrophies, Does.Contain(YautjaTrophyKind.XenoPelt));
                 Assert.That(entMan.GetComponent<StorageComponent>(belt).Container.Contains(xenoSkull), Is.True);
@@ -225,7 +230,8 @@ public sealed class YautjaTrophyTrapTest
                 Assert.That(entMan.HasComponent<IgnoreXenoWeedsSlowdownComponent>(xeno), Is.True);
                 Assert.That(entMan.GetComponent<XenoRegenComponent>(xeno).HealOffWeeds, Is.True);
                 Assert.That(entMan.HasComponent<YautjaHivebrokenXenoComponent>(xeno), Is.True);
-                Assert.That(entMan.GetComponent<MetaDataComponent>(xeno).EntityName, Does.StartWith("hivebroken "));
+                Assert.That(entMan.GetComponent<MetaDataComponent>(xeno).EntityName,
+                    Does.StartWith(Loc.GetString("cmu-yautja-hivebroken-xeno-name", ("baseName", string.Empty))));
 
                 var hivebrokenSpeech = entMan.GetComponent<SpeechComponent>(xeno);
                 Assert.That(hivebrokenSpeech.SpeechVerb.ToString(), Is.EqualTo("Default"));
@@ -365,15 +371,20 @@ public sealed class YautjaTrophyTrapTest
                 mobState.ChangeMobState(xeno, MobState.Dead);
 
                 var humanVerbs = verbs.GetLocalVerbs(human, hunter, typeof(AlternativeVerb));
-                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == "Take skull trophy"));
-                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == "Take left arm bone"));
-                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == "Take ribcage"));
+                var humanSkull = Loc.GetString("cmu-yautja-trophy-verb-human-skull");
+                var leftArm = Loc.GetString("cmu-yautja-trophy-verb-human-left-arm");
+                var ribcage = Loc.GetString("cmu-yautja-trophy-verb-human-ribcage");
+                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == humanSkull));
+                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == leftArm));
+                Assert.That(humanVerbs, Has.Some.Matches<Verb>(verb => verb.Text == ribcage));
 
                 var xenoVerbs = verbs.GetLocalVerbs(xeno, hunter, typeof(AlternativeVerb));
-                Assert.That(xenoVerbs, Has.Some.Matches<Verb>(verb => verb.Text == "Take xeno skull trophy"));
-                Assert.That(xenoVerbs, Has.Some.Matches<Verb>(verb => verb.Text == "Take xeno pelt trophy"));
-                Assert.That(xenoVerbs.Count(verb => verb.Text == "Take xeno skull trophy"), Is.EqualTo(1));
-                Assert.That(xenoVerbs.Count(verb => verb.Text == "Take xeno pelt trophy"), Is.EqualTo(1));
+                var xenoSkull = Loc.GetString("cmu-yautja-trophy-verb-xeno-skull");
+                var xenoPelt = Loc.GetString("cmu-yautja-trophy-verb-xeno-pelt");
+                Assert.That(xenoVerbs, Has.Some.Matches<Verb>(verb => verb.Text == xenoSkull));
+                Assert.That(xenoVerbs, Has.Some.Matches<Verb>(verb => verb.Text == xenoPelt));
+                Assert.That(xenoVerbs.Count(verb => verb.Text == xenoSkull), Is.EqualTo(1));
+                Assert.That(xenoVerbs.Count(verb => verb.Text == xenoPelt), Is.EqualTo(1));
             }
             finally
             {
@@ -410,7 +421,7 @@ public sealed class YautjaTrophyTrapTest
             {
                 entMan.EnsureComponent<YautjaComponent>(hunter);
                 var captiveVerbs = verbs.GetLocalVerbs(prey, hunter, typeof(AlternativeVerb));
-                Assert.That(captiveVerbs.Count(verb => verb.Text == "Claim ritual captive"), Is.EqualTo(1));
+                Assert.That(captiveVerbs.Count(verb => verb.Text == Loc.GetString("cmu-yautja-ritual-claim-verb")), Is.EqualTo(1));
                 Assert.That(ritual.TryClaimCaptive(hunter, prey), Is.False);
 
                 Assert.That(pulling.TryStartPull(hunter, prey), Is.True);

@@ -22,6 +22,7 @@ const skipPathPatterns = [
   /[\\/]avali[\\/](first_names|last_names)\.ftl$/i,
   /[\\/]greek_names\.ftl$/i,
   /[\\/]number_names\.ftl$/i,
+  /[\\/]_CMU14[\\/]yautja[\\/]names\.ftl$/i,
 ];
 
 function hasCyrillic(text) {

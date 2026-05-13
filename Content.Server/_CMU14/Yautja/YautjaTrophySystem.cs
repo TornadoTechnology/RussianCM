@@ -15,6 +15,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Roles;
 using Content.Shared.Storage;
 using Content.Shared.Traits.Assorted;
 using Content.Shared.Verbs;
@@ -58,6 +59,7 @@ public sealed class YautjaTrophySystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly RMCUnrevivableSystem _unrevivable = default!;
     [Dependency] private readonly YautjaMarkSystem _marks = default!;
     [Dependency] private readonly YautjaRitualSystem _ritual = default!;
@@ -719,8 +721,7 @@ public sealed class YautjaTrophySystem : EntitySystem
         Dirty(ent);
 
         var name = MetaData(ent).EntityName;
-        if (!name.StartsWith("polished ", StringComparison.OrdinalIgnoreCase))
-            _meta.SetEntityName(ent, $"polished {name}");
+        _meta.SetEntityName(ent, Loc.GetString("cmu-yautja-trophy-polished-name", ("name", name)));
 
         var record = EnsureComp<YautjaTrophyRecordComponent>(args.User);
         record.PolishedTrophies++;
@@ -1110,7 +1111,12 @@ public sealed class YautjaTrophySystem : EntitySystem
     private string GetXenoCasteName(EntityUid target)
     {
         if (TryComp(target, out XenoComponent? xeno))
+        {
+            if (_prototypes.TryIndex(xeno.Role, out JobPrototype? job))
+                return job.LocalizedName;
+
             return FormatXenoRole(xeno.Role.Id);
+        }
 
         var meta = MetaData(target);
         return meta.EntityPrototype?.Name ?? meta.EntityName;

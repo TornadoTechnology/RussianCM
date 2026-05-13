@@ -709,6 +709,7 @@
   - type: Item
     size: Small
     sprite: _CMU14/Yautja/healing_gun.rsi
+  - type: YautjaTechItem
   - type: YautjaHealingGun
     damageContainers:
     - Biological
