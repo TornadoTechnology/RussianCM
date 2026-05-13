@@ -2163,10 +2163,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "left front"
+        - state: "left_front"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "left front"
+      state: "left_front"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -2268,10 +2268,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "right front"
+        - state: "right_front"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "right front"
+      state: "right_front"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -2373,10 +2373,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "front_middle window"
+        - state: "front_middle_window"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "front_middle window"
+      state: "front_middle_window"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -2508,10 +2508,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "left window"
+        - state: "left_window"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "left window"
+      state: "left_window"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -2568,10 +2568,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "right window"
+        - state: "right_window"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "right window"
+      state: "right_window"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -2628,10 +2628,10 @@
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
       drawdepth: Walls
       layers:
-        - state: "bottom window"
+        - state: "bottom_window"
     - type: Icon
       sprite: _CMU14/Yautja/Structures/hunter_shuttle.rsi
-      state: "bottom window"
+      state: "bottom_window"
 
 - type: entity
   parent: CMUYautjaStructureBase
@@ -4732,3 +4732,4 @@
     - type: Icon
       sprite: _CMU14/Yautja/Structures/yautja_machines.rsi
       state: "console_shuttle"
+
