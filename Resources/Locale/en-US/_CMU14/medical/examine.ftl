@@ -18,11 +18,22 @@ cmu-medical-examine-wound-bleeding-suffix = (bleeding)
 
 cmu-medical-examine-wound-full = a { $treated }{ $size } { $type }{ $bleeding }
 
-cmu-medical-examine-fracture-hairline = a { $stabilized }hairline fracture
-cmu-medical-examine-fracture-simple = a { $stabilized }broken bone
-cmu-medical-examine-fracture-compound = a { $stabilized }compound fracture
-cmu-medical-examine-fracture-comminuted = a { $stabilized }shattered bone
-cmu-medical-examine-fracture-stabilized-prefix = stabilized
+cmu-medical-examine-fracture-hairline = { $stabilized ->
+    [true]  a stabilized hairline fracture
+   *[other] a hairline fracture
+}
+cmu-medical-examine-fracture-simple = { $stabilized ->
+    [true]  a stabilized broken bone
+   *[other] a broken bone
+}
+cmu-medical-examine-fracture-compound = { $stabilized ->
+    [true]  a stabilized compound fracture
+   *[other] a compound fracture
+}
+cmu-medical-examine-fracture-comminuted = { $stabilized ->
+    [true]  a stabilized shattered bone
+   *[other] a shattered bone
+}
 
 cmu-medical-examine-eschar = charred burn tissue
 
@@ -37,5 +48,5 @@ cmu-medical-examine-part-leg-right = Right leg
 cmu-medical-examine-part-foot-left = Left foot
 cmu-medical-examine-part-foot-right = Right foot
 
-cmu-medical-examine-list-and = { $a } and { $b }
+cmu-medical-examine-list-and =  and
 cmu-medical-examine-list-comma-and = { $list }, and { $last }

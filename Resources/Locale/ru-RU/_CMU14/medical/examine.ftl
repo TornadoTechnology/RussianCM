@@ -48,5 +48,5 @@ cmu-medical-examine-part-leg-right = Правая нога
 cmu-medical-examine-part-foot-left = Левая стопа
 cmu-medical-examine-part-foot-right = Правая стопа
 
-cmu-medical-examine-list-and = { $a } и { $b }
+cmu-medical-examine-list-and =  и
 cmu-medical-examine-list-comma-and = { $list } и { $last }
