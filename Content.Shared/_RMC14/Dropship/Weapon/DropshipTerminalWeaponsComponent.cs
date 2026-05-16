@@ -1,4 +1,4 @@
-﻿using Robust.Shared.GameStates;
+using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._RMC14.Dropship.Weapon;
@@ -45,7 +45,7 @@ public sealed partial class DropshipTerminalWeaponsComponent : Component
 
     [DataRecord]
     [Serializable, NetSerializable]
-    public record struct Screen(
+    public partial record struct Screen(
         DropshipTerminalWeaponsScreen State,
         NetEntity? Weapon,
         NetEntity? System
@@ -53,7 +53,7 @@ public sealed partial class DropshipTerminalWeaponsComponent : Component
 
     [DataRecord]
     [Serializable, NetSerializable]
-    public readonly record struct TargetEnt(
+    public readonly partial record struct TargetEnt(
         NetEntity Id,
         string Name
     );

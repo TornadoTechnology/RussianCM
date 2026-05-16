@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Content.Client.Lobby.UI;
 using Content.Client.Stylesheets;
 using Content.Shared.CCVar;
@@ -16,9 +16,9 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
     [GenerateTypedNameReferences]
     public sealed partial class MakeGhostRoleWindow : DefaultWindow
     {
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IStylesheetManager _stylesheetManager = default!;
         private readonly List<GhostRoleRaffleSettingsPrototype> _rafflePrototypes = [];
 
         private const int RaffleDontRaffleId = -1;

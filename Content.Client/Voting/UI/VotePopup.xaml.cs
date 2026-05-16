@@ -17,11 +17,11 @@ namespace Content.Client.Voting.UI
     [GenerateTypedNameReferences]
     public sealed partial class VotePopup : Control
     {
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
-        [Dependency] private readonly IVoteManager _voteManager = default!;
-        [Dependency] private readonly IEntityNetworkManager _net = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
+        [Dependency] private IGameTiming _gameTiming = default!;
+        [Dependency] private IVoteManager _voteManager = default!;
+        [Dependency] private IEntityNetworkManager _net = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IStylesheetManager _stylesheetManager = default!;
 
         private readonly VoteManager.ActiveVote _vote;
         private readonly Button[] _voteButtons;
@@ -266,7 +266,7 @@ namespace Content.Client.Voting.UI
 
         protected override void FrameUpdate(FrameEventArgs args)
         {
-            // Logger.Debug($"{_gameTiming.ServerTime}, {_vote.StartTime}, {_vote.EndTime}");
+            // Logger.GetSawmill("content").Debug($"{_gameTiming.ServerTime}, {_vote.StartTime}, {_vote.EndTime}");
 
             var curTime = _gameTiming.RealTime;
             var timeLeft = _vote.EndTime - curTime;

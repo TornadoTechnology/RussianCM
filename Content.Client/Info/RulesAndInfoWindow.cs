@@ -11,11 +11,11 @@ using Robust.Shared.Configuration;
 
 namespace Content.Client.Info
 {
-    public sealed class RulesAndInfoWindow : DefaultWindow
+    public sealed partial class RulesAndInfoWindow : DefaultWindow
     {
-        [Dependency] private readonly IResourceManager _resourceManager = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
+        [Dependency] private IResourceManager _resourceManager = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IStylesheetManager _stylesheetManager = default!;
 
         public RulesAndInfoWindow()
         {

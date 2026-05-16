@@ -40,27 +40,27 @@ namespace Content.Server._AU14.Abominations;
 ///     (<see cref="AbominationMimicComponent.TransformCooldown"/>, default 5min)
 ///     is stamped onto the original mimic at this point.
 /// </summary>
-public sealed class AbominationMimicSystem : EntitySystem
+public sealed partial class AbominationMimicSystem : EntitySystem
 {
     public static readonly ProtoId<PolymorphPrototype> DisguisePolymorph = "AbominationMimicDisguise";
     public static readonly EntProtoId RevertAction = "ActionAbominationMimicRevert";
     public static readonly ProtoId<EmotePrototype> ScreamEmote = "Scream";
 
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly NpcFactionSystem _faction = default!;
-    [Dependency] private readonly GunIFFSystem _gunIff = default!;
-    [Dependency] private readonly SharedJitteringSystem _jitter = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly SkillsSystem _skills = default!;
-    [Dependency] private readonly SharedHumanoidAppearanceSystem _humanoid = default!;
-    [Dependency] private readonly PolymorphSystem _polymorph = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private NpcFactionSystem _faction = default!;
+    [Dependency] private GunIFFSystem _gunIff = default!;
+    [Dependency] private SharedJitteringSystem _jitter = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private MetaDataSystem _metaData = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private SkillsSystem _skills = default!;
+    [Dependency] private SharedHumanoidAppearanceSystem _humanoid = default!;
+    [Dependency] private PolymorphSystem _polymorph = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] private SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {

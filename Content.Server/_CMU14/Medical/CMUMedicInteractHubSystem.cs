@@ -7,10 +7,10 @@ using Robust.Shared.GameObjects;
 
 namespace Content.Server._CMU14.Medical;
 
-public sealed class CMUMedicInteractHubSystem : EntitySystem
+public sealed partial class CMUMedicInteractHubSystem : EntitySystem
 {
-    [Dependency] private readonly Wounds.CMUBandageInterceptionSystem _bandage = default!;
-    [Dependency] private readonly Diagnostics.CMUStethoscopeSystem _stethoscope = default!;
+    [Dependency] private Wounds.CMUBandageInterceptionSystem _bandage = default!;
+    [Dependency] private Diagnostics.CMUStethoscopeSystem _stethoscope = default!;
 
     public override void Initialize()
     {

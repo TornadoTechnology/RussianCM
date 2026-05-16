@@ -11,10 +11,10 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._CMU14.Medical.Wounds;
 
-public sealed class CMUWoundsSystem : SharedCMUWoundsSystem
+public sealed partial class CMUWoundsSystem : SharedCMUWoundsSystem
 {
-    [Dependency] private readonly SharedRMCDamageableSystem _rmcDamageable = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutions = default!;
+    [Dependency] private SharedRMCDamageableSystem _rmcDamageable = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutions = default!;
 
     private static readonly ProtoId<DamageGroupPrototype> BruteGroup = "Brute";
     private static readonly ProtoId<DamageGroupPrototype> BurnGroup = "Burn";

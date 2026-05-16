@@ -21,15 +21,15 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._CMU14.Medical.Bones;
 
-public abstract class SharedBoneSystem : EntitySystem
+public abstract partial class SharedBoneSystem : EntitySystem
 {
-    [Dependency] protected readonly IConfigurationManager Cfg = default!;
-    [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] protected readonly INetManager Net = default!;
-    [Dependency] protected readonly IPrototypeManager Proto = default!;
-    [Dependency] protected readonly SharedFractureSystem Fracture = default!;
-    [Dependency] protected readonly SharedStatusEffectsSystem Status = default!;
-    [Dependency] protected readonly RMCUnrevivableSystem Unrevivable = default!;
+    [Dependency] protected IConfigurationManager Cfg = default!;
+    [Dependency] protected IGameTiming Timing = default!;
+    [Dependency] protected INetManager Net = default!;
+    [Dependency] protected IPrototypeManager Proto = default!;
+    [Dependency] protected SharedFractureSystem Fracture = default!;
+    [Dependency] protected SharedStatusEffectsSystem Status = default!;
+    [Dependency] protected RMCUnrevivableSystem Unrevivable = default!;
 
     private const string BoneRegenBoostStatus = "StatusEffectCMUBoneRegenBoost";
     private static readonly ProtoId<DamageGroupPrototype> BruteGroup = "Brute";

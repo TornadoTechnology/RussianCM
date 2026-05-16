@@ -6,11 +6,11 @@ using Robust.Shared.IoC;
 
 namespace Content.Client.Stylesheets
 {
-    public sealed class StylesheetManager : IStylesheetManager
+    public sealed partial class StylesheetManager : IStylesheetManager
     {
-        [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-        [Dependency] private readonly IResourceCache _resourceCache = default!;
-        [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+        [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
+        [Dependency] private IResourceCache _resourceCache = default!;
+        [Dependency] private IConfigurationManager _configurationManager = default!;
 
         public Stylesheet SheetNano { get; private set; } = default!;
         public Stylesheet SheetSpace { get; private set; } = default!;

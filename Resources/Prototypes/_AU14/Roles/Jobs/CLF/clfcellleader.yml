@@ -7,6 +7,9 @@
   ignoreAllegiance: true
   playTimeTracker: AU14JobCLFCellLeader
   requirements:
+  - !type:DepartmentTimeRequirement
+    department: AU14DepartmentColonialLiberationFront
+    time: 36000 # 10 hours
   - !type:OverallPlaytimeRequirement
     time: 36000 # 10 hours
   - !type:TraitsRequirement

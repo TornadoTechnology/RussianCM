@@ -15,8 +15,8 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
     [GenerateTypedNameReferences]
     public sealed partial class GhostRoleRulesWindow : DefaultWindow
     {
-        [Dependency] private readonly IConfigurationManager _cfg = IoCManager.Resolve<IConfigurationManager>();
-        [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
+        [Dependency] private IConfigurationManager _cfg = IoCManager.Resolve<IConfigurationManager>();
+        [Dependency] private IStylesheetManager _stylesheetManager = default!;
         private float _timer;
         private readonly GhostRoleKind _ghostRoleKind;
 
