@@ -9,7 +9,7 @@ ent-AU14BoxHEDPRMC = ящик гранат R2175/A HEDP
     .desc = Герметичный ящик, содержащий 18 30-мм гранат R2175/A High-Explosive Dual-Purpose. Высокое взрывчатое вещество, не хранить рядом с топливом для огнемёта.
 
 ent-AU14PacketGrenadeNeuroRMC = упаковка газовых гранат R2175/CN20
-    .desc = Содержит три зажигательные гранаты 2175/B HIDP.
+    .desc = Содержит три газовые гранаты 2175/B HIDP.
 ent-AU14PacketGrenadeNeuroRMCFilled = { ent-AU14PacketGrenadeNeuroRMC }
     .desc = { ent-AU14PacketGrenadeNeuroRMC.desc }
 
