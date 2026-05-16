@@ -1,4 +1,8 @@
-ent-AU14WeaponRifleTwoBore-name = предмет
-ent-AU14CartridgeRifleTwoBore-name = патрон
-ent-AU14BulletRifleTwoBore-name = БазоваяПуля
-ent-AU14BulletRifleTwoBore-desc = Если ты это видишь, ты, вероятно, мёртв!
+ent-AU14WeaponRifleTwoBore = двуствольная винтовка Double-Deuce Two-Bore
+    .desc = Двуствольная винтовка калибра Two-Bore, изготовленная на заказ. Создана для охоты на самую крупную или самую опасную дичь. Весит сорок пять фунтов без снаряжения, запрещена в трёх секторах и имеет очень лёгкий спуск. Обращайтесь с ней бережно, и она позаботится о вас и о том, на что вы её направите.
+
+ent-AU14CartridgeRifleTwoBore = винтовочный патрон (Two-Bore)
+    .desc = Патрон для винтовки Two-Bore. Этот снаряд делает .50 похожим на горошину. Молитесь, чтобы вас никогда не задело этой штукой.
+
+ent-AU14BulletRifleTwoBore = пуля
+    .desc = Если ты это видишь, ты, вероятно, мёртв!
