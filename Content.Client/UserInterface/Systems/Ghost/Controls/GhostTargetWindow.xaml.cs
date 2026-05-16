@@ -22,12 +22,12 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls
     [GenerateTypedNameReferences]
     public sealed partial class GhostTargetWindow : DefaultWindow
     {
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
-        [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
-        [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IPlayerManager _playerManager = default!;
+        [Dependency] private IStylesheetManager _stylesheetManager = default!;
+        [Dependency] private IUserInterfaceManager _uiManager = default!;
 
         private SpriteSystem? _spriteSystem;
         private readonly List<TabState> _tabs = new();
@@ -770,7 +770,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls
             Dense,
         }
 
-        private sealed class SectionState
+        private sealed partial class SectionState
         {
             public readonly BoxContainer Container;
             public readonly Label CountLabel;
@@ -783,7 +783,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls
             }
         }
 
-        private sealed class TabState
+        private sealed partial class TabState
         {
             public readonly string Name;
             public readonly Button Button;
@@ -800,7 +800,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls
             }
         }
 
-        private sealed class RowState
+        private sealed partial class RowState
         {
             public readonly GhostWarp Warp;
             public readonly Button Button;

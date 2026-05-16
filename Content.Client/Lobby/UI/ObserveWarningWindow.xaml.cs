@@ -15,10 +15,10 @@ namespace Content.Client.Lobby.UI;
 [UsedImplicitly]
 public sealed partial class ObserveWarningWindow : DefaultWindow
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly ISharedAdminManager _adminManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IStylesheetManager _stylesheetManager = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private ISharedAdminManager _adminManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IStylesheetManager _stylesheetManager = default!;
 
     public ObserveWarningWindow()
     {

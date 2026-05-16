@@ -1,10 +1,10 @@
-﻿using Content.Shared.Corvax.TTS;
+using Content.Shared.Corvax.TTS;
 
 namespace Content.Shared._RMC14.ARES;
 
-public sealed class ARESSystem : EntitySystem
+public sealed partial class ARESSystem : EntitySystem
 {
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
+    [Dependency] private MetaDataSystem _metaData = default!;
 
     private bool TryGetARES(out Entity<ARESComponent> alert)
     {

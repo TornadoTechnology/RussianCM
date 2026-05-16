@@ -1787,6 +1787,7 @@ namespace Content.Client.Lobby.UI
             ReloadProfilePreview();
         }
 
+        [System.Obsolete]
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
