@@ -1,4 +1,5 @@
-ent-AU14WYPMCBallCap-name = Кепка ЧВК ВЕ-Ю
-ent-AU14WYPMCBallCap-desc = Патрульная кепка ЧВК ВЕ-Ю.
-ent-AU14WYPPOCap-name = Кепка офицера личной охраны ВЕ-Ю
-ent-AU14WYPPOCap-desc = Кепка офицера личной охраны ВЕ-Ю.
+ent-AU14WYPMCBallCap = кепка ЧВК Ве-Ю
+    .desc = Патрульная кепка ЧВК Ве-Ю.
+
+ent-AU14WYPPOCap = кепка офицера Ве-Ю
+    .desc = Кепка офицера Ве-Ю.

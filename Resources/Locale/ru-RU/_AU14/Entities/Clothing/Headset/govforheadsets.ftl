@@ -1,18 +1,26 @@
-ent-AU14EncryptionKeyGOVFOR-name = ключ шифрования ГОВФОР
-ent-AU14EncryptionKeyGOVFOR-desc = Ключ шифрования, используемый для связи по каналу ГОВФОР.
-ent-AU14EncryptionKeyGOVFORCommand-name = командный ключ шифрования ГОВФОР
-ent-AU14EncryptionKeyGOVFORCommand-desc = Ключ шифрования, используемый для связи по всем каналам ГОВФОР.
-ent-AU14EncryptionKeyGOVFORauxiliarysupport-name = ключ шифрования вспомогательной поддержки ГОВФОР
-ent-AU14EncryptionKeyGOVFORauxiliarysupport-desc = Ключ шифрования, используемый для связи по каналам вспомогательной поддержки.
-ent-AU14EncryptionKeyGOVFORBravo-name = ключ шифрования Браво ГОВФОР
-ent-AU14EncryptionKeyGOVFORBravo-desc = Ключ шифрования, используемый для связи по каналу Браво ГОВФОР.
-ent-AU14EncryptionKeyGOVFORCharlie-name = ключ шифрования Чарли ГОВФОР
-ent-AU14EncryptionKeyGOVFORCharlie-desc = Ключ шифрования, используемый для связи по каналу Чарли ГОВФОР.
-ent-AU14EncryptionKeyGOVFORIntel-name = ключ шифрования разведки ГОВФОР
-ent-AU14EncryptionKeyGOVFORIntel-desc = Ключ шифрования, используемый для связи по разведывательному каналу ГОВФОР.
-ent-AU14HeadsetSectionMarine-name = радиогарнитура ГОВФОР
-ent-AU14HeadsetSectionMarine-desc = Используется персоналом ГОВФОР для радиосвязи.
-ent-AU14HeadsetSectionLeader-name = командная радиогарнитура ГОВФОР
-ent-AU14HeadsetSectionLeader-desc = Используется членами командования ГОВФОР для радиосвязи.
-ent-AU14HeadsetGOVFORAux-name = гарнитура вспомогательной поддержки ГОВФОР
-ent-AU14HeadsetGOVFORAux-desc = Используется членами вспомогательной поддержки ГОВФОР для радиосвязи.
+ent-AU14EncryptionKeyGOVFOR = ключ шифрования ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по каналу ГОВФОР.
+
+ent-AU14EncryptionKeyGOVFORCommand = командный ключ шифрования ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по всем каналам ГОВФОР.
+
+ent-AU14EncryptionKeyGOVFORauxiliarysupport = ключ шифрования поддержки ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по каналам поддержки.
+
+ent-AU14EncryptionKeyGOVFORBravo = ключ шифрования Браво ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по каналу Браво ГОВФОР.
+
+ent-AU14EncryptionKeyGOVFORCharlie = ключ шифрования Чарли ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по каналу Чарли ГОВФОР.
+
+ent-AU14EncryptionKeyGOVFORIntel = ключ шифрования разведки ГОВФОР
+    .desc = Ключ шифрования, используемый для связи по разведывательному каналу ГОВФОР.
+
+ent-AU14HeadsetSectionMarine = радиогарнитура ГОВФОР
+    .desc = Используется персоналом ГОВФОР для радиосвязи.
+
+ent-AU14HeadsetSectionLeader = командная радиогарнитура ГОВФОР
+    .desc = Используется членами командования ГОВФОР для радиосвязи.
+
+ent-AU14HeadsetGOVFORAux = гарнитура поддержки ГОВФОР
+    .desc = Используется членами поддержки ГОВФОР для радиосвязи.

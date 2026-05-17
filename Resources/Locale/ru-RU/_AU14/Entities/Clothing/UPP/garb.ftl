@@ -1,14 +1,20 @@
-ent-AU14ArmorGarbShinGuardsUPP-name = Поножи UM5
-ent-AU14ArmorGarbShinGuardsUPP-desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
-ent-AU14ArmorGarbShoulderPadsUPP-name = Наплечники UM5
-ent-AU14ArmorGarbShoulderPadsUPP-desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
-ent-AU14ArmorGarbCrotchPadUPP-name = Паховая защита UM5
-ent-AU14ArmorGarbCrotchPadUPP-desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
-ent-AU14ArmorGarbMagazineWebbingUPP-name = Разгрузка для магазинов Type 41
-ent-AU14ArmorGarbMagazineWebbingUPP-desc = Разгрузка для магазинов, предназначенная для крепления снаружи личной брони.
-ent-AU14ArmorGarbLargeWebbingUPP-name = Большая разгрузка Type 41
-ent-AU14ArmorGarbLargeWebbingUPP-desc = Большая разгрузка, предназначенная для крепления снаружи личной брони.
-ent-AU14ArmorGarbSmallWebbingUPP-name = Малая разгрузка Type 41
-ent-AU14ArmorGarbSmallWebbingUPP-desc = Малая разгрузка, предназначенная для крепления снаружи личной брони.
-ent-AU14ArmorGarbJunglePonchoUPP-name = Дождевой пончо для джунглей Type 41
-ent-AU14ArmorGarbJunglePonchoUPP-desc = Пончо, предназначенное для использования в сочетании с личной бронёй.
+ent-AU14ArmorGarbShinGuardsUPP = наколенники UM5
+    .desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
+
+ent-AU14ArmorGarbShoulderPadsUPP = наплечники UM5
+    .desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
+
+ent-AU14ArmorGarbCrotchPadUPP = паховая защита UM5
+    .desc = Элемент брони, предназначенный для использования в сочетании с бронёй.
+
+ent-AU14ArmorGarbMagazineWebbingUPP = разгрузка для магазинов Тип 41
+    .desc = Разгрузка для магазинов, предназначенная для крепления на личную броню.
+
+ent-AU14ArmorGarbLargeWebbingUPP = большая разгрузка Тип 41
+    .desc = Большая разгрузка, предназначенная для крепления на личную броню.
+
+ent-AU14ArmorGarbSmallWebbingUPP = малая разгрузка Тип 41
+    .desc = Малая разгрузка, предназначенная для крепления на личную броню.
+
+ent-AU14ArmorGarbJunglePonchoUPP = дождевое пончо для джунглей Тип 41
+    .desc = Пончо, предназначенное для использования в сочетании с личной бронёй.

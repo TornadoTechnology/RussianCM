@@ -1,62 +1,92 @@
-ent-AU14CivilianJacketBlueParka-name = Синяя парка
-ent-AU14CivilianJacketBlueParka-desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
-ent-AU14CivilianJacketGreenParka-name = Зелёная парка
-ent-AU14CivilianJacketGreenParka-desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
-ent-AU14CivilianJacketRedParka-name = Красная парка
-ent-AU14CivilianJacketRedParka-desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
-ent-AU14CivilianJacketYellowParka-name = Жёлтая парка
-ent-AU14CivilianJacketYellowParka-desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
-ent-AU14CivilianJacketGrayPufferJacket-name = Серая пуховая куртка
-ent-AU14CivilianJacketGrayPufferJacket-desc = Стильная пуховая куртка.
-ent-AU14CivilianJacketKhakiPufferJacket-name = Хаки пуховая куртка
-ent-AU14CivilianJacketKhakiPufferJacket-desc = Стильная пуховая куртка.
-ent-AU14CivilianJacketOrangePufferJacket-name = Оранжевая пуховая куртка
-ent-AU14CivilianJacketOrangePufferJacket-desc = Стильная пуховая куртка.
-ent-AU14CivilianJacketGrayPufferVest-name = Серый пуховый жилет
-ent-AU14CivilianJacketGrayPufferVest-desc = Стильный пуховый жилет.
-ent-AU14CivilianJacketKhakiPufferVest-name = Хаки пуховый жилет
-ent-AU14CivilianJacketKhakiPufferVest-desc = Стильный пуховый жилет.
-ent-AU14CivilianJacketTanPufferVest-name = Бежевый пуховый жилет
-ent-AU14CivilianJacketTanPufferVest-desc = Стильный пуховый жилет.
-ent-AU14WindbreakerBlue-name = Синяя ветровкa
-ent-AU14WindbreakerBlue-desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
-ent-AU14WindbreakerGray-name = Серая ветровкa
-ent-AU14WindbreakerGray-desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
-ent-AU14WindbreakerGreen-name = Зелёная ветровкa
-ent-AU14WindbreakerGreen-desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
-ent-AU14WindbreakerKhaki-name = Хаки ветровкa
-ent-AU14WindbreakerKhaki-desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
-ent-AU14WindbreakerKhakiGreenMix-name = Зелёно-хаки ветровка
-ent-AU14WindbreakerKhakiGreenMix-desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
-ent-AU14CivilianJacketBomberJacket-name = Бомбер
-ent-AU14CivilianJacketBomberJacket-desc = Простой бомбер, изначально разработанный для пилотов.
-ent-AU14CivilianJacketOldCoat-name = Старое пальто
-ent-AU14CivilianJacketOldCoat-desc = Очень старое пальто, такое носил бы твой дедушка...
-ent-AU14CivilianJacketSnowSuit-name = Зимняя куртка
-ent-AU14CivilianJacketSnowSuit-desc = Белая зимняя куртка для очень холодных условий.
-ent-AU14CivilianTanTrenchCoat-name = Бежевый тренчкот
-ent-AU14CivilianTanTrenchCoat-desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
-ent-AU14CivilianGrayTrenchCoat-name = Серый тренчкот
-ent-AU14CivilianGrayTrenchCoat-desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
-ent-AU14CivilianBrownTrenchCoat-name = Коричневый тренчкот
-ent-AU14CivilianBrownTrenchCoat-desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
-ent-AU14CivilianBaristaApron-name = Фартук бариста
-ent-AU14CivilianBaristaApron-desc = Прочный и качественный фартук, хорош для защиты одежды от пролитого кофе.
-ent-AU14CivilianTurnoutGear-name = Пожарный боевой костюм
-ent-AU14CivilianTurnoutGear-desc = Пара огнестойких боевых костюмов, используемых как в военной, так и в гражданской сфере.
-ent-AU14CivilianFullSuitParamedicRed-name = Красный комбинезон парамедика
-ent-AU14CivilianFullSuitParamedicRed-desc = Водонепроницаемый комбинезон, разработанный для парамедиков и фельдшеров.
-ent-AU14CivilianFullSuitParamedicGreen-name = Зелёный комбинезон парамедика
-ent-AU14CivilianFullSuitParamedicGreen-desc = Водонепроницаемый комбинезон, разработанный для парамедиков и фельдшеров.
-ent-AU14CivilianFullSuitSanitation-name = Санитарный комбинезон
-ent-AU14CivilianFullSuitSanitation-desc = Водонепроницаемый комбинезон, разработанный для трудолюбивого человека.
-ent-AU14CivilianFullSuitWeYuEngineer-name = Комбинезон инженера We-Yu
-ent-AU14CivilianFullSuitWeYuEngineer-desc = Водонепроницаемый комбинезон, разработанный для трудолюбивого человека.
-ent-AU14CivilianHazardVestParamedicGreen-name = Зелёный сигнальный жилет парамедика
-ent-AU14CivilianHazardVestParamedicGreen-desc = Светоотражающий жилет, созданный для безопасности парамедиков при работе в тёмных условиях.
-ent-AU14CivilianHazardVestParamedicWhite-name = Белый сигнальный жилет парамедика
-ent-AU14CivilianHazardVestParamedicWhite-desc = Светоотражающий жилет, созданный для безопасности парамедиков при работе в тёмных условиях.
-ent-AU14CivilianHazardVestSanitation-name = Сигнальный жилет санитарного работника
-ent-AU14CivilianHazardVestSanitation-desc = Светоотражающий жилет, созданный для безопасности работников санитарной службы при работе в тёмных условиях.
-ent-AU14CivilianHazardVestKellandMiningCorporation-name = Сигнальный жилет Kelland Mining Corporation
-ent-AU14CivilianHazardVestKellandMiningCorporation-desc = Светоотражающий жилет, созданный для безопасности работников Kelland Mining Corporation при работе в тёмных условиях.
+ent-AU14CivilianJacketBlueParka = синяя парка
+    .desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
+
+ent-AU14CivilianJacketGreenParka = зелёная парка
+    .desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
+
+ent-AU14CivilianJacketRedParka = красная парка
+    .desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
+
+ent-AU14CivilianJacketYellowParka = жёлтая парка
+    .desc = Хорошая парка, созданный чтобы согревать вас в холодную погоду.
+
+ent-AU14CivilianJacketGrayPufferJacket = серая пуховая куртка
+    .desc = Стильная пуховая куртка.
+
+ent-AU14CivilianJacketKhakiPufferJacket = хаки пуховая куртка
+    .desc = Стильная пуховая куртка.
+
+ent-AU14CivilianJacketOrangePufferJacket = оранжевая пуховая куртка
+    .desc = Стильная пуховая куртка.
+
+ent-AU14CivilianJacketGrayPufferVest = серый пуховый жилет
+    .desc = Стильный пуховый жилет.
+
+ent-AU14CivilianJacketKhakiPufferVest = хаки пуховый жилет
+    .desc = Стильный пуховый жилет.
+
+ent-AU14CivilianJacketTanPufferVest = бежевый пуховый жилет
+    .desc = Стильный пуховый жилет.
+
+ent-AU14WindbreakerBlue = синяя ветровкa
+    .desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
+
+ent-AU14WindbreakerGray = серая ветровкa
+    .desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
+
+ent-AU14WindbreakerGreen = зелёная ветровкa
+    .desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
+
+ent-AU14WindbreakerKhaki = хаки ветровкa
+    .desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
+
+ent-AU14WindbreakerKhakiGreenMix = хаки зелёная ветровка
+    .desc = Ветровка, созданная чтобы согревать вас в ветреную погоду. Также она водонепроницаема.
+
+ent-AU14CivilianJacketBomberJacket = бомбер
+    .desc = Простой бомбер, изначально разработанный для пилотов.
+
+ent-AU14CivilianJacketOldCoat = старое пальто
+    .desc = Очень старое пальто, такое носил бы твой дедушка...
+
+ent-AU14CivilianJacketSnowSuit = зимняя куртка
+    .desc = Белая зимняя куртка для очень холодных условий.
+
+ent-AU14CivilianTanTrenchCoat = бежевый тренчкот
+    .desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
+
+ent-AU14CivilianGrayTrenchCoat = серый тренчкот
+    .desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
+
+ent-AU14CivilianBrownTrenchCoat = коричневый тренчкот
+    .desc = Прочный и качественный тренчкот, хорош для дождливой погоды.
+
+ent-AU14CivilianBaristaApron = фартук бариста
+    .desc = Прочный и качественный фартук, хорош для защиты одежды от пролитого кофе.
+
+ent-AU14CivilianTurnoutGear = пожарный боевой костюм
+    .desc = Пара огнестойких боевых костюмов, используемых как в военной, так и в гражданской сфере.
+
+ent-AU14CivilianFullSuitParamedicRed = красный комбинезон парамедика
+    .desc = Водонепроницаемый комбинезон, разработанный для парамедиков и фельдшеров.
+
+ent-AU14CivilianFullSuitParamedicGreen = зелёный комбинезон парамедика
+    .desc = Водонепроницаемый комбинезон, разработанный для парамедиков и фельдшеров.
+
+ent-AU14CivilianFullSuitSanitation = санитарный комбинезон
+    .desc = Водонепроницаемый комбинезон, разработанный для трудолюбивого человека.
+
+ent-AU14CivilianFullSuitWeYuEngineer = комбинезон инженера Ве-Ю
+    .desc = Водонепроницаемый комбинезон, разработанный для трудолюбивого человека.
+
+ent-AU14CivilianHazardVestParamedicGreen = зелёный сигнальный жилет парамедика
+    .desc = Светоотражающий жилет, созданный для безопасности парамедиков при работе в тёмных условиях.
+
+ent-AU14CivilianHazardVestParamedicWhite = белый сигнальный жилет парамедика
+    .desc = Светоотражающий жилет, созданный для безопасности парамедиков при работе в тёмных условиях.
+
+ent-AU14CivilianHazardVestSanitation = сигнальный жилет санитарного работника
+    .desc = Светоотражающий жилет, созданный для безопасности работников санитарной службы при работе в тёмных условиях.
+
+ent-AU14CivilianHazardVestKellandMiningCorporation = сигнальный жилет горнодобывающей корпорации Келланд
+    .desc = Светоотражающий жилет, созданный для безопасности работников горнодобывающей корпорации Келланд при работе в тёмных условиях.

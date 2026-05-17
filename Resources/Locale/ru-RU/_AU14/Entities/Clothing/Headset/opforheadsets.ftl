@@ -1,20 +1,29 @@
-ent-AU14EncryptionKeyopfor-name = ключ шифрования ОПФОР
-ent-AU14EncryptionKeyopfor-desc = Ключ шифрования, используемый для связи по каналу ОПФОР.
-ent-AU14EncryptionKeyopforcommand-name = командный ключ шифрования ОПФОР
-ent-AU14EncryptionKeyopforcommand-desc = Ключ шифрования, используемый для связи по всем каналам ОПФОР.
-ent-AU14EncryptionKeyopforaux-name = ключ шифрования вспомогательной поддержки ОПФОР
-ent-AU14EncryptionKeyopforaux-desc = Ключ шифрования, используемый для связи по каналам вспомогательной поддержки.
-ent-AU14HeadsetSectionOpforAux-name = радиогарнитура вспомогательной поддержки ОПФОР
-ent-AU14HeadsetSectionOpforAux-desc = Используется персоналом вспомогательной поддержки для радиосвязи.
-ent-AU14HeadsetSectionOpfor-name = радиогарнитура подразделения ОПФОР
-ent-AU14HeadsetSectionOpfor-desc = Используется персоналом ОПФОР для радиосвязи.
-ent-AU14HeadsetSectionLeaderopfor-name = командная радиогарнитура ОПФОР
-ent-AU14HeadsetSectionLeaderopfor-desc = Используется членами командования ОПФОР для радиосвязи.
-ent-AU14EncryptionKeyopforjtac-name = ключ шифрования СКАТ ОПФОР
-ent-AU14EncryptionKeyopforjtac-desc = Ключ шифрования, используемый для связи по каналам СКАТ ОПФОР.
-ent-AU14EncryptionKeyopforBravo-name = ключ шифрования Браво ОПФОР
-ent-AU14EncryptionKeyopforBravo-desc = Ключ шифрования, используемый для связи по каналу Браво ОПФОР.
-ent-AU14EncryptionKeyopforCharlie-name = ключ шифрования Чарли ОПФОР
-ent-AU14EncryptionKeyopforCharlie-desc = Ключ шифрования, используемый для связи по каналу Чарли ОПФОР.
-ent-AU14EncryptionKeyopforIntel-name = ключ шифрования разведки ОПФОР
-ent-AU14EncryptionKeyopforIntel-desc = Ключ шифрования, используемый для связи по разведывательному каналу ОПФОР.
+ent-AU14EncryptionKeyopfor = ключ шифрования ОПФОР
+    .desc = Ключ шифрования, используемый для связи по каналу ОПФОР.
+
+ent-AU14EncryptionKeyopforcommand = командный ключ шифрования ОПФОР
+    .desc = Ключ шифрования, используемый для связи по всем каналам ОПФОР.
+
+ent-AU14EncryptionKeyopforaux = ключ шифрования поддержки ОПФОР
+    .desc = Ключ шифрования, используемый для связи по каналам поддержки.
+
+ent-AU14HeadsetSectionOpforAux = радиогарнитура поддержки ОПФОР
+    .desc = Используется персоналом поддержки для радиосвязи.
+
+ent-AU14HeadsetSectionOpfor = радиогарнитура подразделения ОПФОР
+    .desc = Используется персоналом ОПФОР для радиосвязи.
+
+ent-AU14HeadsetSectionLeaderopfor = командная радиогарнитура ОПФОР
+    .desc = Используется членами командования ОПФОР для радиосвязи.
+
+ent-AU14EncryptionKeyopforjtac = ключ шифрования СКАТ ОПФОР
+    .desc = Ключ шифрования, используемый для связи по каналам СКАТ ОПФОР.
+
+ent-AU14EncryptionKeyopforBravo = ключ шифрования Браво ОПФОР
+    .desc = Ключ шифрования, используемый для связи по каналу Браво ОПФОР.
+
+ent-AU14EncryptionKeyopforCharlie = ключ шифрования Чарли ОПФОР
+    .desc = Ключ шифрования, используемый для связи по каналу Чарли ОПФОР.
+
+ent-AU14EncryptionKeyopforIntel = ключ шифрования разведки ОПФОР
+    .desc = Ключ шифрования, используемый для связи по разведывательному каналу ОПФОР.
