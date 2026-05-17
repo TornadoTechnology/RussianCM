@@ -1,22 +1,24 @@
-ent-CMSandbagFull = пустые мешки с песком
+ent-CMSandbagFull = мешки с песком
+  .desc = Несколько мешков, набитых песком. Пока что просто громоздкие, но скоро пригодятся для укреплений.
 
-ent-CMSandbagEmpty = пустые мешки с песком
+ent-CMSandbagEmpty = пустые мешки для песка
+  .desc = Несколько пустых мешков для песка. Лучше набить их, если хочешь использовать.
 
 ent-CMBarricadeSandbag = баррикада из мешков с песком
-  .desc = Импровизированная баррикада, сделанная из песка с земли. 
+  .desc = Импровизированная баррикада, сделанная из песка с земли.
 
-ent-CMSandbagEmpty50 = пустые мешки с песком
+ent-CMSandbagEmpty50 = пустые мешки для песка
 
-ent-CMSandbagEmpty25 = пустые мешки с песком
+ent-CMSandbagEmpty25 = пустые мешки для песка
 
-ent-CMSandbagEmpty10 = пустые мешки с песком
+ent-CMSandbagEmpty10 = пустые мешки для песка
 
-ent-CMSandbagFull50 = пустые мешки с песком
+ent-CMSandbagFull50 = мешки с песком
 
-ent-CMSandbagFull25 = пустые мешки с песком
+ent-CMSandbagFull25 = мешки с песком
 
-ent-CMSandbagFull5 = пустые мешки с песком
+ent-CMSandbagFull5 = мешки с песком
 
 ent-RMCBarricadeSandbagSoro = баррикада из мешков с песком
-  .desc = Импровизированная баррикада, сделанная из песка с земли. 
+  .desc = Импровизированная баррикада, сделанная из песка с земли.
 
