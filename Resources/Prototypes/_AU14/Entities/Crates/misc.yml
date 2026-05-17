@@ -71,7 +71,7 @@
   - type: StorageFill
     contents:
     - id: RMCWeaponLauncherDisposableFolded
-      amount: 4d
+      amount: 4
 
 - type: entity
   parent: RMCCrateWeapons
