@@ -1,2 +1,2 @@
-ent-AU14GlovesCBRNUPP-name = Перчатки МОПП СПН
-ent-AU14GlovesCBRNUPP-desc = Часть костюма МОПП СПН.
+ent-AU14GlovesCBRNUPP = перчатки ОЗК СПН
+    .desc = Часть костюма ОЗК СПН.

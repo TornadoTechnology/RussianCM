@@ -1,18 +1,23 @@
-ent-AU14PacketGrenadeHighExplosiveUPP-name = упаковка осколочных гранат Type 6
-ent-AU14PacketGrenadeHighExplosiveUPP-desc = Содержит шесть осколочных гранат Type 6. Обращаться с осторожностью.
-ent-AU14PacketGrenadeHighExplosiveUPPFilled-name = упаковка осколочных гранат Type 6
-ent-AU14PacketGrenadeHighExplosiveUPPFilled-desc = Содержит шесть осколочных гранат Type 6. Обращаться с осторожностью.
-ent-AU14BoxHEDPUPP-name = ящик осколочных гранат Type 6
-ent-AU14BoxHEDPUPP-desc = Герметичный ящик, содержащий 12 осколочных гранат Type 6. Перед извлечением из ящика убедитесь, что чеки на месте.
-ent-AU14PacketGrenadeSmokeUPP-name = упаковка дымовых гранат RDG-17
-ent-AU14PacketGrenadeSmokeUPP-desc = Содержит шесть дымовых гранат RDG-17.
-ent-AU14PacketGrenadeSmokeUPPFilled-name = упаковка дымовых гранат RDG-17
-ent-AU14PacketGrenadeSmokeUPPFilled-desc = Содержит шесть дымовых гранат RDG-17.
-ent-AU14BoxSmokeUPP-name = ящик дымовых гранат RDG-17
-ent-AU14BoxSmokeUPP-desc = Герметичный ящик, содержащий 12 дымовых гранат RDG-17. Перед извлечением из ящика убедитесь, что чеки на месте.
-ent-AU14PacketGrenadeIncendiaryUPP-name = упаковка зажигательных гранат Type 8
-ent-AU14PacketGrenadeIncendiaryUPP-desc = Содержит три гранаты с белым фосфором Type 8.
-ent-AU14PacketGrenadeIncendiaryUPPFilled-name = упаковка зажигательных гранат Type 8
-ent-AU14PacketGrenadeIncendiaryUPPFilled-desc = Содержит три гранаты с белым фосфором Type 8.
-ent-AU14BoxHIDPUPP-name = ящик гранат с белым фосфором Type 8
-ent-AU14BoxHIDPUPP-desc = Герметичный ящик, содержащий 12 гранат с белым фосфором Type 8. Перед извлечением из ящика убедитесь, что чеки на месте.
+ent-AU14PacketGrenadeHighExplosiveUPP = упаковка осколочных гранат Тип 6
+    .desc = Содержит шесть осколочных гранат Тип 6. Обращайтесь с осторожностью.
+ent-AU14PacketGrenadeHighExplosiveUPPFilled = { ent-AU14PacketGrenadeHighExplosiveUPP }
+    .desc = { ent-AU14PacketGrenadeHighExplosiveUPP.desc }
+
+ent-AU14BoxHEDPUPP = ящик осколочных гранат Тип 6
+    .desc = Герметичный ящик, содержащий 12 осколочных гранат Тип 6. Перед извлечением из ящика убедитесь, что чеки на месте.
+
+ent-AU14PacketGrenadeSmokeUPP = упаковка дымовых гранат РГД-17
+    .desc = Содержит шесть дымовых гранат РГД-17.
+ent-AU14PacketGrenadeSmokeUPPFilled = { ent-AU14PacketGrenadeSmokeUPP }
+    .desc = { ent-AU14PacketGrenadeSmokeUPP.desc }
+
+ent-AU14BoxSmokeUPP = ящик дымовых гранат РГД-17
+    .desc = Герметичный ящик, содержащий 12 дымовых гранат РГД-17. Перед извлечением из ящика убедитесь, что чеки на месте.
+
+ent-AU14PacketGrenadeIncendiaryUPP = упаковка зажигательных гранат Тип 8
+    .desc = Содержит три гранаты с белым фосфором Тип 8.
+ent-AU14PacketGrenadeIncendiaryUPPFilled = { ent-AU14PacketGrenadeIncendiaryUPP }
+    .desc = { ent-AU14PacketGrenadeIncendiaryUPP.desc }
+
+ent-AU14BoxHIDPUPP = ящик гранат с белым фосфором Тип 8
+    .desc = Герметичный ящик, содержащий 12 гранат с белым фосфором Тип 8. Перед извлечением из ящика убедитесь, что чеки на месте.

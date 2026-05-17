@@ -1,6 +1,8 @@
-ent-AU14EncryptionKeyMob-name = ключ шифрования мафии
-ent-AU14EncryptionKeyMob-desc = Ключ шифрования, используемый для связи по каналу Семьи.
-ent-AU14HeadsetMob-name = гарнитура мафии
-ent-AU14HeadsetMob-desc = Обычная колониальная гарнитура с пользовательским каналом.
-ent-AU14HeadsetWorkingJoe-name = гарнитура Рабочего Джо
-ent-AU14HeadsetWorkingJoe-desc = Обычная гарнитура, используемая Рабочими Джо.
+ent-AU14EncryptionKeyMob = ключ шифрования мафии
+    .desc = Ключ шифрования, используемый для связи по каналу семьи.
+
+ent-AU14HeadsetMob = гарнитура мафии
+    .desc = Обычная колониальная гарнитура с пользовательским каналом.
+
+ent-AU14HeadsetWorkingJoe = гарнитура Рабочего Джо
+    .desc = Обычная гарнитура, используемая Рабочими Джо.

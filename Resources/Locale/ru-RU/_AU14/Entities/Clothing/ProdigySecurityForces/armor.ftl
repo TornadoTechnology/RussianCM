@@ -1,6 +1,8 @@
-ent-CMUArmorProdigyFlakVest-name = бронежилет с разгрузкой
-ent-CMUArmorProdigyFlakVest-desc = Лёгкий бронежилет.
-ent-CMUArmorProdigyFlakVestAlt-name = бронежилет с поясом
-ent-CMUArmorProdigyFlakVestAlt-desc = Лёгкий бронежилет.
-ent-CMUArmorProdigyFlakVestMedical-name = медицинский бронежилет
-ent-CMUArmorProdigyFlakVestMedical-desc = Лёгкий бронежилет.
+ent-CMUArmorProdigyFlakVest = бронежилет с разгрузкой
+    .desc = Лёгкий бронежилет.
+
+ent-CMUArmorProdigyFlakVestAlt = бронежилет с поясом
+    .desc = Лёгкий бронежилет.
+
+ent-CMUArmorProdigyFlakVestMedical = медицинский бронежилет
+    .desc = Лёгкий бронежилет.

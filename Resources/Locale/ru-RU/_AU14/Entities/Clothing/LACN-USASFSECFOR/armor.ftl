@@ -1,18 +1,26 @@
-ent-AU14LACNArmorStandard-name = Броня LACN BL-1
-ent-AU14LACNArmorStandard-desc = Комплект баллистической брони, используемый десантными силами LACN.
-ent-AU14LACNArmorStandardPadless-name = Броня LACN BL-1 без наплечников и поножей
-ent-AU14LACNArmorStandardPadless-desc = Комплект баллистической брони, используемый десантными силами LACN. На этом экземпляре отсутствуют поножи и наплечники.
-ent-AU14LACNArmorSL-name = Броня LACN BL-2
-ent-AU14LACNArmorSL-desc = Комплект баллистической брони, используемый унтер-офицерами и офицерами десантных сил LACN.
-ent-AU14LACNCommandoArmorStandard-name = Броня LACN BL-4L
-ent-AU14LACNCommandoArmorStandard-desc = Комплект баллистической брони, используемый морскими коммандос LACN.
-ent-AU14CLFFlakVest-name = Бронежилет КОФ
-ent-AU14CLFFlakVest-desc = Импортный бронежилет от вашего зарубежного поставщика из СПН. Ты понятия не имеешь о его происхождении.
-ent-AU14LACNCommandoArmorScout-name = Разведывательная броня LACN BL-4L
-ent-AU14LACNCommandoArmorScout-desc = Комплект баллистической брони, используемый разведчиками морских коммандос LACN.
-ent-AU14LACNCommandoArmorPointman-name = Броня наконечника LACN BL-4L
-ent-AU14LACNCommandoArmorPointman-desc = Комплект баллистической брони, используемый наконечниками морских коммандос LACN.
-ent-AU14USASFSECFORChestrig-name = Нагрудная разгрузка сил безопасности USASF
-ent-AU14USASFSECFORChestrig-desc = Внешняя нагрудная разгрузка, используемая силами безопасности USASF.
-ent-AU14LACNICPS2-name = Лётная броня LACN ICPS-2
-ent-AU14LACNICPS2-desc = Комплект баллистической брони, используемый лётным составом LACN.
+ent-AU14LACNArmorStandard = броня ЛАКФ BL-1
+    .desc = Комплект баллистической брони, используемый десантными силами ЛАКФ.
+
+ent-AU14LACNArmorStandardPadless = броня ЛАКФ BL-1 без наплечников и наколенников
+    .desc = Комплект баллистической брони, используемый десантными силами ЛАКФ. На этом экземпляре отсутствуют наколенники и наплечники.
+
+ent-AU14LACNArmorSL = броня ЛАКФ BL-2
+    .desc = Комплект баллистической брони, используемый унтер-офицерами и офицерами десантных сил ЛАКФ.
+
+ent-AU14LACNCommandoArmorStandard = броня ЛАКФ BL-4L
+    .desc = Комплект баллистической брони, используемый морскими коммандос ЛАКФ.
+
+ent-AU14CLFFlakVest = бронежилет КОФ
+    .desc = Импортный бронежилет от зарубежного поставщика из СПН. Ты понятия не имеешь о его происхождении.
+
+ent-AU14LACNCommandoArmorScout = разведывательная броня ЛАКФ BL-4L
+    .desc = Комплект баллистической брони, используемый разведчиками морских коммандос ЛАКФ.
+
+ent-AU14LACNCommandoArmorPointman = броня наконечника ЛАКФ BL-4L
+    .desc = Комплект баллистической брони, используемый наконечниками морских коммандос ЛАКФ.
+
+ent-AU14USASFSECFORChestrig = нагрудная разгрузка сил безопасности АКССША
+    .desc = Внешняя нагрудная разгрузка, используемая силами безопасности АКССША.
+
+ent-AU14LACNICPS2 = лётная броня ЛАКФ ICPS-2
+    .desc = Комплект баллистической брони, используемый лётным составом ЛАКФ.

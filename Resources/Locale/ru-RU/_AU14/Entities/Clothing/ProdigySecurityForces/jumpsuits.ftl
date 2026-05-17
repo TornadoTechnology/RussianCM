@@ -1,2 +1,2 @@
-ent-AU14ProdigyFatigues-name = полевая форма Prodigy
-ent-AU14ProdigyFatigues-desc = Стандартная полевая форма сил безопасности Prodigy.
+ent-AU14ProdigyFatigues = полевая форма Prodigy
+    .desc = Стандартная полевая форма сил безопасности Prodigy.
