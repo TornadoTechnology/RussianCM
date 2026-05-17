@@ -261,7 +261,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: RMCIweaponLauncherDisposableFolded
+    - id: RMCWeaponLauncherDisposableFolded
       amount: 2
 
 - type: entity
