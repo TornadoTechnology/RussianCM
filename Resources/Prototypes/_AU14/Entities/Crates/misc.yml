@@ -320,7 +320,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: RMCMagazineRiflessG45
+    - id: RMCMagazineRifleSSG45
       amount: 4
 
 - type: entity
