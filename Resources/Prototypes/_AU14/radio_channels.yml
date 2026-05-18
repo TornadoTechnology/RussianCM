@@ -2,7 +2,7 @@
 - type: radioChannel #UNMC High Command, for events and such, basically CentComm channel
   id: mob
   name: chat-radio-mob
-  keycode: "l" #z in cm13
+  keycode: "р" #z in cm13
   frequency: 1431
   color: "#318779"
   longRange: true
@@ -12,7 +12,7 @@
 - type: radioChannel
   id: colonyalert
   name: chat-radio-alert
-  keycode: "2" #z in cm13
+  keycode: "ъ" #z in cm13
   frequency: 1431
   color: "#318779"
   longRange: true
@@ -20,7 +20,7 @@
 - type: radioChannel
   id: opfor
   name: chat-radio-opfor
-  keycode: "s"
+  keycode: "1"
   frequency: 1601
   color: "#bb91d8"
   longRange: true
@@ -30,7 +30,7 @@
 - type: radioChannel
   id: opforcommand
   name: chat-radio-opforcommand
-  keycode: "e" #z in cm13
+  keycode: "2"
   frequency: 1479
   color: "#5b96d4"
   longRange: true
@@ -40,7 +40,7 @@
 - type: radioChannel
   id: opforjtac
   name: chat-radio-opforjtac
-  keycode: "d" #z in cm13
+  keycode: "3"
   frequency: 1474
   color: "#ad3b98"
   longRange: true
@@ -50,7 +50,7 @@
 - type: radioChannel
   id: OpforIntel
   name: chat-radio-opforintel
-  keycode: "k"
+  keycode: "4"
   frequency: 1602
   color: "#e4860c"
   longRange: true
@@ -60,7 +60,7 @@
 - type: radioChannel
   id: OpforBravo
   name: chat-radio-opforbravo
-  keycode: "t"
+  keycode: "5"
   frequency: 1603
   color: "#c6c1a8"
   longRange: true
@@ -70,7 +70,7 @@
 - type: radioChannel
   id: OpforCharlie
   name: chat-radio-opforcharlie
-  keycode: "u"
+  keycode: "6"
   frequency: 1604
   color: "#bb44bd"
   longRange: true
@@ -80,7 +80,7 @@
 - type: radioChannel
   id: GovforCommand
   name: chat-radio-marine-command
-  keycode: "v" #v in cm13
+  keycode: "к" #v in cm13
   frequency: 2592
   color: "#5b96d4"
   longRange: true
@@ -90,7 +90,7 @@
 - type: radioChannel
   id: GovforJTAC
   name: chat-radio-marine-jtac
-  keycode: "j" #j in CM13
+  keycode: "т" #j in CM13
   frequency: 2598
   color: "#ad3b98"
   longRange: true
@@ -100,7 +100,7 @@
 - type: radioChannel
   id: GovforIntel
   name: chat-radio-govforintel
-  keycode: "y"
+  keycode: "й"
   frequency: 1605
   color: "#e4860c"
   longRange: true
@@ -110,7 +110,7 @@
 - type: radioChannel
   id: GovforAlpha
   name: chat-radio-marine-alpha
-  keycode: "a" #a in cm13
+  keycode: "а" #a in cm13
   frequency: 2502
   color: "#F0433E"
   longRange: true
@@ -120,7 +120,7 @@
 - type: radioChannel
   id: GovforBravo
   name: chat-radio-govforbravo
-  keycode: "b"
+  keycode: "б"
   frequency: 1606
   color: "#c7b646"
   longRange: true
@@ -130,7 +130,7 @@
 - type: radioChannel
   id: GovforCharlie
   name: chat-radio-govforcharlie
-  keycode: "c"
+  keycode: "ч"
   frequency: 1607
   color: "#9D3EF0"
   longRange: true
@@ -140,9 +140,9 @@
 - type: radioChannel
   id: CLF
   name: chat-radio-clf
-  keycode: "6"
+  keycode: "в"
   frequency: 1886
-  color: "#059705" #more closely matches the green on the flag
+  color: "#059705"
   longRange: true
   tower: true
   faction: "clf"
@@ -159,7 +159,7 @@
 - type: radioChannel
   id: UASOF
   name: chat-radio-uasof
-  keycode: "5"
+  keycode: "8"
   frequency: 1553
   color: "#2e4f68"
   longRange: true
@@ -175,7 +175,7 @@
 - type: radioChannel
   id: TWESOF
   name: chat-radio-twe
-  keycode: "q"
+  keycode: "9"
   frequency: 1557
   color: "#701ba7"
   longRange: true
@@ -183,7 +183,7 @@
 - type: radioChannel
   id: ICSCSOF
   name: chat-radio-icsc
-  keycode: "g"
+  keycode: "0"
   frequency: 1558
   color: "#0b93b9"
   longRange: true
@@ -191,7 +191,7 @@
 - type: radioChannel
   id: VAI
   name: chat-radio-vai
-  keycode: "z"
+  keycode: "с"
   frequency: 1559
   color: "#e3580e"
   longRange: true
