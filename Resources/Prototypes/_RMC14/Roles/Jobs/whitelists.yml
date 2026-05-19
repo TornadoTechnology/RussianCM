@@ -1,5 +1,4 @@
 - type: job
-  abstract: true
   parent: CMJobBase
   id: RMCWhitelistEasy
   name: rmc-job-name-whitelist-easy
@@ -10,7 +9,6 @@
   hasIcon: false
 
 - type: job
-  abstract: true
   parent: CMJobBase
   id: RMCWhitelistMedium
   name: rmc-job-name-whitelist-medium
@@ -21,7 +19,6 @@
   hasIcon: false
 
 - type: job
-  abstract: true
   parent: CMJobBase
   id: RMCWhitelistHard
   name: rmc-job-name-whitelist-hard
