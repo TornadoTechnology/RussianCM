@@ -1,8 +1,6 @@
 - type: job
   parent: RMCJobSyntheticColony
   id: RMCSyntheticColonyHybrisaDetective
-  whitelisted: true
-  whitelistParent: RMCWhitelistMedium
   startingGear: RMCGearSyntheticColonistHybrisaDetective
   spawnMenuRoleName: Detective Synth (Hybrisa Survivor)
   special:

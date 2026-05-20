@@ -12,7 +12,7 @@
   requireAdminNotify: false
   joinNotifyCrew: false
   whitelisted: true
-  whitelistParent: RMCWhitelistHard
+  whitelistParent: AU14JobGeneralWhitelist
   supervisors: au14-job-supervisors-orbital
   accessGroups:
   - Colonist

@@ -25,7 +25,6 @@
   marineAuthorityLevel: 15
   supervisors: cm-job-supervisors-marine-high-command
   whitelisted: true
-  whitelistParent: RMCWhitelistHard
   accessGroups:
   - ShipMasterAccess
   roleWeight: 0.25

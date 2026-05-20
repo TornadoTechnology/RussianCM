@@ -1,8 +1,6 @@
 ﻿- type: job
   parent: CMJobBase
   id: CMExecutiveOfficer
-  whitelisted: true
-  whitelistParent: RMCWhitelistHard
   name: cm-job-name-executive-officer
   description: cm-job-description-executive-officer
   playTimeTracker: CMJobExecutiveOfficer

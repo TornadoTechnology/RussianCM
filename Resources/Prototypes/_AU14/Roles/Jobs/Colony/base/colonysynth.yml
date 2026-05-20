@@ -24,7 +24,7 @@
   joinNotifyCrew: false
   supervisors: au14-job-supervisors-colonycivilian
   whitelisted: true
-  whitelistParent: RMCWhitelistMedium
+  whitelistParent: AU14JobGeneralWhitelist
   accessGroups:
   - Colonist
   - auadmin

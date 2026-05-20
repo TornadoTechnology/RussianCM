@@ -1,8 +1,6 @@
 ﻿- type: job
   parent: CMJobBase
   id: CMProvostAdvisor
-  whitelisted: true
-  whitelistParent: RMCWhitelistHard
   name: rmc-job-name-corp-provost-advisor
   description: rmc-ghost-role-information-provost-description
   playTimeTracker: CMJobProvostAdvisor

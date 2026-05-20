@@ -28,7 +28,6 @@
   joinNotifyCrew: false
   supervisors: au14-job-supervisors-opfor
   whitelisted: true
-  whitelistParent: RMCWhitelistMedium
   accessGroups:
   - AU14OpforCommand
   roleWeight: 0.25

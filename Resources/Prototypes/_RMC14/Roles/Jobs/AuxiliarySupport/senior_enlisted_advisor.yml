@@ -42,7 +42,6 @@
   marineAuthorityLevel: 5
   supervisors: rmc-job-supervisors-commander
   whitelisted: true
-  whitelistParent: RMCWhitelistHard
   accessGroups:
   - MarineMain
   roleWeight: 0.25
