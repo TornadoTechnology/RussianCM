@@ -32,7 +32,7 @@
 - type: radioChannel
   id: radioGovforCommand
   name: chat-radio-govforcommand
-  keycode: "к"
+  keycode: "ш"
   frequency: 2592
   color: "#5b96d4"
   longRange: true
@@ -133,7 +133,7 @@
 - type: radioChannel
   id: radioOpforMILP
   name: chat-radio-opformp
-  keycode: "l"
+  keycode: "7"
   frequency: 1477
   color: "#DD0055"
   longRange: true
@@ -161,7 +161,7 @@
 - type: radioChannel
   id: radioWEYU
   name: chat-radio-WEYU
-  keycode: "w"
+  keycode: "ю"
   frequency: 1231
   color: "#fe9b24"
   longRange: true
@@ -170,7 +170,7 @@
 - type: radioChannel
   id: radioCMB
   name: chat-radio-CMB
-  keycode: "c"
+  keycode: "к"
   frequency: 1220
   color: "#1b748c"
   longRange: true
@@ -198,7 +198,7 @@
 - type: radioChannel
   id: radioAI
   name: chat-radio-ai
-  keycode: "$"
+  keycode: "и"
   frequency: 7676
   color: "#d39d22"
   longRange: true
@@ -242,7 +242,7 @@
 - type: radioChannel
   id: UPPSOF
   name: chat-radio-uppsof
-  keycode: "7"
+  keycode: "u"
   frequency: 1533
   color: "#e4860c"
   longRange: true
@@ -260,7 +260,7 @@
 - type: radioChannel
   id: PART
   name: chat-radio-part
-  keycode: "p"
+  keycode: "ж"
   frequency: 5571
   color: "#92969A"
   longRange: true
