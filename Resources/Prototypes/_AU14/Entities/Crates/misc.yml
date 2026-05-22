@@ -286,7 +286,7 @@
   - type: StorageFill
     contents:
     - id: RMCWeaponPistolPK7
-      amount: 1
+      amount: 2
     - id: RMCMagazinePistolPK7
       amount: 4
 
