@@ -68,13 +68,13 @@
         crate: AU14CratePK7Ammo
     - name: We-Yu Experiments
       entries:
-      - cost: 2000
+      - cost: 4500
         crate: AU14CrateSecureWeYuMindBreaker
-      - cost: 2000
+      - cost: 4500
         crate: AU14CrateSecureWeYuMMI
-      - cost: 3000
+      - cost: 5000
         crate: AU14CrateSecureWeYuDrug
-      - cost: 7500
+      - cost: 9000
         crate: AU14CrateSecureWeYuXenoEggs
     - name: We-Yu Armor & Additions
       entries:

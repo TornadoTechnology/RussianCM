@@ -326,7 +326,9 @@
         crate: CMVendorSeeds
       - cost: 530
         crate: CMVendorNutri
-      - cost: 1000
+      - cost: 3750
         crate: AU14CrateMedicalVendor
-      - cost: 1000
+      - cost: 3700
         crate: AU14CrateMedicalBloodVendor
+      - cost: 1650
+        crate: AU14CrateAutolathe
