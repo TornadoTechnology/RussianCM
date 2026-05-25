@@ -2,13 +2,13 @@
   abstract: true
   parent: CMTileBase
   id: RMCFloorStrataYellowBase
-  name: tiles-cm-default-yellow
-  suffix: Sorokyne
+  name: tile-rmcfloorstratayellowbase-name
+  suffix: tile-rmcfloorstratayellowbase-suffix
 
 - type: tile
   parent: RMCFloorStrataYellowBase
   id: RMCFloorStrataYellow
-  name: yellow metal tile
+  name: tile-rmcfloorstratayellow-name
   sprite: /Textures/_RMC14/Tiles/strata/yellow1.png
 
 - type: tile

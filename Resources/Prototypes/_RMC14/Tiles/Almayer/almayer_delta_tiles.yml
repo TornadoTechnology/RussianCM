@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelDeltaBase
-  name: tiles-cm-default-delta
+  name: tile-cmfloorsteeldeltabase-name
 
 - type: tile
   parent: CMFloorSteelDeltaBase

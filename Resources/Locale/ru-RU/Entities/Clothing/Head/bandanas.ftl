@@ -18,5 +18,26 @@ ent-ClothingHeadBandMerc-name = бандана наемника
 
 ent-ClothingHeadBandBrown-name = коричневая бандана
 
-ent-ClothingHeadBandBase-name = lathe-category-clothing
+ent-ClothingHeadBandBase-name = Одежда
 
+ent-ClothingHeadBandBase = item
+
+ent-ClothingHeadBandBlack = черная бандана
+
+ent-ClothingHeadBandBlue = синяя бандана
+
+ent-ClothingHeadBandBotany = ботаническая бандана
+
+ent-ClothingHeadBandBrown = коричневая бандана
+
+ent-ClothingHeadBandGold = золотая бандана
+
+ent-ClothingHeadBandGreen = зеленая бандана
+
+ent-ClothingHeadBandGrey = серая бандана
+
+ent-ClothingHeadBandMerc = бандана наемника
+
+ent-ClothingHeadBandRed = красная бандана
+
+ent-ClothingHeadBandSkull = череп бандана

@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14USArmySynthBase
-  name: rmc-job-name-forecon-synth
-  description: au14-job-description-usarmy
+  name: job-au14usarmysynthbase-name
+  description: job-au14usarmysynthbase-desc
   playTimeTracker: AU14JobUSArmySynth
   basePlaytimeTracker: true
   hidden: true
@@ -10,8 +10,8 @@
 - type: job
   parent: AU14USArmySynthBase
   id: AU14JobUSArmySynthArmored
-  name: rmc-job-name-forecon-synth
-  description: au14-job-description-usarmy
+  name: job-au14jobusarmysyntharmored-name
+  description: job-au14jobusarmysyntharmored-desc
   ranks:
     USArmy_ChiefWarrantOfficer5:
     - !type:RoleTimeRequirement
@@ -30,12 +30,12 @@
       role: AU14JobUSArmySynth
       time: 18000 #5 hours
     USArmy_WarrantOfficer1: []
-  spawnMenuRoleName: US Army Synthetic (AU14, 3rd Party)
+  spawnMenuRoleName: job-au14jobusarmysyntharmored-spawnmenurolename
   startingGear: AU14GearUSArmySynthArmored
   greeting: au14-usarmy-armored-greeting
   icon: "AU14JobIconUSArmySynth"
   joinNotifyCrew: false
-  supervisors: rmc-job-name-forecon-commander
+  supervisors: job-au14jobusarmysyntharmored-supervisors
   accessGroups:
   - AU14GovforCommand
   special:
@@ -94,7 +94,7 @@
 - type: entity
   parent: AU14BaseMobSpeciesOrganicUSArmy
   id: AU14JobUSArmySynthArmored
-  name: US Army Synthetic (ERT)
+  name: ent-AU14JobUSArmySynthArmored
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial

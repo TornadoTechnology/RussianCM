@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelShivaPurpleBase
-  name: tiles-cm-default-purple
+  name: tile-cmfloorsteelshivapurplebase-name
 
 - type: tile
   parent: CMFloorSteelShivaPurpleBase

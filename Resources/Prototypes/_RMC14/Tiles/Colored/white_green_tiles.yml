@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelPlanetWhiteGreenBase
-  name: tiles-cm-default-green
+  name: tile-cmfloorsteelplanetwhitegreenbase-name
 
 - type: tile
   parent: CMFloorSteelPlanetWhiteGreenBase

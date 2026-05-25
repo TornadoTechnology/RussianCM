@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14FORECONMarksmanDetachment
-  name: rmc-job-name-forecon-marksman
-  description: rmc-job-description-forecon-detachment
+  name: job-au14foreconmarksmandetachment-name
+  description: job-au14foreconmarksmandetachment-desc
   playTimeTracker: AU14FORECONMarksmanDetachment
   ranks:
     RMCRankChiefWarrantOfficer:
@@ -10,12 +10,12 @@
       role: AU14FORECONMarksmanDetachment
       time: 18000 #5 hours
     RMCRankWarrantOfficer: []
-  spawnMenuRoleName: FORECON Marksman (AU14, Detachment)
+  spawnMenuRoleName: job-au14foreconmarksmandetachment-spawnmenurolename
   startingGear: AU14GearFORECONMarksmanDetachment
   greeting: au14-forecon-detachment-greeting
   icon: "CMJobIconWeaponsSpecialist"
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-platco
+  supervisors: job-au14foreconmarksmandetachment-supervisors
   accessGroups:
   - AU14GovforSquad
   special:
@@ -35,9 +35,9 @@
 
 - type: entity
   parent: AU14BaseMobSpeciesOrganicFORECON
-  suffix: AU14, FORECON, Detachment
+  suffix: ent-AU14JobFORECONMarksmanDetachment-suffix
   id: AU14JobFORECONMarksmanDetachment
-  name: FORECON Marksman (Detachment)
+  name: ent-AU14JobFORECONMarksmanDetachment
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial

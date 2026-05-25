@@ -1,0 +1,2 @@
+department-au14departmentgovernmentforces-desc = Правительственные силы
+department-au14departmentgovernmentforces-name = Правительственные силы

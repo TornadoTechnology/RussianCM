@@ -1,16 +1,15 @@
 - type: job
   parent: RMCSurvivorShivasEngineer
   id: RMCSurvivorShivasPanicRoomEngineer
-  name: rmc-job-name-survivor-shivas-engineer
+  name: job-rmcsurvivorshivaspanicroomengineer-name
   playTimeTracker: CMJobSurvivorEngineer
   startingGear: RMCGearSurvivorShivasEngineer
-  spawnMenuRoleName: Engineer (Shivas Panic Room Special Survivor)
+  spawnMenuRoleName: job-rmcsurvivorshivaspanicroomengineer-spawnmenurolename
   greeting: rmc-job-greeting-shivas-panic-room-engineer
-
 - type: entity
   parent: RMCSpawnPointSurvivorShivasEngineer
   id: RMCSpawnPointSurvivorShivasPanicRoomEngineer
-  name: special survivor shivas panic room engineer spawn point
+  name: ent-RMCSpawnPointSurvivorShivasPanicRoomEngineer
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorShivasPanicRoomEngineer

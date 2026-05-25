@@ -1,17 +1,17 @@
 - type: job
   parent: RMCSurvivorPMCBase
   id: RMCSurvivorSolarisPMCEngineer
-  name: rmc-job-name-pmc-engineer
+  name: job-rmcsurvivorsolarispmcengineer-name
   ranks:
     RMCRankWeYaCorporateTechnician: []
-  supervisors: cm-job-supervisors-we-ya
+  supervisors: job-rmcsurvivorsolarispmcengineer-supervisors
   accessGroups:
   - ColonistPMC
   startingGear: RMCGearSurvivorPMCEngineer
   icon: RMCJobIconPMCEngineer
   greeting: rmc-job-greeting-solaris-pmc-engineer
   playTimeTracker: RMCJobSurvivorMilitary
-  spawnMenuRoleName: Survivor — PMC Engineer (Solaris Ridge special survivor)
+  spawnMenuRoleName: job-rmcsurvivorsolarispmcengineer-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -66,7 +66,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorCrashlandingOfficesEngineer
-  name: special survivor crashlanding offices pmc engineer spawn point
+  name: ent-RMCSpawnPointSurvivorCrashlandingOfficesEngineer
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorSolarisPMCEngineer

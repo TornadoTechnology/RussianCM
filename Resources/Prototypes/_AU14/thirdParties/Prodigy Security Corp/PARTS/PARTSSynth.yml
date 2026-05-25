@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14JobPARTSPartySynthetic
-  name: au14-job-name-part-synth
-  description: au14-prodigyparty-description
+  name: job-au14jobpartspartysynthetic-name
+  description: job-au14jobpartspartysynthetic-desc
   playTimeTracker: AU14JobPARTSPartySynthetic
   ranks:
     AU14RankPrDSynth5:
@@ -22,12 +22,12 @@
       role: AU14JobPARTSPartySynthetic
       time: 18000 #5 hours
     AU14RankPrDSynth1: []
-  spawnMenuRoleName: Prodigy Support Synthetic (AU14, 3rd Party)
+  spawnMenuRoleName: job-au14jobpartspartysynthetic-spawnmenurolename
   startingGear: AU14GearPARTSPartySynth
   greeting: au14-prodigyparty-greeting
   icon: "RMCJobIconReconSynthetic"
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-psc
+  supervisors: job-au14jobpartspartysynthetic-supervisors
   accessGroups:
   - auwy
   - AUPrisonStaff
@@ -86,7 +86,7 @@
 - type: entity
   parent: AU14BaseMobSpeciesSyntheticProdigy
   id: AU14JobPARTSPartySynthetic
-  name: Prodigy Synthetic (AU14, 3rd Party)
+  name: ent-AU14JobPARTSPartySynthetic
   components:
   - type: Threat
   - type: GhostTakeoverAvailable

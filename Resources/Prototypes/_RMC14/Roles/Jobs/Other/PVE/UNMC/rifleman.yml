@@ -4,8 +4,8 @@
   playTimeTracker: CMJobPVERifleman
   ranks:
     RMCRankPrivate: []
-  spawnMenuRoleName: Sun Rider Rifleman (PVE)
-  supervisors: cm-job-supervisors-secserg
+  spawnMenuRoleName: job-cmpverifleman-spawnmenurolename
+  supervisors: job-cmpverifleman-supervisors
   startingGear: RMCGearPVERifleman
   special:
   - !type:AddComponentSpecial
@@ -43,7 +43,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointPVERifleman
-  name: PVE rifleman spawn point
+  name: ent-RMCSpawnPointPVERifleman
   components:
   - type: SpawnPoint
     job_id: CMPVERifleman

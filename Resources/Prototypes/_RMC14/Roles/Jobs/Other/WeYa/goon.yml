@@ -2,8 +2,8 @@
 - type: job
   parent: CMJobBase
   id: RMCWeYaGoon
-  name: rmc-job-name-pmc-bodyguard
-  description: rmc-ghost-role-information-pmc-description
+  name: job-rmcweyagoon-name
+  description: job-rmcweyagoon-desc
   playTimeTracker: RMCJobWeYaGoon
   ranks:
     RMCRankWeYaOperator: []
@@ -13,7 +13,7 @@
   accessGroups:
   - Colony
   - RMCWeYa
-  spawnMenuRoleName: WEYA PMC Goon
+  spawnMenuRoleName: job-rmcweyagoon-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -74,8 +74,8 @@
 - type: entity
   parent: MarkerBase
   id: RMCRandomHumanoidWeYaGoon
-  name: weya corporate ghost role goon
-  suffix: Spawner, Player
+  name: ent-RMCRandomHumanoidWeYaGoon
+  suffix: ent-RMCRandomHumanoidWeYaGoon-suffix
   components:
   - type: Sprite
     layers:

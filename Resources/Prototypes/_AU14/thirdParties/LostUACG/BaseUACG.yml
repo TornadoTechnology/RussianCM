@@ -1,7 +1,7 @@
 - type: entity
   parent: CMMobHuman
   id: AU14BaseMobSpeciesOrganicUACG
-  suffix: AU14, UA, UACG
+  suffix: ent-AU14BaseMobSpeciesOrganicUACG-suffix
   abstract: true
   components:
   - type: GhostTakeoverAvailable
@@ -76,7 +76,7 @@
 - type: entity
   parent: CMBeltMarine
   id: AU14UACGBeltFilledM20a
-  suffix: UACG, Filled, M20a
+  suffix: ent-AU14UACGBeltFilledM20a-suffix
   components:
   - type: StorageFill
     contents:
@@ -86,7 +86,7 @@
 - type: entity
   parent: RMCPouchMagazine
   id: AU14UACGPouchFilledM20a
-  suffix: UACG, Filled, M20a
+  suffix: ent-AU14UACGPouchFilledM20a-suffix
   components:
   - type: StorageFill
     contents:
@@ -96,7 +96,7 @@
 - type: entity
   parent: RMCPouchGeneralLarge
   id: AU14UACGCigPouch
-  suffix: UACG, Filled, Cigarettes
+  suffix: ent-AU14UACGCigPouch-suffix
   components:
   - type: StorageFill
     contents:
@@ -110,7 +110,7 @@
 - type: entity
   parent: RMCSatchelMarineLogisticsBig
   id: AU14UACGPatrolRucksack
-  suffix: UACG, Backpack
+  suffix: ent-AU14UACGPatrolRucksack-suffix
   components:
   - type: StorageFill
     contents:
@@ -128,7 +128,7 @@
 - type: entity
   parent: RMCSatchelMarineLogisticsBig
   id: AU14UACGPatrolRucksackAmmobearer
-  suffix: UACG, Backpack, Ammobearer
+  suffix: ent-AU14UACGPatrolRucksackAmmobearer-suffix
   components:
   - type: StorageFill
     contents:
@@ -140,7 +140,7 @@
 - type: entity
   parent: RMCBeltUtilityGeneral
   id: AU14UACGAmmoBearerBelt
-  suffix: UACG, Belt
+  suffix: ent-AU14UACGAmmoBearerBelt-suffix
   components:
   - type: StorageFill
     contents:

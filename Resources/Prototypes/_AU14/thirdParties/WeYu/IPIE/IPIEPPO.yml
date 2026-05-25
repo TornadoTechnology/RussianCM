@@ -1,17 +1,17 @@
 - type: job
   parent: CMJobBase
   id: AU14JobIPIEPPO
-  name: IPIE Personal Protection Officer
-  description: au14-ipie-ppo-description
+  name: job-au14jobipieppo-name
+  description: job-au14jobipieppo-desc
   playTimeTracker: AU14JobIPIEPPO
   ranks:
     AU14RankWYSecurityOfficer: []
-  spawnMenuRoleName: WY IPIE Personal Protection Officer (3rd party)
+  spawnMenuRoleName: job-au14jobipieppo-spawnmenurolename
   startingGear: AU14GearIPIEPPO
   greeting: au14-ipie-greeting
   icon: "CMJobIconLiaison"
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-wy
+  supervisors: job-au14jobipieppo-supervisors
   accessGroups:
   - Colonist
   - auadmin
@@ -52,7 +52,7 @@
 - type: entity
   parent: AU14BaseMobSpeciesOrganicWeYu
   id: AU14JobIPIEPPO
-  name: WY IPIE Personal Protection Officer (3rd party)
+  name: ent-AU14JobIPIEPPO
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial

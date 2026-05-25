@@ -2,11 +2,11 @@
   abstract: true
   parent: CMJobBase
   id: AU14JobPlatOpBaseAbstract
-  name: au14-job-name-govforplatop
-  description: au14-job-description-govforplatop
+  name: job-au14jobplatopbaseabstract-name
+  description: job-au14jobplatopbaseabstract-desc
   icon: "AU14JobIconOpsOfc"
-  spawnMenuRoleName: Junior Officer (GOVFOR)
-  supervisors: au14-job-supervisors-govfor
+  spawnMenuRoleName: job-au14jobplatopbaseabstract-spawnmenurolename
+  supervisors: job-au14jobplatopbaseabstract-supervisors
   startingGear: AU14GearGOVFORPlatOp
   dummyStartingGear: AU14GearGOVFORPlatOpDummy
   playTimeTracker: AU14JobGOVFORPlatOp
@@ -88,7 +88,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: AU14SpawnPointGOVFORPlatOp
-  name: Spawn Point GOVFOR Platoon Operations Officer
+  name: ent-AU14SpawnPointGOVFORPlatOp
   components:
   - type: SpawnPoint
     job_id: AU14JobGOVFORPlatOp

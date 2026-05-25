@@ -1,0 +1,1 @@
+guideentry-command-name = Command

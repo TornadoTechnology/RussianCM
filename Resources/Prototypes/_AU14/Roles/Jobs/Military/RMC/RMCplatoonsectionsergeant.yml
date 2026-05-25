@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobSectionSergeantBase
   id: AU14JobGOVFORSectionSergeantRMC
-  name: au14-job-name-govforSSGRMC
-  description: au14-job-description-govforSSG
+  name: job-au14jobgovforsectionsergeantrmc-name
+  description: job-au14jobgovforsectionsergeantrmc-desc
   setPreference: true
   requirements:
   - !type:AgeRequirement
@@ -24,14 +24,14 @@
   dummyStartingGear: AU14GearGOVFORPlatoonSergantDummy
   icon: "AU14JobIconPlatoonSarge"
   requireAdminNotify: true
-  spawnMenuRoleName: Platoon Sergeant (TWE RMC)
+  spawnMenuRoleName: job-au14jobgovforsectionsergeantrmc-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforsectionsergeantrmc-supervisors
   accessGroups:
   - AU14GovforCommand
   overwatchSortPriority: -6
   overwatchShowName: true
-  overwatchRoleName: Platoon Sergeant
+  overwatchRoleName: job-au14jobgovforsectionsergeantrmc-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial

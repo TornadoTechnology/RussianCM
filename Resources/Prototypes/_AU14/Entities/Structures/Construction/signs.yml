@@ -1,9 +1,9 @@
 - type: entity
   parent: BaseStructure
   id: DecorSignMinesProp
-  name: mines
-  suffix: Prop
-  description: danger of mines and death...
+  name: ent-DecorSignMinesProp
+  suffix: ent-DecorSignMinesProp-suffix
+  description: ent-DecorSignMinesProp-desc
   components:
   - type: Sprite
     sprite: _AU14/N14content/world.rsi
@@ -15,13 +15,13 @@
 # ├──[ CONSTRUCTION MENU ]───────────────────────────────────────────┤
 - type: construction
   parent: RMC
-  name: Mines Sign
+  name: construction-au14constructionsignmines-name
   id: AU14ConstructionSignMines
   graph: AU14SignGraph
   startNode: start
   targetNode: sign_mines
   category: construction-category-cm-furniture
-  description: A sign warning about mines.
+  description: construction-au14constructionsignmines-desc
   objectType: Structure
   canBuildInImpassable: false
   conditions:
@@ -29,13 +29,13 @@
 
 - type: construction
   parent: RMC
-  name: Traffic Director (Empty)
+  name: construction-au14constructionsignempty-name
   id: AU14ConstructionSignEmpty
   graph: AU14SignGraph
   startNode: start
   targetNode: sign_empty
   category: construction-category-cm-furniture
-  description: A blank traffic director sign.
+  description: construction-au14constructionsignempty-desc
   objectType: Structure
   canBuildInImpassable: false
   conditions:
@@ -43,39 +43,34 @@
 
 - type: construction
   parent: AU14ConstructionSignEmpty
-  name: Traffic Director (Evac Center)
+  name: construction-au14constructionsignevaccenter-name
   id: AU14ConstructionSignEvacCenter
   targetNode: sign_evaccenter
-  description: Directs to the evacuation center.
-
+  description: construction-au14constructionsignevaccenter-desc
 - type: construction
   parent: AU14ConstructionSignEmpty
-  name: Traffic Director (Checkpoint Ahead)
+  name: construction-au14constructionsigncheckpoint-name
   id: AU14ConstructionSignCheckpoint
   targetNode: sign_cpahead
-  description: Warns of a checkpoint ahead.
-
+  description: construction-au14constructionsigncheckpoint-desc
 - type: construction
   parent: AU14ConstructionSignEmpty
-  name: Traffic Director (Follow Army Orders)
+  name: construction-au14constructionsignfolloworders-name
   id: AU14ConstructionSignFollowOrders
   targetNode: sign_armyorders
-  description: Reminder to follow army orders.
-
+  description: construction-au14constructionsignfolloworders-desc
 - type: construction
   parent: AU14ConstructionSignEmpty
-  name: Traffic Director (Tune Freq)
+  name: construction-au14constructionsigntunefreq-name
   id: AU14ConstructionSignTuneFreq
   targetNode: sign_freqtune
-  description: Tells people to tune to 91.7 AM.
-
+  description: construction-au14constructionsigntunefreq-desc
 - type: construction
   parent: AU14ConstructionSignEmpty
-  name: Traffic Director (Slow Down)
+  name: construction-au14constructionsignslowdown-name
   id: AU14ConstructionSignSlowDown
   targetNode: sign_slowdown
-  description: Instructs to slow down.
-
+  description: construction-au14constructionsignslowdown-desc
 # ├──[ CONSTRUCTION GRAPH ]──────────────────────────────────────────┤
 - type: constructionGraph
   parent: RMC

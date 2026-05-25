@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobSquadRiflemanBase
   id: AU14JobGOVFORSquadRifleman
-  name: au14-job-name-govforsquadrifleman
-  description: au14-job-description-govforsquadrifleman
+  name: job-au14jobgovforsquadrifleman-name
+  description: job-au14jobgovforsquadrifleman-desc
   setPreference: true
   playTimeTracker: AU14JobGOVFORSquadRifleman
   requirements:
@@ -28,9 +28,9 @@
   dummyStartingGear: AU14GearGOVFORRiflemanDummy
   icon: "AU14JobIconGovRifleman"
   requireAdminNotify: false
-  spawnMenuRoleName: Rifleman (GOVFOR)
+  spawnMenuRoleName: job-au14jobgovforsquadrifleman-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforsquadrifleman-supervisors
   accessGroups:
   - AU14GovforSquad
   hasIcon: false
@@ -64,7 +64,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: AU14SpawnPointGOVFORSquadRifleman
-  name: Spawn Point GOVFOR Squad Rifleman
+  name: ent-AU14SpawnPointGOVFORSquadRifleman
   components:
   - type: SpawnPoint
     job_id: AU14JobGOVFORSquadRifleman

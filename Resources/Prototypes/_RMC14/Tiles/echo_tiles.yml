@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelechoBase
-  name: tiles-cm-echo
+  name: tile-cmfloorsteelechobase-name
   itemDrop: CMTileItemSteel # TODO RMC14
 
 - type: tile

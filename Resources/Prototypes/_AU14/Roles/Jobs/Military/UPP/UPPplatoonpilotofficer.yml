@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobDSPilotBase
   id: AU14JobGOVFORDSPilotUPP
-  name: Dropship Pilot
-  description: au14-job-description-govfordspilot
+  name: job-au14jobgovfordspilotupp-name
+  description: job-au14jobgovfordspilotupp-desc
   setPreference: false
   canBeAntag: false
   ranks:
@@ -23,9 +23,9 @@
   dummyStartingGear: AU14GearGOVFORDSPilotDummy
   icon: "AU14JobIconPilotOfficer"
   requireAdminNotify: false
-  spawnMenuRoleName: Pilot Officer (UPP)
+  spawnMenuRoleName: job-au14jobgovfordspilotupp-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovfordspilotupp-supervisors
   accessGroups:
   - AU14GovforPilot
   - AU14GovforCorpsman

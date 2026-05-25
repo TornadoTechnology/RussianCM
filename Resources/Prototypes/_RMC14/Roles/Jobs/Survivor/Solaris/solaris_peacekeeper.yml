@@ -1,11 +1,11 @@
 - type: job # Basically same as NV version, should that one just be moved to multi-map?
   parent: CMSurvivorSecurity
   id: CMSurvivorSolarisILRCPeacekeeper
-  name: cm-job-name-survivor-un-peacekeeper
-  description: cm-job-description-survivor
+  name: job-cmsurvivorsolarisilrcpeacekeeper-name
+  description: job-cmsurvivorsolarisilrcpeacekeeper-desc
   playTimeTracker: CMJobSurvivorSecurity
   startingGear: RMCGearSurvivorSolarisILRCPeacekeeper
-  spawnMenuRoleName: ILRC peacekeeper (Solaris Survivor)
+  spawnMenuRoleName: job-cmsurvivorsolarisilrcpeacekeeper-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -33,7 +33,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorSolarisILRCPeacekeeper
-  name: survivor solaris ILRC peacekeeper spawn point
+  name: ent-RMCSpawnPointSurvivorSolarisILRCPeacekeeper
   components:
   - type: SpawnPoint
     job_id: CMSurvivorSolarisILRCPeacekeeper

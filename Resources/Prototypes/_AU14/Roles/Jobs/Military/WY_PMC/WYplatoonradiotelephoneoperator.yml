@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobRadioTelephoneOperatorBase
   id: AU14JobGOVFORRadioTelephoneOperatorWYPMC
-  name: PMC Communications Specialist
-  description: au14-job-description-radiotelephoneoperator
+  name: job-au14jobgovforradiotelephoneoperatorwypmc-name
+  description: job-au14jobgovforradiotelephoneoperatorwypmc-desc
   setPreference: false
   ranks:
     AU14RankWeYuSeniorOperator:
@@ -14,13 +14,13 @@
   dummyStartingGear: AU14GearGOVFORRadioTelephoneOperatorDummy
   icon: "AU14JobIconRTO"
   requireAdminNotify: false
-  spawnMenuRoleName: Fireteam Leader (WYPMC)
+  spawnMenuRoleName: job-au14jobgovforradiotelephoneoperatorwypmc-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforradiotelephoneoperatorwypmc-supervisors
   accessGroups:
   - AU14GovforFTL
   overwatchSortPriority: -5
-  overwatchRoleName: au14-job-name-radiotelephoneoperator-alt
+  overwatchRoleName: job-au14jobgovforradiotelephoneoperatorwypmc-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial

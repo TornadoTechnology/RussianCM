@@ -1,18 +1,18 @@
 - type: job
   parent: CMJobBase
   id: CMRoyalMarinesScoutSniperPVE
-  name: rmc-job-name-rcm-pve-scout-sniper
-  description: rmc-ghost-role-information-rcm-description
+  name: job-cmroyalmarinesscoutsniperpve-name
+  description: job-cmroyalmarinesscoutsniperpve-desc
   playTimeTracker: RMCJobRoyalScoutSniperPVE
   ranks:
     RMCRankTSELanceCorporal: [ ]
   startingGear: RMCGearRoyalScoutSniperPVE
   icon: "RMCJobIconRoyalScoutSniperPVE"
   joinNotifyCrew: false
-  supervisors: cm-job-supervisors-royal-tl
+  supervisors: job-cmroyalmarinesscoutsniperpve-supervisors
   accessGroups:
   - WeaponSpec
-  spawnMenuRoleName: RCM Scout Sniper (PVE)
+  spawnMenuRoleName: job-cmroyalmarinesscoutsniperpve-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -55,7 +55,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: CMSpawnPointRCMPVEScoutSniper
-  name: RCM scout sniper spawn point
+  name: ent-CMSpawnPointRCMPVEScoutSniper
   components:
   - type: SpawnPoint
     job_id: CMRoyalMarinesScoutSniperPVE

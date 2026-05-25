@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobAuxTechBase
   id: AU14JobGOVFORAuxTech
-  name: au14-job-name-govforAuxTech
-  description: au14-job-description-govforAuxTech
+  name: job-au14jobgovforauxtech-name
+  description: job-au14jobgovforauxtech-desc
   setPreference: true
   requirements:
   - !type:TraitsRequirement
@@ -32,15 +32,15 @@
   dummyStartingGear: AU14GearGOVFORAuxTechDummy
   icon: "AU14JobIconRTO"
   requireAdminNotify: false
-  spawnMenuRoleName: Auxiliary Technician (GOVFOR)
+  spawnMenuRoleName: job-au14jobgovforauxtech-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforauxtech-supervisors
   accessGroups:
   - AU14GovforAuxTech
   - CMCargoTech
   overwatchSortPriority: -6
   overwatchShowName: true
-  overwatchRoleName: au14-job-name-govforAuxTech
+  overwatchRoleName: job-au14jobgovforauxtech-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial
@@ -90,7 +90,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: AU14SpawnPointGOVFORAuxTech
-  name: Spawn Point GOVFOR Auxiliary Technician
+  name: ent-AU14SpawnPointGOVFORAuxTech
   components:
   - type: SpawnPoint
     job_id: AU14JobGOVFORAuxTech

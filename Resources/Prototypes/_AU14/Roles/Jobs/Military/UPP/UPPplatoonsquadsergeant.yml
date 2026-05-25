@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobSquadSergeantBase
   id: AU14JobGOVFORSquadSergeantUPP
-  spawnMenuRoleName: Squad Sergeant (UPP)
-  overwatchRoleName: Squad Sergeant
+  spawnMenuRoleName: job-au14jobgovforsquadsergeantupp-spawnmenurolename
+  overwatchRoleName: job-au14jobgovforsquadsergeantupp-overwatchrolename
   ranks:
     UPP_Plutonowy: []
   special:

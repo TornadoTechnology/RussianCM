@@ -1,9 +1,9 @@
-﻿
+
 - type: job
   parent: CMJobBase
   id: CMCommandingOfficer
-  name: cm-job-name-commanding-officer
-  description: cm-job-description-commanding-officer
+  name: job-cmcommandingofficer-name
+  description: job-cmcommandingofficer-desc
   setPreference: false
   playTimeTracker: CMJobCommandingOfficer
   requirements: []
@@ -23,7 +23,7 @@
   requireAdminNotify: true
   joinNotifyCrew: true
   marineAuthorityLevel: 15
-  supervisors: cm-job-supervisors-marine-high-command
+  supervisors: job-cmcommandingofficer-supervisors
   whitelisted: true
   whitelistParent: RMCWhitelistHard
   accessGroups:
@@ -83,7 +83,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: CMSpawnPointCommandingOfficer
-  name: commanding officer spawn point
+  name: ent-CMSpawnPointCommandingOfficer
   components:
   - type: SpawnPoint
     job_id: CMCommandingOfficer
@@ -97,8 +97,8 @@
 - type: entity
   parent: CMGuidebookRole
   id: RMCGuidebookRoleCO
-  name: The Commanding Officer
-  description: The Commanding Officer.
+  name: ent-RMCGuidebookRoleCO
+  description: ent-RMCGuidebookRoleCO-desc
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

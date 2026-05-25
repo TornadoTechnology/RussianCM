@@ -1,14 +1,14 @@
 - type: job
   parent: RMCPMCWhiteout
   id: RMCPMCWhiteoutGunner
-  name: rmc-job-name-pmc-whiteout-gunner
+  name: job-rmcpmcwhiteoutgunner-name
   startingGear: RMCPMCWhiteoutGunner
-  spawnMenuRoleName: WEYA Whiteout Combat Gunner Unit
+  spawnMenuRoleName: job-rmcpmcwhiteoutgunner-spawnmenurolename
 
 - type: entity
   parent: RMCRandomHumanoidPMCWhiteout
   id: RMCRandomHumanoidPMCWhiteoutGunner
-  name: DEATHSQUAD pmc ghost role whiteout gunner
+  name: ent-RMCRandomHumanoidPMCWhiteoutGunner
   components:
   - type: RandomHumanoidSpawner
     settings: RMCPMCWhiteoutGunner

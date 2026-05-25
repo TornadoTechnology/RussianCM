@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14FORECONSupportTechBase
-  name: rmc-job-name-forecon-support-tech
-  description: au14-job-description-govforadvisor
+  name: job-au14foreconsupporttechbase-name
+  description: job-au14foreconsupporttechbase-desc
   playTimeTracker: AU14JobFORECONSupportTech
   basePlaytimeTracker: true
   hidden: true
@@ -10,8 +10,8 @@
 - type: job
   parent: AU14FORECONSupportTechBase
   id: AU14FORECONSupportTech
-  name: rmc-job-name-forecon-support-tech
-  description: rmc-job-description-forecon
+  name: job-au14foreconsupporttech-name
+  description: job-au14foreconsupporttech-desc
   ranks:
     RMCRankStaffSergeant:
     - !type:RoleTimeRequirement
@@ -22,12 +22,12 @@
       role: AU14JobFORECONSupportTech
       time: 18000 #5 hours
     RMCRankCorporal: []
-  spawnMenuRoleName: FORECON Support Tech (AU14, surv)
+  spawnMenuRoleName: job-au14foreconsupporttech-spawnmenurolename
   startingGear: AU14GearFORECONSupportTech
   greeting: au14-forecon-greeting
   icon: "CMJobIconEmpty"
   joinNotifyCrew: false
-  supervisors: cm-job-name-squad-leader
+  supervisors: job-au14foreconsupporttech-supervisors
   accessGroups:
   - AU14GovforSquad
   special:
@@ -69,7 +69,7 @@
 - type: entity
   parent: AU14BaseMobSpeciesOrganicFORECON
   id: AU14JobFORECONSupportTech
-  name: FORECON Support Tech (Surv)
+  name: ent-AU14JobFORECONSupportTech
   components:
   - type: Threat
   - type: GhostTakeoverAvailable

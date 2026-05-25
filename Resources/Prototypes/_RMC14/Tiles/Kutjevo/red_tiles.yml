@@ -2,8 +2,8 @@
   abstract: true
   parent: CMTileBase
   id: RMCFloorKutjevoRedBase
-  name: tiles-cm-default-red
-  suffix: kutjevo
+  name: tile-rmcfloorkutjevoredbase-name
+  suffix: tile-rmcfloorkutjevoredbase-suffix
 
 - type: tile
   parent: RMCFloorKutjevoRedBase

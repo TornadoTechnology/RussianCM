@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelPrisonDarkPurpleBase
-  name: tiles-cm-default-purple
+  name: tile-cmfloorsteelprisondarkpurplebase-name
 
 - type: tile
   parent: CMFloorSteelPrisonDarkPurpleBase

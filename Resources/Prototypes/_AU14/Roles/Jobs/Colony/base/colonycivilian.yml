@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14JobCivilianColonist
-  name: au14-job-name-civiliancolonist
-  description: au14-job-description-civiliancolonist
+  name: job-au14jobciviliancolonist-name
+  description: job-au14jobciviliancolonist-desc
   setPreference: true
   playTimeTracker: AU14JobCivilianColonist
   ranks:
@@ -12,8 +12,8 @@
   hasIcon: false
   requireAdminNotify: false
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-colonycivilian
-  spawnMenuRoleName: Colonist (CMU)
+  supervisors: job-au14jobciviliancolonist-supervisors
+  spawnMenuRoleName: job-au14jobciviliancolonist-spawnmenurolename
   accessGroups:
   - Colonist
   roleWeight: 0.25
@@ -42,7 +42,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: AU14SpawnPointCivilianColonist
-  name: Spawn Point Civilian Colonist
+  name: ent-AU14SpawnPointCivilianColonist
   components:
   - type: SpawnPoint
     job_id: AU14JobCivilianColonist

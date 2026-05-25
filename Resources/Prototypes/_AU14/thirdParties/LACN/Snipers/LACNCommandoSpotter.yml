@@ -1,21 +1,21 @@
 - type: job
   parent: CMJobBase
   id: AU14LACNCommandoSpotter
-  name: au14-job-name-forecon-spotter
+  name: job-au14lacncommandospotter-name
   playTimeTracker: AU14LACNCommandoSpotter
-  description: au14-lacncommando-description
+  description: job-au14lacncommandospotter-desc
   ranks:
     RMCRankChiefWarrantOfficer:
     - !type:RoleTimeRequirement
       role: AU14LACNCommandoSpotter
       time: 18000 #5 hours
     RMCRankWarrantOfficer: []
-  spawnMenuRoleName: LACN Commando Spotter (AU14, 3rd Party)
+  spawnMenuRoleName: job-au14lacncommandospotter-spawnmenurolename
   startingGear: AU14GearLACNCommandoSniperTeamSpotter
   greeting: au14-lacncommando-description
   icon: "CMJobIconEmpty"
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-loner
+  supervisors: job-au14lacncommandospotter-supervisors
   special:
   - !type:AddComponentSpecial
     components:
@@ -40,9 +40,9 @@
 
 - type: entity
   parent: AU14BaseMobSpeciesOrganicLACN
-  suffix: AU14, LACN
+  suffix: ent-AU14JobCommandoSniperTeamSpotter-suffix
   id: AU14JobCommandoSniperTeamSpotter
-  name: LACN Commando Spotter (3rd party)
+  name: ent-AU14JobCommandoSniperTeamSpotter
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial

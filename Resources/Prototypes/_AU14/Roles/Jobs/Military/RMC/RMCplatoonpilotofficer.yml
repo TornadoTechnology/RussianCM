@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobDSPilotBase
   id: AU14JobGOVFORDSPilotRMC
-  name: RMC Pilot Officer
-  description: au14-job-description-govfordspilot
+  name: job-au14jobgovfordspilotrmc-name
+  description: job-au14jobgovfordspilotrmc-desc
   setPreference: true
   canBeAntag: false
   requirements:
@@ -33,9 +33,9 @@
   dummyStartingGear: AU14GearGOVFORDSPilotDummy
   icon: "AU14JobIconPilotOfficer"
   requireAdminNotify: true
-  spawnMenuRoleName: Pilot Officer (TWE RMC)
+  spawnMenuRoleName: job-au14jobgovfordspilotrmc-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovfordspilotrmc-supervisors
   accessGroups:
   - AU14GovforPilot
   - AU14GovforCorpsman

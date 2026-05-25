@@ -2,8 +2,8 @@
   abstract: true
   parent: CMTileBase
   id: CMFloorStrataWhiteBase
-  name: tiles-cm-default-white
-  suffix: Sorokyne
+  name: tile-cmfloorstratawhitebase-name
+  suffix: tile-cmfloorstratawhitebase-suffix
 
 - type: tile
   parent: CMFloorStrataWhiteBase

@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobSquadAutomaticRiflemanBase
   id: AU14JobGOVFORSquadAutomaticRiflemanUPP
-  name: Machine Gunner
-  description: au14-job-description-govforsquadautomaticrifleman
+  name: job-au14jobgovforsquadautomaticriflemanupp-name
+  description: job-au14jobgovforsquadautomaticriflemanupp-desc
   setPreference: false
   ranks:
     UPP_Gefreiter:
@@ -14,14 +14,14 @@
   dummyStartingGear: AU14GearGOVFORAutoRiflemanDummy
   icon: "AU14JobIconAFN"
   requireAdminNotify: false
-  spawnMenuRoleName: Automatic Rifleman (UPP)
+  spawnMenuRoleName: job-au14jobgovforsquadautomaticriflemanupp-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforsquadautomaticriflemanupp-supervisors
   accessGroups:
   - AU14GovforGunner
   overwatchSortPriority: -3
   overwatchShowName: true
-  overwatchRoleName: au14-job-name-govforsquadautomaticrifleman-plural
+  overwatchRoleName: job-au14jobgovforsquadautomaticriflemanupp-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial

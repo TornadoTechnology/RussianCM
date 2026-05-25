@@ -1,0 +1,1 @@
+job-cmxenowarrior-name = Warrior

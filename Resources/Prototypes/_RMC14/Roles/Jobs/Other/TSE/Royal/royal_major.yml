@@ -1,15 +1,15 @@
 - type: job
   parent: CMJobBase
   id: CMRoyalMarinesMajor
-  name: rmc-job-name-rcm-major
-  description: rmc-ghost-role-information-rcm-description
+  name: job-cmroyalmarinesmajor-name
+  description: job-cmroyalmarinesmajor-desc
   playTimeTracker: RMCJobRoyalMajor
   ranks:
     RMCRankTSEMajor: [ ]
   startingGear: RMCGearRoyalMajor
   icon: "RMCJobIconRoyalMajor"
   joinNotifyCrew: false
-  spawnMenuRoleName: RCM Major
+  spawnMenuRoleName: job-cmroyalmarinesmajor-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:

@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14UPPGROMPointman
-  name: au14-job-name-govforspecialist-marksmanRMC
-  description: au14-uppgrom-description
+  name: job-au14uppgrompointman-name
+  description: job-au14uppgrompointman-desc
   playTimeTracker: AU14JobUPPGROMPointman
   ranks:
     UPP_StaffSergeant:
@@ -14,12 +14,12 @@
       role: AU14JobUPPGROMPointman
       time: 18000 #5 hours
     UPP_Plutonowy: []
-  spawnMenuRoleName: UPP GROM Pointman (Survivor)
+  spawnMenuRoleName: job-au14uppgrompointman-spawnmenurolename
   startingGear: AU14GearUPPGROMPointman
   greeting: au14-uppgrom-greeting
   icon: "CMJobIconEmpty"
   joinNotifyCrew: false
-  supervisors: au-14-job-name-uppgrom-squadleader
+  supervisors: job-au14uppgrompointman-supervisors
   accessGroups:
   - AU14GovforCommand
   special:
@@ -42,7 +42,7 @@
 - type: entity
   parent: AU14BaseMobSpeciesOrganicUPPGROM
   id: AU14JobUPPGROMPointman
-  name: UPP GROM Pointman
+  name: ent-AU14JobUPPGROMPointman
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial

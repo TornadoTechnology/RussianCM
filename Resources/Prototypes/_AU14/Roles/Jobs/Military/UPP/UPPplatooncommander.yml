@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobPlatCoBase
   id: AU14JobGOVFORPlatCoUPP
-  name: Platoon Commander
-  spawnMenuRoleName: Platoon Commander (UPP)
+  name: job-au14jobgovforplatcoupp-name
+  spawnMenuRoleName: job-au14jobgovforplatcoupp-spawnmenurolename
   ranks:
     UPP_Captain:
     - !type:RoleTimeRequirement

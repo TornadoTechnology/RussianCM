@@ -1,12 +1,12 @@
 - type: construction
   parent: RMC
-  name: HESCO Barrier
+  name: construction-au14hescobarrier-name
   id: AU14HESCOBarrier
   graph: AU14HESCOGraph
   startNode: start
   targetNode: nodeFilled
   category: construction-category-cm-structures
-  description: A modular, sand-filled defensive barrier used to protect against explosives and small arms fire.
+  description: construction-au14hescobarrier-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

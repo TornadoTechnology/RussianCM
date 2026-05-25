@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: RMCCLFStandardPVE
-  name: rmc-job-name-clf-pve-standard
-  description: rmc-ghost-role-information-clf-pve-description
+  name: job-rmcclfstandardpve-name
+  description: job-rmcclfstandardpve-desc
   playTimeTracker: CMJobCLFStandardPVE
   ranks:
     RMCRankCivilian: []
@@ -12,7 +12,7 @@
   accessGroups:
   - Colony
   - Rifleman
-  spawnMenuRoleName: CLF Standard (PVE)
+  spawnMenuRoleName: job-rmcclfstandardpve-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -46,8 +46,8 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointCLFStandardPVE
-  name: clf standard spawn point
-  suffix: PVE
+  name: ent-RMCSpawnPointCLFStandardPVE
+  suffix: ent-RMCSpawnPointCLFStandardPVE-suffix
   components:
   - type: SpawnPoint
     job_id: RMCCLFStandardPVE

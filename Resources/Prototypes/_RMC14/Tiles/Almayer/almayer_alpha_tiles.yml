@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorSteelAlphaBase
-  name: tiles-cm-default-alpha
+  name: tile-cmfloorsteelalphabase-name
 
 - type: tile
   parent: CMFloorSteelAlphaBase

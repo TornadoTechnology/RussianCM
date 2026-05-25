@@ -1,11 +1,11 @@
 - type: job
   parent: CMSurvivor
   id: RMCSurvivorPMCBase
-  name: rmc-job-name-pmc-standard
-  description: rmc-job-description-survivor
+  name: job-rmcsurvivorpmcbase-name
+  description: job-rmcsurvivorpmcbase-desc
   ranks:
     RMCRankOperator: []
-  supervisors: cm-job-supervisors-we-ya
+  supervisors: job-rmcsurvivorpmcbase-supervisors
   accessGroups:
   - ColonistPMC
   startingGear: RMCGearSurvivorPMCBase
@@ -15,7 +15,7 @@
   joinNotifyCrew: false
   greeting: rmc-job-greeting-solaris-pmc
   playTimeTracker: RMCJobSurvivorMilitary
-  spawnMenuRoleName: Survivor — PMC (Base)
+  spawnMenuRoleName: job-rmcsurvivorpmcbase-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -43,7 +43,7 @@
 
 - type: entity
   id: RMCGearSurvivorPresetPMCGun
-  name: pmc survivor weapons preset
+  name: ent-RMCGearSurvivorPresetPMCGun
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityPreset
@@ -58,5 +58,5 @@
 - type: entity
   parent: [ RMCSurvivorPresetNoGun, RMCGearSurvivorPresetPMCGun ]
   id: RMCGearSurvivorPresetPMCBase
-  name: pmc base survivor preset
+  name: ent-RMCGearSurvivorPresetPMCBase
   categories: [ HideSpawnMenu ]

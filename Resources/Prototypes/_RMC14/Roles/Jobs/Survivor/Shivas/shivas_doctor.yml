@@ -1,10 +1,10 @@
 - type: job
   parent: CMSurvivorDoctor
   id: RMCSurvivorShivasDoctor
-  name: rmc-job-name-survivor-shivas-doctor
+  name: job-rmcsurvivorshivasdoctor-name
   playTimeTracker: CMJobSurvivorDoctor
   startingGear: RMCGearSurvivorShivasDoctor
-  spawnMenuRoleName: Doctor (Shivas Survivor)
+  spawnMenuRoleName: job-rmcsurvivorshivasdoctor-spawnmenurolename
   camouflageStartingGear: null
 
 - type: startingGear
@@ -21,7 +21,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorShivasDoctor
-  name: survivor shivas doctor spawn point
+  name: ent-RMCSpawnPointSurvivorShivasDoctor
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorShivasDoctor

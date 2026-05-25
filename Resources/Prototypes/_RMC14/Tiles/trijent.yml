@@ -4,9 +4,9 @@
   abstract: true
   parent: CMPlanetBase
   id: RMCPlanetRedDesertBase
-  name: tiles-rmc-red-desert
+  name: tile-rmcplanetreddesertbase-name
   sprite: /Textures/_RMC14/Tiles/planet/red_desert/desert1.png
-  suffix: Trijent
+  suffix: tile-rmcplanetreddesertbase-suffix
 
 # Desert
 

@@ -1,14 +1,14 @@
 - type: job
   parent: AU14JobSquadSergeantBase
   id: AU14JobGOVFORSquadSergeantWYPMC
-  name: PMC Squad Leader
+  name: job-au14jobgovforsquadsergeantwypmc-name
   ranks:
     AU14RankWeYuEnforcerSenior:
     - !type:RoleTimeRequirement
       role: AU14JobGOVFORSquadSergeant
       time: 108000 # 30 hours
     AU14RankWeYuEnforcer: []
-  spawnMenuRoleName: Squad Sergeant (WYPMC)
+  spawnMenuRoleName: job-au14jobgovforsquadsergeantwypmc-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:

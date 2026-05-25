@@ -1,13 +1,13 @@
 # Airlocks
 - type: construction
   parent: RMC
-  name: airlock
+  name: construction-cmairlock-name
   id: CMAirlock
   graph: CMAirlock
   startNode: start
   targetNode: airlock
   category: construction-category-cm-structures
-  description: It opens, it closes, and maybe crushes you.
+  description: construction-cmairlock-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -16,13 +16,13 @@
 
 - type: construction
   parent: RMC
-  name: glass airlock
+  name: construction-cmairlockglass-name
   id: CMAirlockGlass
   graph: CMAirlock
   startNode: start
   targetNode: glassAirlock
   category: construction-category-cm-structures
-  description: It opens, it closes, and maybe crushes you.
+  description: construction-cmairlockglass-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -32,13 +32,13 @@
   # Directional Windows
 - type: construction
   parent: RMC
-  name: directional window
+  name: construction-rmcwindowdirectional-name
   id: RMCWindowDirectional
   graph: RMCWindowDirectional
   startNode: start
   targetNode: windowDirectional
   category: construction-category-cm-structures
-  description: A glass window. It looks thin and flimsy.
+  description: construction-rmcwindowdirectional-desc
   canBuildInImpassable: true
   conditions:
   - !type:EmptyOrWindowValidInTile
@@ -48,13 +48,13 @@
 
 - type: construction
   parent: RMC
-  name: directional reinforced window
+  name: construction-rmcwindowreinforceddirectional-name
   id: RMCWindowReinforcedDirectional
   graph: RMCWindowDirectional
   startNode: start
   targetNode: windowReinforcedDirectional
   category: construction-category-cm-structures
-  description: A glass window reinforced with bracing rods. It looks rather strong.
+  description: construction-rmcwindowreinforceddirectional-desc
   canBuildInImpassable: true
   conditions:
   - !type:EmptyOrWindowValidInTile
@@ -65,13 +65,13 @@
 # Windoors
 - type: construction
   parent: RMC
-  name: windoor
+  name: construction-cmwindoor-name
   id: CMWindoor
   graph: CMWindoor
   startNode: start
   targetNode: windoor
   category: construction-category-cm-structures
-  description: It opens, it closes, and you can see through it!
+  description: construction-cmwindoor-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -80,13 +80,13 @@
 
 - type: construction
   parent: RMC
-  name: secure windoor
+  name: construction-cmwindoorsecure-name
   id: CMWindoorSecure
   graph: CMWindoor
   startNode: start
   targetNode: windoorSecure
   category: construction-category-cm-structures
-  description: It opens, it closes, and you can see through it! This one looks tough.
+  description: construction-cmwindoorsecure-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -96,13 +96,13 @@
   # Barricades
 - type: construction
   parent: RMC
-  name: Metal Barricade
+  name: construction-cmbarricademetal-name
   id: CMBarricadeMetal
   graph: BarricadeMetalGraph
   startNode: start
   targetNode: nodeMetal
   category: construction-category-cm-structures
-  description: A military-grade metal barricade.
+  description: construction-cmbarricademetal-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -113,13 +113,13 @@
 
 - type: construction
   parent: RMC
-  name: Plasteel Barricade
+  name: construction-rmcbarricadeplasteel-name
   id: RMCBarricadePlasteel
   graph: BarricadePlasteelGraph
   startNode: start
   targetNode: nodePlasteel
   category: construction-category-cm-structures
-  description: A military-grade hardened plasteel barricade.
+  description: construction-rmcbarricadeplasteel-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -130,13 +130,13 @@
 
 - type: construction
   parent: RMC
-  name: Wooden Barricade
+  name: construction-rmcbarricadewood-name
   id: RMCBarricadeWood
   graph: BarricadeWoodGraph
   startNode: start
   targetNode: nodeWood
   category: construction-category-cm-structures
-  description: A makeshift wooden barricade.
+  description: construction-rmcbarricadewood-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -147,13 +147,13 @@
 
 - type: construction
   parent: RMC
-  name: Folding Metal Barricade
+  name: construction-cmbarricademetaldoor-name
   id: CMBarricadeMetalDoor
   graph: BarricadeMetalDoorGraph
   startNode: start
   targetNode: nodeBarricadeMetalDoor
   category: construction-category-cm-structures
-  description: A barricade that can be folded or opened to allow marines through.
+  description: construction-cmbarricademetaldoor-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -164,13 +164,13 @@
 
 - type: construction
   parent: RMC
-  name: Folding Plasteel Barricade
+  name: construction-cmbarricadeplasteeldoor-name
   id: CMBarricadePlasteelDoor
   graph: BarricadePlasteelDoorGraph
   startNode: start
   targetNode: nodeBarricadePlasteelDoor
   category: construction-category-cm-structures
-  description: A barricade that can be folded or opened to allow marines through. Made from hardened plasteel.
+  description: construction-cmbarricadeplasteeldoor-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -182,13 +182,13 @@
 #lighting
 - type: construction
   parent: RMC
-  name: tube light fixture
+  name: construction-rmclighttubefixture-name
   id: RMCLightTubeFixture
   graph: RMCLightFixture
   startNode: start
   targetNode: tubeLight
   category: construction-category-cm-structures
-  description: A wallmounted fixture for tube lights.
+  description: construction-rmclighttubefixture-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -198,13 +198,13 @@
 
 - type: construction
   parent: RMC
-  name: bulb light fixture
+  name: construction-rmclightbulbfixture-name
   id: RMCLightBulbFixture
   graph: RMCLightFixture
   startNode: start
   targetNode: bulbLight
   category: construction-category-cm-structures
-  description: A wallmounted fixture for bulb lights.
+  description: construction-rmclightbulbfixture-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

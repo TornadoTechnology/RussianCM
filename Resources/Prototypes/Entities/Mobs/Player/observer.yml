@@ -2,7 +2,7 @@
   id: Incorporeal
   save: false
   abstract: true
-  description: Mobs without physical bodies
+  description: ent-Incorporeal-desc
   components:
   - type: Sprite
     noRot: true
@@ -37,8 +37,8 @@
   - BaseMob
   id: MobObserverBase
   abstract: true
-  name: observer
-  description: Boo!
+  name: ent-MobObserverBase
+  description: ent-MobObserverBase-desc
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -117,8 +117,8 @@
 - type: entity
   parent: BaseMentalAction
   id: ActionGhostBoo
-  name: Boo!
-  description: Scare your crew members because of boredom!
+  name: ent-ActionGhostBoo
+  description: ent-ActionGhostBoo-desc
   components:
   - type: Action
     icon: Interface/Actions/scream.png
@@ -131,8 +131,8 @@
 - type: entity
   parent: BaseMentalAction
   id: ActionToggleLighting
-  name: Toggle Lighting
-  description: Toggle light rendering to better observe dark areas.
+  name: ent-ActionToggleLighting
+  description: ent-ActionToggleLighting-desc
   components:
   - type: Action
     icon: Interface/VerbIcons/light.svg.192dpi.png
@@ -143,8 +143,8 @@
 - type: entity
   parent: BaseMentalAction
   id: ActionToggleFov
-  name: Toggle FoV
-  description: Toggles field-of-view in order to see what players see.
+  name: ent-ActionToggleFov
+  description: ent-ActionToggleFov-desc
   components:
   - type: Action
     icon: Interface/VerbIcons/vv.svg.192dpi.png
@@ -155,8 +155,8 @@
 - type: entity
   parent: BaseMentalAction
   id: ActionToggleGhosts
-  name: Toggle Ghosts
-  description: Toggle the visibility of other ghosts.
+  name: ent-ActionToggleGhosts
+  description: ent-ActionToggleGhosts-desc
   components:
   - type: Action
     icon: { sprite: Mobs/Ghosts/ghost_human.rsi, state: icon }
@@ -167,8 +167,8 @@
 - type: entity
   parent: BaseMentalAction
   id: ActionToggleGhostHearing
-  name: Toggle Ghost Hearing
-  description: Toggle between hearing all messages and hearing only radio & nearby messages.
+  name: ent-ActionToggleGhostHearing
+  description: ent-ActionToggleGhostHearing-desc
   components:
   - type: Action
     icon:

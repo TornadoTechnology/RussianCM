@@ -1,16 +1,16 @@
 - type: job
   parent: CMJobBase
   id: AU14VAIEngiBase
-  name: au14-job-name-vai-engi
-  description: au14-vai-mercenary-description
+  name: job-au14vaiengibase-name
+  description: job-au14vaiengibase-desc
   ranks:
     VAI_Mercenary: []
   icon: "CMJobIconEmpty"
   playTimeTracker: AU14VAIEngi
-  spawnMenuRoleName: VAI Engineer (Base)
+  spawnMenuRoleName: job-au14vaiengibase-spawnmenurolename
   joinNotifyCrew: false
   hasIcon: false
-  supervisors: au14-job-name-vai-teamleader
+  supervisors: job-au14vaiengibase-supervisors
   special:
   - !type:AddComponentSpecial
     components:

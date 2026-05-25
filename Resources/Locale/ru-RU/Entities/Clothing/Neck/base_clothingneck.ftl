@@ -1,4 +1,7 @@
-ent-ClothingNeckBase-name = lathe-category-clothing
+ent-ClothingNeckBase-name = Одежда
 
-ent-ClothingScarfBase-name = lathe-category-clothing
+ent-ClothingScarfBase-name = Одежда
 
+ent-ClothingNeckBase = item
+
+ent-ClothingScarfBase = item

@@ -1,12 +1,12 @@
 - type: job
   parent: RMCSurvivorParaBase
   id: RMCSurvivorParaPilot
-  name: rmc-job-name-para-pilot
+  name: job-rmcsurvivorparapilot-name
   ranks:
     RMCRankParaCorporal: [ ]
   startingGear: RMCGearParaPilot
   icon: RMCJobIconParaPilot
-  spawnMenuRoleName: Royal Paramarine Fleet Air Arm Pilot (Survivor)
+  spawnMenuRoleName: job-rmcsurvivorparapilot-spawnmenurolename
   special:
     - !type:AddComponentSpecial
       components:
@@ -43,7 +43,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointParaPilot
-  name: paramarine dropship pilot spawn point
+  name: ent-RMCSpawnPointParaPilot
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorParaPilot

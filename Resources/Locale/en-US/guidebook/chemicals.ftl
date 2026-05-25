@@ -1,0 +1,10 @@
+guideentry-biological-name = Biological
+guideentry-botanical-name = Botanical
+guideentry-chemicals-name = Chemicals
+guideentry-elements-name = Elements
+guideentry-foods-name = Foods
+guideentry-narcotics-name = Narcotics
+guideentry-others-name = Others
+guideentry-pyrotechnic-name = Pyrotechnic
+guideentry-special-name = Special
+guideentry-toxins-name = Toxins

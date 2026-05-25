@@ -4,12 +4,26 @@ ent-BaseRailing-desc = Простые перила, предназначенны
 ent-Railing-name = перила
 ent-Railing-desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
 
-ent-RailingCorner-name = construction-recipe-railing-corner
+ent-RailingCorner-name = перила (угол)
 ent-RailingCorner-desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
 
-ent-RailingCornerSmall-name = construction-recipe-railing-corner-small
+ent-RailingCornerSmall-name = перила (угол маленький)
 ent-RailingCornerSmall-desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
 
-ent-RailingRound-name = construction-recipe-railing-round
+ent-RailingRound-name = перила (круглые)
 ent-RailingRound-desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
 
+ent-BaseRailing = перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
+
+ent-Railing = перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
+
+ent-RailingCorner = перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
+
+ent-RailingCornerSmall = перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.
+
+ent-RailingRound = перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов, как ты, от падения.

@@ -1,11 +1,11 @@
 - type: job
   parent: CMSurvivor
   id: CMJobSurvivorSoroMiner
-  name: rmc-job-name-survivor-soro-miner
-  description: cm-job-description-survivor
+  name: job-cmjobsurvivorsorominer-name
+  description: job-cmjobsurvivorsorominer-desc
   playTimeTracker: CMJobSurvivor
   startingGear: RMCGearSurvivorSoroMiner
-  spawnMenuRoleName: Miner (Sorokyne Survivor)
+  spawnMenuRoleName: job-cmjobsurvivorsorominer-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -41,7 +41,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorSoroMiner
-  name: sorokyne miner spawn point
+  name: ent-RMCSpawnPointSurvivorSoroMiner
   components:
   - type: SpawnPoint
     job_id: CMSurvivor

@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobRadioTelephoneOperatorBase
   id: AU14JobGOVFORRadioTelephoneOperatorRMC
-  name: au14-job-name-radiotelephoneoperatorRMC
-  description: au14-job-description-radiotelephoneoperator
+  name: job-au14jobgovforradiotelephoneoperatorrmc-name
+  description: job-au14jobgovforradiotelephoneoperatorrmc-desc
   setPreference: true
   requirements:
   - !type:TraitsRequirement
@@ -24,13 +24,13 @@
   dummyStartingGear: AU14GearGOVFORRadioTelephoneOperatorDummy
   icon: "AU14JobIconRTO"
   requireAdminNotify: false
-  spawnMenuRoleName: Fireteam Leader (TWE RMC)
+  spawnMenuRoleName: job-au14jobgovforradiotelephoneoperatorrmc-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforradiotelephoneoperatorrmc-supervisors
   accessGroups:
   - AU14GovforFTL
   overwatchSortPriority: -5
-  overwatchRoleName: au14-job-name-radiotelephoneoperator-alt
+  overwatchRoleName: job-au14jobgovforradiotelephoneoperatorrmc-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial

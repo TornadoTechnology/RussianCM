@@ -1,17 +1,17 @@
 - type: job
   parent: RMCSurvivorPMCBase
   id: RMCSurvivorSolarisPMCMedic
-  name: rmc-job-name-pmc-medic
+  name: job-rmcsurvivorsolarispmcmedic-name
   ranks:
     RMCRankWeYaMedicalSpecialist: []
-  supervisors: cm-job-supervisors-we-ya
+  supervisors: job-rmcsurvivorsolarispmcmedic-supervisors
   accessGroups:
   - ColonistPMC
   startingGear: RMCGearSurvivorPMCMedic
   icon: RMCJobIconPMCMedic
   greeting: rmc-job-greeting-solaris-pmc-medic
   playTimeTracker: RMCJobSurvivorMilitary
-  spawnMenuRoleName: Survivor — PMC Medic (Solaris Ridge special survivor)
+  spawnMenuRoleName: job-rmcsurvivorsolarispmcmedic-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -67,7 +67,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorCrashlandingOfficesMedic
-  name: special survivor crashlanding offices pmc medic spawn point
+  name: ent-RMCSpawnPointSurvivorCrashlandingOfficesMedic
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorSolarisPMCMedic

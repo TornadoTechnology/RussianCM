@@ -1,13 +1,13 @@
 - type: job
   parent: CMSurvivorFiorinaRiotOfficer
   id: RMCSurvivorFiorinaRiotInProgressCMBRiotControlOfficer
-  name: cm-job-name-survivor-riot-officer
-  description: cm-job-description-survivor
+  name: job-rmcsurvivorfiorinariotinprogresscmbriotcontrolofficer-name
+  description: job-rmcsurvivorfiorinariotinprogresscmbriotcontrolofficer-desc
   playTimeTracker: CMJobSurvivorSecurity
   startingGear: RMCGearSurvivorFiorinaRiotInProgressCMBRiotControlOfficer
   accessGroups:
   - ColonistSec
-  spawnMenuRoleName: CMB Riot Control Officer (Special Survivor)
+  spawnMenuRoleName: job-rmcsurvivorfiorinariotinprogresscmbriotcontrolofficer-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -33,7 +33,6 @@
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: background_cmb
   greeting: rmc-job-greeting-riot-in-progress-CMB-RCO
-
 - type: startingGear
   id: RMCGearSurvivorFiorinaRiotInProgressCMBRiotControlOfficer
   equipment:
@@ -49,7 +48,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointSurvivorFiorinaRiotInProgressUNRiotOfficer
-  name: special survivor fiorina riot in progress cmb riot control officer spawn point
+  name: ent-RMCSpawnPointSurvivorFiorinaRiotInProgressUNRiotOfficer
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorFiorinaRiotInProgressCMBRiotControlOfficer
@@ -60,7 +59,7 @@
 
 - type: entity
   id: RMCSurvivorPresetRiotInProgressCMBRCO
-  name: riot in progress CMB RCO preset
+  name: ent-RMCSurvivorPresetRiotInProgressCMBRCO
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityPreset

@@ -3,12 +3,12 @@
   id: RMCSurvivorParaSupportSynthetic
   whitelisted: true
   whitelistParent: RMCWhitelistMedium
-  name: rmc-job-name-para-synth
+  name: job-rmcsurvivorparasupportsynthetic-name
   ranks:
     RMCRankSyntheticColonist: [ ]
   startingGear: RMCGearParaSupportSynthetic
   icon: RMCJobIconParaSupportSynthetic
-  spawnMenuRoleName: Royal Paramarine Support Synthetic (Survivor)
+  spawnMenuRoleName: job-rmcsurvivorparasupportsynthetic-spawnmenurolename
   special:
     - !type:AddComponentSpecial
       components:
@@ -68,7 +68,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: RMCSpawnPointParaSupportSynthetic
-  name: paramarine support synthetic spawn point
+  name: ent-RMCSpawnPointParaSupportSynthetic
   components:
   - type: SpawnPoint
     job_id: RMCSurvivorParaSupportSynthetic

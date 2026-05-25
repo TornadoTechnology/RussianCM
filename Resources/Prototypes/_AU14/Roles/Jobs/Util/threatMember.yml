@@ -1,12 +1,12 @@
 - type: job
   parent: CMJobXenoBase
   id: AU14JobThreatMember
-  name: au-job-name-threat-member
-  description: au-job-description-threat-member
+  name: job-au14jobthreatmember-name
+  description: job-au14jobthreatmember-desc
   setPreference: true
   playTimeTracker: AUJobThreatMember
   hidden: false
-  supervisors: nobody
+  supervisors: job-au14jobthreatmember-supervisors
   icon: "AU14JobIconThreatMember"
   jobPreviewEntity: RMCPlayerXenoQueenPreview
   accessGroups:

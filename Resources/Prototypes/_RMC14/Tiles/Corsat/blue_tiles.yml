@@ -1,8 +1,8 @@
-﻿- type: tile
+- type: tile
   abstract: true
   parent: CMTileBase
   id: CMFloorCorsatBlueBase
-  name: tiles-cm-default-blue
+  name: tile-cmfloorcorsatbluebase-name
 
 - type: tile
   parent: CMFloorCorsatBlueBase

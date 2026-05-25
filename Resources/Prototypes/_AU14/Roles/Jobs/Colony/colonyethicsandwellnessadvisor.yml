@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: AU14JobCivilianEthicsAndWellnessAdvisor
-  name: au14-job-name-ethicsandwellnessadvisor
-  description: au14-job-description-ethicsandwellnessadvisor
+  name: job-au14jobcivilianethicsandwellnessadvisor-name
+  description: job-au14jobcivilianethicsandwellnessadvisor-desc
   setPreference: true
   playTimeTracker: AU14JobCivilianEthicsAndWellnessAdvisor
   ranks:
@@ -12,7 +12,7 @@
   hasIcon: false
   requireAdminNotify: false
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-colonycivilian
+  supervisors: job-au14jobcivilianethicsandwellnessadvisor-supervisors
   accessGroups:
   - Colonist
   - aumed
@@ -46,7 +46,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: AU14SpawnPointCivilianEthicsAndWellnessAdvisor
-  name: Spawn Point Civilian Ethics And Wellness Advisor
+  name: ent-AU14SpawnPointCivilianEthicsAndWellnessAdvisor
   components:
   - type: SpawnPoint
     job_id: AU14JobCivilianEthicsAndWellnessAdvisor

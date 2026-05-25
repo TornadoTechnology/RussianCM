@@ -1,6 +1,12 @@
-ent-ClothingEyesBase-name = lathe-category-clothing
+ent-ClothingEyesBase-name = Одежда
 
-ent-ClothingHeadEyeBaseFlippable-name = lathe-category-clothing
+ent-ClothingHeadEyeBaseFlippable-name = Одежда
 
-ent-ClothingHeadEyeBaseFlipped-name = lathe-category-clothing
+ent-ClothingHeadEyeBaseFlipped-name = Одежда
 
+ent-ClothingEyesBase = item
+
+ent-ClothingHeadEyeBaseFlippable = item
+
+ent-ClothingHeadEyeBaseFlipped = item
+    .suffix = перевернутый

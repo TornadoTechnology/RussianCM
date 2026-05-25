@@ -2,8 +2,8 @@
   abstract: true
   parent: CMTileBase
   id: RMCFloorKutjevoMiscBase
-  name: tiles-cm-default-misc
-  suffix: kutjevo
+  name: tile-rmcfloorkutjevomiscbase-name
+  suffix: tile-rmcfloorkutjevomiscbase-suffix
   
 # Base floor
   

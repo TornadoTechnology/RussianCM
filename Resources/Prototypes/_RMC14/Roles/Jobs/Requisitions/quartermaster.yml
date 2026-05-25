@@ -1,8 +1,8 @@
 - type: job
   parent: CMJobBase
   id: CMQuartermaster
-  name: cm-job-name-quartermaster
-  description: cm-job-description-quartermaster
+  name: job-cmquartermaster-name
+  description: job-cmquartermaster-desc
   setPreference: false
   playTimeTracker: CMJobQuartermaster
   requirements: []
@@ -18,7 +18,7 @@
   requireAdminNotify: true
   joinNotifyCrew: false
   marineAuthorityLevel: 8
-  supervisors: rmc-job-supervisors-commander
+  supervisors: job-cmquartermaster-supervisors
   accessGroups:
   - QuarterMaster
   roleWeight: 0.25
@@ -72,7 +72,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: CMSpawnPointQuartermaster
-  name: Logistics Officer spawn point
+  name: ent-CMSpawnPointQuartermaster
   components:
   - type: SpawnPoint
     job_id: CMQuartermaster
@@ -86,8 +86,8 @@
 - type: entity
   parent: CMGuidebookRole
   id: RMCGuidebookRoleQM
-  name: The LO
-  description: The Logistics Officer.
+  name: ent-RMCGuidebookRoleQM
+  description: ent-RMCGuidebookRoleQM-desc
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

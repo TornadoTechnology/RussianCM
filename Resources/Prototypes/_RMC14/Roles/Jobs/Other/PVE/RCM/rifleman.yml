@@ -1,16 +1,16 @@
 - type: job
   parent: CMJobBase
   id: CMRoyalMarinesRiflemanPVE
-  name: rmc-job-name-rcm-pve-rifleman
-  description: rmc-ghost-role-information-rcm-description
+  name: job-cmroyalmarinesriflemanpve-name
+  description: job-cmroyalmarinesriflemanpve-desc
   playTimeTracker: RMCJobRoyalRiflemanPVE
   ranks:
     RMCRankTSEMarine: [ ]
   startingGear: RMCGearRoyalRiflemanPVE
   icon: "RMCJobIconRoyalRiflemanPVE"
   joinNotifyCrew: false
-  supervisors: cm-job-supervisors-royal-tl
-  spawnMenuRoleName: RCM Rifleman (PVE)
+  supervisors: job-cmroyalmarinesriflemanpve-supervisors
+  spawnMenuRoleName: job-cmroyalmarinesriflemanpve-spawnmenurolename
   special:
   - !type:AddComponentSpecial
     components:
@@ -51,7 +51,7 @@
 - type: entity
   parent: CMSpawnPointJobBase
   id: CMSpawnPointRCMPVERifleman
-  name: RCM rifleman spawn point
+  name: ent-CMSpawnPointRCMPVERifleman
   components:
   - type: SpawnPoint
     job_id: CMRoyalMarinesRiflemanPVE

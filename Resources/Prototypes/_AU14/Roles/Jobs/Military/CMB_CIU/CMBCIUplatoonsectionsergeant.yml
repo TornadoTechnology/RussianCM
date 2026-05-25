@@ -1,8 +1,8 @@
 - type: job
   parent: AU14JobSectionSergeantBase
   id: AU14JobGOVFORSectionSergeantCMBCIU
-  name: Unit Leader
-  description: au14-job-description-govforSSG
+  name: job-au14jobgovforsectionsergeantcmbciu-name
+  description: job-au14jobgovforsectionsergeantcmbciu-desc
   setPreference: false
   ranks:
     AU14RankCMBChiefDeputy: []
@@ -10,14 +10,14 @@
   dummyStartingGear: AU14GearGOVFORPlatoonSergantDummy
   icon: "AU14JobIconPlatoonSarge"
   requireAdminNotify: true
-  spawnMenuRoleName: Section Sergeant (CMBCIU)
+  spawnMenuRoleName: job-au14jobgovforsectionsergeantcmbciu-spawnmenurolename
   joinNotifyCrew: false
-  supervisors: au14-job-supervisors-govfor
+  supervisors: job-au14jobgovforsectionsergeantcmbciu-supervisors
   accessGroups:
   - AU14GovforCommand
   overwatchSortPriority: -6
   overwatchShowName: true
-  overwatchRoleName: Platoon Sergeant
+  overwatchRoleName: job-au14jobgovforsectionsergeantcmbciu-overwatchrolename
   roleWeight: 0.25
   special:
   - !type:AddComponentSpecial
