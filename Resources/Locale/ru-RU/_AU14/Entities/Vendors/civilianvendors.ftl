@@ -1,16 +1,16 @@
-ent-AU14CivilianClothingVendor = гардероб гражданской одежды
+ent-AU14CivilianClothingVendor = ОбщГардероб
     .desc = Гардероб, содержащий всю одежду, которая может понадобиться гражданскому лицу.
 
-ent-AU14CivilianEngineerVendor = торгомат для инженеров и логистов
+ent-AU14CivilianEngineerVendor = ИнжЛогМат
     .desc = Торговый автомат, содержащий всё оборудование, которое может понадобиться инженеру или логисту.
 
-ent-AU14CivilianMedicalClothingVendor = медицинский торгомат
+ent-AU14CivilianMedicalClothingVendor = МедоМат
     .desc = Гардероб, содержащий всю одежду и припасы, которые могут понадобиться медицинскому персоналу.
 
-ent-AU14CivilianEmergencyResponderOfficerVendor = торгомат офицера экстренного реагирования
+ent-AU14CivilianEmergencyResponderOfficerVendor = ЭкстроМат
     .desc = Гардероб, содержащий всю одежду и припасы, которые могут понадобиться офицеру экстренного реагирования.
 
-ent-AU14CivilianColonyOperationsSyntheticVendor = торгомат синтетика колониальных операций
+ent-AU14CivilianColonyOperationsSyntheticVendor = СинтоМат
     .desc = Гардероб, содержащий всю одежду и припасы, которые могут понадобиться синтетику колониальных операций.
 
 au14-vendor-section-shoes = Обувь
