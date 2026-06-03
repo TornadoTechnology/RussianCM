@@ -48,6 +48,10 @@
         amount: 40
       - id: AU14HelmetGarbRiotVisor
         amount: 40
+      - id: RMCArmorHelmetM10CMB
+        amount: 40
+      - id: RMCVisorSWAT
+        amount: 40
       - id: RMCHeadCapBureau
         amount: 25
       - id: AU14HeadCommandoBeanie
