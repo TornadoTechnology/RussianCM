@@ -74,6 +74,7 @@ public sealed class RoundEndVoteSystem : EntitySystem
         var options = new VoteOptions
         {
             Title = Loc.GetString("ui-vote-round-end-title"),
+            CarryoverEnabled = false,
             Options =
             {
                 (Loc.GetString("ui-vote-round-end-yes"), "yes"),
