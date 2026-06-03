@@ -1502,11 +1502,11 @@ namespace Content.Client.Lobby.UI
                 yield return (InsurgencyGovernmentJobList,
                     GamemodeInsurgency,
                     $"insurgency-govfor-{segmentKey}",
-                    Loc.GetString("humanoid-profile-editor-government-forces-label", ("segmentTitle", segmentTitle))); // RuCM edit
+                    Loc.GetString("humanoid-profile-editor-government-forces-label", ("segmentTitle", segmentTitle)));
                 yield return (DistressGovernmentJobList,
                     GamemodeDistressSignal,
                     $"distress-govfor-{segmentKey}",
-                    Loc.GetString("humanoid-profile-editor-government-forces-label", ("segmentTitle", segmentTitle))); // RuCM edit
+                    Loc.GetString("humanoid-profile-editor-government-forces-label", ("segmentTitle", segmentTitle)));
                 yield break;
             }
 
@@ -1604,16 +1604,16 @@ namespace Content.Client.Lobby.UI
             if (job.MarineAuthorityLevel > 0 ||
                 ContainsAny(id, name, "PlatCo", "PlatOp", "Commander", "Command", "Officer", "Leader", "Sergeant", "Advisor"))
             {
-                return ("command", Loc.GetString("humanoid-profile-editor-segment-command")); // RuCM edit
+                return ("command", Loc.GetString("humanoid-profile-editor-segment-command"));
             }
 
             if (ContainsAny(id, name, "Pilot", "Dropship", "Crew Chief", "DCC"))
-                return ("flight", Loc.GetString("humanoid-profile-editor-segment-flight")); // RuCM edit
+                return ("flight", Loc.GetString("humanoid-profile-editor-segment-flight"));
 
             if (ContainsAny(id, name, "Doctor", "Corpsman", "Medic", "Technician", "Tech", "Police", "Synth", "Working Joe", "Auxiliary"))
-                return ("support", Loc.GetString("humanoid-profile-editor-segment-support")); // RuCM edit
+                return ("support", Loc.GetString("humanoid-profile-editor-segment-support"));
 
-            return ("line", Loc.GetString("humanoid-profile-editor-segment-line")); // RuCM edit
+            return ("line", Loc.GetString("humanoid-profile-editor-segment-line"));
         }
 
         private static int GetJobSortGroup(DepartmentPrototype department, JobPrototype job)

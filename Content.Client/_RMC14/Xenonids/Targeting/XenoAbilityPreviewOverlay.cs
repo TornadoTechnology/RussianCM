@@ -325,10 +325,27 @@ public sealed class XenoAbilityPreviewOverlay : Overlay
     {
         var direction = mousePos.Position - originMap.Position;
         var distance = Math.Min(direction.Length(), charge.Range);
+
+        // Raycast for walls, doors, and barricades to find where the charge would actually stop.
+        if (direction.Length() > 0.1f)
+        {
+            var mask = (int) (CollisionGroup.Impassable | CollisionGroup.InteractImpassable | CollisionGroup.BarricadeImpassable);
+            var ray = new CollisionRay(originMap.Position, direction.Normalized(), mask);
+            foreach (var result in _physics.IntersectRay(originMap.MapId, ray, distance, player, returnOnFirstHit: true))
+            {
+                distance = Math.Max(0, result.Distance - 0.5f);
+            }
+        }
+
         mousePos = originMap.Offset(direction.Normalized() * distance);
 
         var color = new Color(0.85f, 0.2f, 0.2f).WithAlpha(OutlineAlpha);
-        DrawLinePreview(args, player, xform.Coordinates, mousePos, distance, color);
+        var toCoordinates = _transform.ToCoordinates(player, mousePos);
+        var tiles = _line.DrawLine(xform.Coordinates, toCoordinates, TimeSpan.Zero, distance, out _, hitBlocker: false);
+        if (tiles.Count == 0)
+            return;
+
+        DrawTileBorderFromLineTiles(args, tiles, color);
     }
 
     private void DrawDirectionalStomp(
@@ -364,8 +381,8 @@ public sealed class XenoAbilityPreviewOverlay : Overlay
                 if (Math.Abs(angleDiff.Theta) > halfAngle.Theta)
                     continue;
 
-                // Raycast for barricade blocking.
-                var ray = new CollisionRay(originMap.Position, diff.Normalized(), (int) CollisionGroup.BarricadeImpassable);
+                // Raycast for obstacle blocking (walls, windows, doors, barricades).
+                var ray = new CollisionRay(originMap.Position, diff.Normalized(), (int) (CollisionGroup.Impassable | CollisionGroup.InteractImpassable | CollisionGroup.BarricadeImpassable));
                 var blocked = false;
                 foreach (var _ in _physics.IntersectRay(originMap.MapId, ray, diff.Length(), player, returnOnFirstHit: true))
                 {

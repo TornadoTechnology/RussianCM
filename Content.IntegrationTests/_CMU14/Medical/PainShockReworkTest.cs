@@ -1,11 +1,20 @@
 using Content.Shared._CMU14.Medical;
 using Content.Shared._CMU14.Medical.Bones;
+using Content.Shared._CMU14.Medical.Organs;
+using Content.Shared._CMU14.Medical.Organs.Heart;
+using Content.Shared._CMU14.Medical.Organs.Lungs;
+using Content.Shared._CMU14.Medical.Organs.Stomach;
+using Content.Shared._CMU14.Medical.Shrapnel;
+using Content.Shared._CMU14.Medical.Stabilizers;
 using Content.Shared._CMU14.Medical.StatusEffects;
 using Content.Shared._CMU14.Medical.Wounds;
 using Content.Shared._RMC14.Medical.Wounds;
 using Content.Shared.Body.Part;
 using Content.Shared.Body.Systems;
 using Content.Shared.FixedPoint;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Verbs;
+using Content.Server.Verbs;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using System.Collections.Generic;
@@ -127,6 +136,256 @@ public sealed class PainShockReworkTest
     }
 
     [Test]
+    public async Task ShrapnelAddsPainPressure()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var pain = entMan.System<SharedPainShockSystem>();
+            var shrapnel = entMan.System<SharedCMUShrapnelSystem>();
+            var human = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+
+            try
+            {
+                var part = GetFirstPart(entMan, human);
+                shrapnel.AddShrapnel(part, 3, 18f);
+
+                var profile = pain.ComputePainSourceProfile(human);
+
+                Assert.Multiple(() =>
+                {
+                    Assert.That(profile.Target.Float(), Is.GreaterThanOrEqualTo(18f));
+                    Assert.That(profile.RiseRate.Float(), Is.GreaterThan(0f));
+                });
+            }
+            finally
+            {
+                entMan.DeleteEntity(human);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task ShrapnelExtractionRemovesFragments()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var shrapnel = entMan.System<SharedCMUShrapnelSystem>();
+            var human = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+            var tool = entMan.SpawnEntity(null, MapCoordinates.Nullspace);
+
+            try
+            {
+                var part = GetFirstPart(entMan, human);
+                shrapnel.AddShrapnel(part, 5, 25f);
+
+                var extractor = entMan.EnsureComponent<CMUShrapnelExtractorComponent>(tool);
+
+                Assert.That(shrapnel.TryExtractShrapnel(human, (tool, extractor), out var removed), Is.True);
+                Assert.That(removed, Is.EqualTo(2));
+                Assert.That(entMan.GetComponent<CMUShrapnelComponent>(part).Fragments, Is.EqualTo(3));
+            }
+            finally
+            {
+                entMan.DeleteEntity(human);
+                entMan.DeleteEntity(tool);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task ShrapnelExtractionClearsRetainedFragmentCleanupWhenLastFragmentRemoved()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var shrapnel = entMan.System<SharedCMUShrapnelSystem>();
+            var human = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+            var tool = entMan.SpawnEntity(null, MapCoordinates.Nullspace);
+
+            try
+            {
+                var part = GetFirstPart(entMan, human);
+                shrapnel.AddShrapnel(part, 2, 12f);
+
+                var wounds = entMan.GetComponent<BodyPartWoundComponent>(part);
+                Assert.That(HasRetainedFragmentCleanup(wounds), Is.True);
+
+                var extractor = entMan.EnsureComponent<CMUShrapnelExtractorComponent>(tool);
+
+                Assert.That(shrapnel.TryExtractShrapnel(human, (tool, extractor), out var removed), Is.True);
+                Assert.That(removed, Is.EqualTo(2));
+                Assert.That(entMan.HasComponent<CMUShrapnelComponent>(part), Is.False);
+                Assert.That(HasRetainedFragmentCleanup(wounds), Is.False);
+            }
+            finally
+            {
+                entMan.DeleteEntity(human);
+                entMan.DeleteEntity(tool);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task ShrapnelExtractionVerbRequiresHeldExtractor()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var hands = entMan.System<SharedHandsSystem>();
+            var shrapnel = entMan.System<SharedCMUShrapnelSystem>();
+            var verbs = entMan.System<VerbSystem>();
+            var patient = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+            var user = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+            var tool = entMan.SpawnEntity("KitchenKnife", MapCoordinates.Nullspace);
+
+            try
+            {
+                var part = GetFirstPart(entMan, patient);
+                shrapnel.AddShrapnel(part, 2, 12f);
+
+                var withoutTool = verbs.GetLocalVerbs(patient, user, typeof(InteractionVerb), force: true);
+                Assert.That(ContainsVerb(withoutTool, "Remove shrapnel"), Is.False);
+
+                Assert.That(hands.TryPickupAnyHand(user, tool, checkActionBlocker: false), Is.True);
+
+                var withTool = verbs.GetLocalVerbs(patient, user, typeof(InteractionVerb), force: true);
+                Assert.That(ContainsVerb(withTool, "Remove shrapnel"), Is.True);
+            }
+            finally
+            {
+                entMan.DeleteEntity(patient);
+                entMan.DeleteEntity(user);
+                entMan.DeleteEntity(tool);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task ShrapnelAndLegFracturesPulsePainOnMovement()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var fracture = entMan.System<SharedFractureSystem>();
+            var shrapnel = entMan.System<SharedCMUShrapnelSystem>();
+            var human = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+
+            try
+            {
+                var part = GetFirstPart(entMan, human);
+                shrapnel.AddShrapnel(part, 2, 12f);
+
+                Assert.That(shrapnel.ComputeMovementPainPulse(human), Is.GreaterThan(0f));
+
+                var leg = GetBodyPart(entMan, human, BodyPartType.Leg, BodyPartSymmetry.Left);
+                var frac = entMan.EnsureComponent<FractureComponent>(leg);
+                fracture.SetSeverity((leg, frac), FractureSeverity.Simple);
+
+                Assert.That(shrapnel.ComputeMovementPainPulse(human), Is.GreaterThan(12f));
+            }
+            finally
+            {
+                entMan.DeleteEntity(human);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task OrganPainProfilesAreOrganSpecific()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var pain = entMan.System<SharedPainShockSystem>();
+            var heartPatient = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+            var stomachPatient = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+
+            try
+            {
+                SetOrganStage<HeartComponent>(entMan, heartPatient, OrganDamageStage.Damaged);
+                SetOrganStage<CMUStomachComponent>(entMan, stomachPatient, OrganDamageStage.Damaged);
+
+                var heartProfile = pain.ComputePainSourceProfile(heartPatient);
+                var stomachProfile = pain.ComputePainSourceProfile(stomachPatient);
+
+                Assert.That(heartProfile.Target.Float(), Is.GreaterThan(stomachProfile.Target.Float()));
+            }
+            finally
+            {
+                entMan.DeleteEntity(heartPatient);
+                entMan.DeleteEntity(stomachPatient);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task StabilizedOrganReducesOrganPainPressure()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+
+        await server.WaitAssertion(() =>
+        {
+            var entMan = server.EntMan;
+            var timing = server.ResolveDependency<Robust.Shared.Timing.IGameTiming>();
+            var pain = entMan.System<SharedPainShockSystem>();
+            var human = entMan.SpawnEntity("CMMobHuman", MapCoordinates.Nullspace);
+
+            try
+            {
+                SetOrganStage<LungsComponent>(entMan, human, OrganDamageStage.Damaged);
+
+                var baseline = pain.ComputePainSourceProfile(human);
+                var stabilized = entMan.EnsureComponent<CMUOrganStabilizedComponent>(human);
+                SetField(stabilized, nameof(CMUOrganStabilizedComponent.Target), CMUOrganStabilizerTarget.Lungs);
+                SetField(stabilized, nameof(CMUOrganStabilizedComponent.ExpiresAt), timing.CurTime + TimeSpan.FromMinutes(2));
+
+                var suppressed = pain.ComputePainSourceProfile(human);
+
+                Assert.That(suppressed.Target.Float(), Is.LessThan(baseline.Target.Float()));
+            }
+            finally
+            {
+                entMan.DeleteEntity(human);
+            }
+        });
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
     public async Task OxyMasksShockAndWeakerMedsDoNotInheritItsStrength()
     {
         await using var pair = await PoolManager.GetServerClient();
@@ -192,6 +451,41 @@ public sealed class PainShockReworkTest
         return EntityUid.Invalid;
     }
 
+    private static EntityUid GetBodyPart(IEntityManager entMan, EntityUid bodyUid, BodyPartType type, BodyPartSymmetry symmetry)
+    {
+        var body = entMan.System<SharedBodySystem>();
+        foreach (var (partUid, part) in body.GetBodyChildren(bodyUid))
+        {
+            if (part.PartType == type && part.Symmetry == symmetry)
+                return partUid;
+        }
+
+        Assert.Fail($"Expected CMU human to have {symmetry} {type}.");
+        return EntityUid.Invalid;
+    }
+
+    private static void SetOrganStage<TOrgan>(IEntityManager entMan, EntityUid bodyUid, OrganDamageStage stage)
+        where TOrgan : IComponent
+    {
+        var organ = GetOrgan<TOrgan>(entMan, bodyUid);
+        var health = entMan.GetComponent<OrganHealthComponent>(organ);
+        SetField(health, nameof(OrganHealthComponent.Stage), stage);
+    }
+
+    private static EntityUid GetOrgan<TOrgan>(IEntityManager entMan, EntityUid bodyUid)
+        where TOrgan : IComponent
+    {
+        var body = entMan.System<SharedBodySystem>();
+        foreach (var organ in body.GetBodyOrgans(bodyUid))
+        {
+            if (entMan.HasComponent<TOrgan>(organ.Id))
+                return organ.Id;
+        }
+
+        Assert.Fail($"Expected CMU human to have organ {typeof(TOrgan).Name}.");
+        return EntityUid.Invalid;
+    }
+
     private static BodyPartWoundComponent AddWound(IEntityManager entMan, EntityUid part, WoundSize size, bool treated)
     {
         var wounds = entMan.EnsureComponent<BodyPartWoundComponent>(part);
@@ -210,6 +504,34 @@ public sealed class PainShockReworkTest
     private static List<int> BandagesOf(BodyPartWoundComponent comp)
         => GetField<List<int>>(comp, "Bandages");
 
+    private static List<WoundCleanupFlags> CleanupOf(BodyPartWoundComponent comp)
+        => GetField<List<WoundCleanupFlags>>(comp, nameof(BodyPartWoundComponent.Cleanup));
+
+    private static bool HasRetainedFragmentCleanup(BodyPartWoundComponent comp)
+    {
+        foreach (var cleanup in CleanupOf(comp))
+        {
+            if ((cleanup & WoundCleanupFlags.RetainedFragment) != WoundCleanupFlags.None)
+                return true;
+        }
+
+        return false;
+    }
+
     private static T GetField<T>(BodyPartWoundComponent comp, string name)
         => (T) typeof(BodyPartWoundComponent).GetField(name, BindingFlags.Instance | BindingFlags.Public)!.GetValue(comp)!;
+
+    private static void SetField<TComponent, TValue>(TComponent comp, string name, TValue value)
+        => typeof(TComponent).GetField(name, BindingFlags.Instance | BindingFlags.Public)!.SetValue(comp, value);
+
+    private static bool ContainsVerb(IEnumerable<Verb> verbs, string text)
+    {
+        foreach (var verb in verbs)
+        {
+            if (verb.Text == text)
+                return true;
+        }
+
+        return false;
+    }
 }

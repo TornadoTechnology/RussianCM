@@ -180,6 +180,9 @@
         type: BodyPartPickerBui
       enum.CMUSurgeryUIKey.Key:
         type: CMUSurgeryBui
+      enum.CMUTraumaGovernorUI.Key:
+        type: CMUTraumaGovernorBui
+        requireInputValidation: false
   - type: Infectable
   - type: Tackleable
   - type: XenoNestable

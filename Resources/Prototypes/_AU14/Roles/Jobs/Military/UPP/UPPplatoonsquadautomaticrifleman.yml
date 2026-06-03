@@ -3,6 +3,8 @@
   id: AU14JobGOVFORSquadAutomaticRiflemanUPP
   name: Machine Gunner
   spawnMenuRoleName: Automatic Rifleman (UPP)
+  startingGear: AU14GearGOVFORSquadAutomaticRifleman
+  dummyStartingGear: AU14GearGOVFORAutoRiflemanDummy
   ranks:
     UPP_Gefreiter:
     - !type:RoleTimeRequirement

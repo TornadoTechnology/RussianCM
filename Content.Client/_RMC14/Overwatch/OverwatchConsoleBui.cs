@@ -377,8 +377,8 @@ public sealed partial class OverwatchConsoleBui : RMCPopOutBui<OverwatchConsoleW
                 if (marine.Rank != null)
                 {
                     if (_prototypes.TryIndex(marine.Rank, out var rank))
-                        rankName = _localization.TryGetString($"rank-{rank.ID}.prefix", out var lp) ? lp : rank.Prefix; //RuMC edit
-                }
+                        rankName = _localization.TryGetString($"rank-{rank.ID}.prefix", out var lp) ? lp : rank.Prefix;
+                 }
 
                 var name = rankName != null ? $"{rankName} {marine.Name}" : marine.Name;
                 if (!squadRows.TryGetValue(marine.Id, out var row))

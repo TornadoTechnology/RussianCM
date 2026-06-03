@@ -77,12 +77,12 @@
   id: AU14GearWYGuard
   equipment:
     id: AU14IDCardColonyCorporateLiaison
-    outerClothing: RMCOuterClothingExternalWebbingBlack
+    outerClothing: CMUArmorM4PMCCorporate
     jumpsuit: AU14WYSecurityUniformRig
     shoes: RMCBootsPMCFilled
     head: AU14CivBallCapBlack
-    belt: AU14BeltUtilityGeneralBlack
-    back: RMCSatchelLightpackWeYa
+    belt: RMCBeltSecurityWeYaFilled
+    back: RMCSatchelLightpackBlack
     ears: AU14ColonyWeylandHeadset
     ears2: RMCM5CameraGear
     suitstorage: RMCM77BeltPMCFilled

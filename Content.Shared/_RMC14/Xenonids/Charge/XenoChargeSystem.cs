@@ -33,6 +33,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Map;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Physics;
@@ -387,6 +388,10 @@ public sealed partial class XenoChargeSystem : EntitySystem
             return;
         }
 
+        // Capture charge direction before StopCrusherCharge nulls it.
+        var savedChargeDir = xeno.Comp.Charge?.Normalized();
+        var origin = _transform.GetMapCoordinates(xeno);
+
         StopCrusherCharge(xeno);
 
         if (_net.IsServer)
@@ -424,8 +429,6 @@ public sealed partial class XenoChargeSystem : EntitySystem
 
         _rmcPulling.TryStopAllPullsFromAndOn(targetId);
 
-        var origin = _transform.GetMapCoordinates(xeno);
-
         var distanceTraveled = xeno.Comp.ChargeOrigin != null
             ? (origin.Position - xeno.Comp.ChargeOrigin.Value).Length()
             : 0f;
@@ -435,7 +438,19 @@ public sealed partial class XenoChargeSystem : EntitySystem
         _stun.TryParalyze(targetId, xeno.Comp.StunTime, true);
         _rmcObstacleSlamming.ApplyBonuses(targetId, TimeSpan.FromSeconds(1.5), TimeSpan.FromSeconds(3));
         EnsureComp<ChargeFlungComponent>(targetId);
-        _sizeStun.KnockBack(targetId, origin, knockback, knockback, knockBackSpeed: 15);
+
+        // Fling the target along the saved charge direction.
+        var targetPos = _transform.GetMapCoordinates(targetId);
+        var chargeDir = savedChargeDir ?? (targetPos.Position - origin.Position).Normalized();
+        var flingVec = chargeDir * knockback;
+
+        if (TryComp(targetId, out PhysicsComponent? targetPhysics))
+        {
+            _physics.SetLinearVelocity(targetId, Vector2.Zero, body: targetPhysics);
+            _physics.SetAngularVelocity(targetId, 0f, body: targetPhysics);
+        }
+
+        _throwing.TryThrow(targetId, flingVec, 15, animated: false, playSound: false, compensateFriction: true);
     }
 
     private void OnChargeFlungHit(Entity<ChargeFlungComponent> ent, ref ThrowDoHitEvent args)
@@ -484,17 +499,27 @@ public sealed partial class XenoChargeSystem : EntitySystem
         if (TerminatingOrDeleted(args.OtherEntity))
             return;
 
-        if (!TryComp(args.OtherEntity, out XenoCrusherChargableComponent? crush))
+        // Chargable entities with instant destroy and pass-through: destroy and pass.
+        if (TryComp(args.OtherEntity, out XenoCrusherChargableComponent? crush))
+        {
+            if (crush.InstantDestroy && crush.PassOnDestroy)
+            {
+                if (_net.IsServer)
+                    _destruct.DestroyEntity(args.OtherEntity);
+                else if (_net.IsClient)
+                    _transform.DetachEntity(args.OtherEntity, Transform(args.OtherEntity));
+
+                args.Cancelled = true;
+            }
+
+            return;
+        }
+
+        // Mobs block the charge (handled by OnXenoChargeHit).
+        if (HasComp<MobStateComponent>(args.OtherEntity))
             return;
 
-        if (!crush.InstantDestroy || !crush.PassOnDestroy)
-            return;
-
-        if (_net.IsServer)
-            _destruct.DestroyEntity(args.OtherEntity);
-        else if (_net.IsClient)
-            _transform.DetachEntity(args.OtherEntity, Transform(args.OtherEntity));
-
+        // Everything else (chairs, grass, etc.) is passed through.
         args.Cancelled = true;
     }
 
@@ -530,8 +555,11 @@ public sealed partial class XenoChargeSystem : EntitySystem
             }
         }
         var length = diff.Length();
+        var minRange = 2f;
         if (length > xeno.Comp.Range)
             diff = diff.Normalized() * xeno.Comp.Range;
+        else if (length < minRange)
+            diff = diff.Normalized() * minRange;
         else
             diff = diff.Normalized() * MathF.Ceiling(length);
 

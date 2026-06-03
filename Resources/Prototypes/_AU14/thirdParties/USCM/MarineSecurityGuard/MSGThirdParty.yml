@@ -1,9 +1,9 @@
 - type: partySpawn
   id: MSGSpawn
   leadersToSpawn:
-    AU14MSGCommander: 1
+    AU14JobMSGCommander: 1
   gruntsToSpawn:
-    AU14MSGWatchStander: 1
+    AU14JobMSGWatchStander: 1
   scalewithpop: false
   spawnTogether: true
 

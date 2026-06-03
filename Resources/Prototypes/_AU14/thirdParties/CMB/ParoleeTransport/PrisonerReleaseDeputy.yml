@@ -22,8 +22,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: EquipEntityPreset
-      preset:  AU14ParoleePreset
     - type: NpcFactionMember
       factions:
       - AUBureau
@@ -79,4 +77,3 @@
     raffle:
       settings: short
     rules: You do not know what is going on in the colony.
-

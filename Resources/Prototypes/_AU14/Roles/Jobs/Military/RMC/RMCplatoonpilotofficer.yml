@@ -3,6 +3,8 @@
   id: AU14JobGOVFORDSPilotRMC
   name: RMC Pilot Officer
   spawnMenuRoleName: Pilot Officer (TWE RMC)
+  startingGear: AU14GearGOVFORDSPilot
+  dummyStartingGear: AU14GearGOVFORDSPilotDummy
   ranks:
     RMC_Lieutenant:
     - !type:RoleTimeRequirement

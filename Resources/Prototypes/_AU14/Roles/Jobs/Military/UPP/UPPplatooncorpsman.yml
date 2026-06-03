@@ -3,6 +3,8 @@
   id: AU14JobGOVFORPlatoonCorpsmanUPP
   name: Field Medic
   spawnMenuRoleName: Hospital Corpsman (UPP)
+  startingGear: AU14GearGOVFORPlatoonCorpsman
+  dummyStartingGear: AU14GearGOVFORCorpsmanDummy
   ranks:
     UPP_Corporal:
     - !type:RoleTimeRequirement

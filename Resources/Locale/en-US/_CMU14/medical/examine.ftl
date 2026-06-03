@@ -6,17 +6,24 @@ cmu-medical-examine-body-part-line = { $part }: { $conditions }.
 
 cmu-medical-examine-wound-size-small = small
 cmu-medical-examine-wound-size-deep = deep
+cmu-medical-examine-wound-size-deep-visible = moderate
 cmu-medical-examine-wound-size-gaping = gaping
+cmu-medical-examine-wound-size-gaping-visible = large
 cmu-medical-examine-wound-size-massive = massive
 
 cmu-medical-examine-wound-type-burn = burn
+cmu-medical-examine-wound-type-wound = wound
 cmu-medical-examine-wound-type-surgery = surgical wound
 cmu-medical-examine-wound-type-trauma = trauma wound
 
 cmu-medical-examine-wound-treated-prefix = treated
 cmu-medical-examine-wound-bleeding-suffix = (bleeding)
+cmu-medical-examine-wound-bleeding-active = active bleeding
 
-cmu-medical-examine-wound-full = a { $treated }{ $size } { $type }{ $bleeding }
+cmu-medical-examine-wound-visible = { $treated ->
+    [true] a treated { $size } { $type }
+   *[other] a { $size } { $type }
+}
 
 cmu-medical-examine-fracture-hairline = { $stabilized ->
     [true]  a stabilized hairline fracture
@@ -51,3 +58,8 @@ cmu-medical-examine-part-severed = SEVERED
 
 cmu-medical-examine-list-and =  and
 cmu-medical-examine-list-comma-and = { $list }, and { $last }
+
+cmu-medical-detailed-examine-verb = Inspect injuries
+cmu-medical-detailed-examine-verb-message = Take a closer look at their injuries.
+cmu-medical-detailed-examine-start = You begin checking { THE($target) } for injuries.
+cmu-medical-detailed-examine-none = No obvious injuries found.

@@ -3,6 +3,8 @@
   id: AU14JobGOVFORPlatoonCorpsmanWYPMC
   name: PMC Combat Lifesaver
   spawnMenuRoleName: Hospital Corpsman (WYPMC)
+  startingGear: AU14GearGOVFORPlatoonCorpsman
+  dummyStartingGear: AU14GearGOVFORCorpsmanDummy
   ranks:
     AU14RankWeYuSeniorOperator:
     - !type:RoleTimeRequirement

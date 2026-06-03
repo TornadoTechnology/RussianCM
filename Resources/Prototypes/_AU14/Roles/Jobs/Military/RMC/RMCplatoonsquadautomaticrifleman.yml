@@ -3,6 +3,8 @@
   id: AU14JobGOVFORSquadAutomaticRiflemanRMC
   name: au14-job-name-govforsquadautomaticriflemanRMC
   spawnMenuRoleName: Automatic Rifleman (TWE RMC)
+  startingGear: AU14GearGOVFORSquadAutomaticRifleman
+  dummyStartingGear: AU14GearGOVFORAutoRiflemanDummy
   ranks:
     RMC_Corporal:
     - !type:RoleTimeRequirement
@@ -13,3 +15,17 @@
       role: AU14JobGOVFORSquadAutomaticRifleman
       time: 54000 # 15 hours
     RMC_Marine: []
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillFirearms: 2
+        RMCSkillFireman: 1
+        RMCSkillJtac: 1
+        RMCSkillSmartGun: 1
+        RMCSkillConstruction: 2
+        RMCSkillEngineer: 3
+        RMCSkillPolice: 1
+    - type: JobPrefix
+      prefix: au14-job-prefix-govforsquadautomaticriflemanRMC

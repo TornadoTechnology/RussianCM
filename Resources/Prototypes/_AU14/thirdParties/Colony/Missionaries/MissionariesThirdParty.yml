@@ -17,7 +17,7 @@
   weight: 20
   minplayers: 20
   maxplayers: 69
-  Ghostneeded: 2
+  GhostsNeeded: 2
   roundstart: false
   whitelistedgamemodes:
     - insurgency
@@ -39,7 +39,7 @@
   weight: 20
   minplayers: 70
   maxplayers: 150
-  Ghostneeded: 4
+  GhostsNeeded: 4
   roundstart: false
   whitelistedgamemodes:
     - insurgency

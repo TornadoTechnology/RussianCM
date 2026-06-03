@@ -367,7 +367,7 @@ public sealed partial class GhostRoleSystem : EntitySystem
     {
         if (args.NewStatus == SessionStatus.InGame)
         {
-            var response = new GhostUpdateGhostRoleCountEvent(_ghostRoles.Count);
+            var response = new GhostUpdateGhostRoleCountEvent(GetGhostRoleCount());
             RaiseNetworkEvent(response, args.Session.Channel);
         }
         else
@@ -379,6 +379,12 @@ public sealed partial class GhostRoleSystem : EntitySystem
 
     public void RegisterGhostRole(Entity<GhostRoleComponent> role)
     {
+        if (!CanTakeGhost(role.Owner, role.Comp))
+        {
+            UnregisterGhostRole(role);
+            return;
+        }
+
         if (_ghostRoles.ContainsValue(role))
             return;
 
@@ -712,7 +718,11 @@ public sealed partial class GhostRoleSystem : EntitySystem
     public int GetGhostRoleCount()
     {
         var metaQuery = GetEntityQuery<MetaDataComponent>();
-        return _ghostRoles.Count(pair => metaQuery.CompOrNull(pair.Value.Owner)?.EntityPaused == false);
+        return _ghostRoles.Count(pair =>
+            metaQuery.TryComp(pair.Value.Owner, out var meta) &&
+            !meta.EntityPaused &&
+            !pair.Value.Comp.Taken &&
+            !IsControlledGhostRole(pair.Value.Owner));
     }
 
     /// <summary>
@@ -737,6 +747,12 @@ public sealed partial class GhostRoleSystem : EntitySystem
         foreach (var (id, (uid, role)) in _ghostRoles)
         {
             if (!metaQuery.TryComp(uid, out var meta))
+            {
+                _ghostRolesToRemove.Add(id);
+                continue;
+            }
+
+            if (role.Taken || IsControlledGhostRole(uid))
             {
                 _ghostRolesToRemove.Add(id);
                 continue;
@@ -936,7 +952,14 @@ public sealed partial class GhostRoleSystem : EntitySystem
     {
         return Resolve(uid, ref component, false) &&
                !component.Taken &&
-               !MetaData(uid).EntityPaused;
+               !MetaData(uid).EntityPaused &&
+               !IsControlledGhostRole(uid);
+    }
+
+    private bool IsControlledGhostRole(EntityUid uid)
+    {
+        return HasComp<ActorComponent>(uid) ||
+               TryComp(uid, out MindContainerComponent? mind) && mind.HasMind;
     }
 
     private void OnTakeoverTakeRole(EntityUid uid, GhostTakeoverAvailableComponent component, ref TakeGhostRoleEvent args)

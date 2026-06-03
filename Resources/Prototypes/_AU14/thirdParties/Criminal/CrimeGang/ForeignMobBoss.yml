@@ -12,7 +12,7 @@
   joinNotifyCrew: false
   supervisors: au14-job-supervisors-mobboss
   accessGroups:
-  - colonist
+  - Colonist
   roleWeight: 0.25
   ranks:
     RMCRankCivilian: []

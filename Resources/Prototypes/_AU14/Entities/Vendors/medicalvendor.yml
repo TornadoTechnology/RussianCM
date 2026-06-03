@@ -16,6 +16,40 @@
       entries:
       - id: CMOintment10
         amount: 40
+      - id: CMUPlainGauze10
+        amount: 40
+      - id: CMUPlainTraumaDressing10
+        amount: 30
+      - id: CMUCoagulantPowder
+        amount: 20
+      - id: CMUAntiseptic
+        amount: 20
+      - id: CMUBurnGel
+        amount: 20
+      - id: CMUTissueSealant
+        amount: 20
+      - id: CMUTraumaFoam
+        amount: 20
+      - id: CMUHemostaticGauze6
+        amount: 25
+      - id: CMUAntisepticGauze6
+        amount: 25
+      - id: CMUBurnGelGauze6
+        amount: 25
+      - id: CMUSealingGauze6
+        amount: 25
+      - id: CMUCompressionGauze6
+        amount: 25
+      - id: CMUHemostaticTraumaDressing4
+        amount: 15
+      - id: CMUAntisepticTraumaDressing4
+        amount: 15
+      - id: CMUBurnTraumaDressing4
+        amount: 15
+      - id: CMUSealingTraumaDressing4
+        amount: 15
+      - id: CMUCompressionTraumaDressing4
+        amount: 15
       - id: AU14HemostaticGauzePacket
         amount: 40
       - id: AU14Tourniquet

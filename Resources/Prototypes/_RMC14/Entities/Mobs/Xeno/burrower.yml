@@ -9,7 +9,7 @@
   - RMCXenoVentCrawler
   id: CMXenoBurrower
   name: Burrower
-  description: A beefy alien with sharp claws.
+  description: A hefty alien with sharp claws.
   components:
   - type: TTS
     voice: WITCH_DOCTOR_DOTA_2
@@ -44,6 +44,7 @@
     - ActionXenoWatch
     - ActionXenoTailStab
     - ActionXenoAcidNormal
+    - ActionXenoPheromones
     - ActionXenoOrderConstruction
     - ActionXenoDigTunnel
     - ActionXenoPlantWeeds
@@ -67,6 +68,8 @@
     xenoArmor: 25
     explosionArmor: 40
   - type: XenoDevour
+  - type: XenoPheromones
+    pheromonesMultiplier: 2
   - type: XenoStomp
     selfEffect: CMEffectSelfStomp
     shortRange: 0

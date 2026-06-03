@@ -59,7 +59,7 @@ public sealed partial class ThreatPrototype : IPrototype
 
 
     [DataField("maxplayers")]
-    public int MaxPlayers { get; private set; } = 100;
+    public int MaxPlayers { get; private set; } = 0;
 
     [DataField("minplayers")]
     public int MinPlayers { get; private set; } = 0;
@@ -98,12 +98,12 @@ public sealed partial class ThreatPrototype : IPrototype
     /// Minimum seconds after round start before threat entities spawn and win conditions activate.
     /// </summary>
     [DataField("spawnDelayMin")]
-    public int SpawnDelayMin { get; private set; } = 1800;
+    public int SpawnDelayMin { get; private set; } = 1200;
 
     /// <summary>
     /// Maximum seconds after round start before threat entities spawn and win conditions activate.
     /// </summary>
     [DataField("spawnDelayMax")]
-    public int SpawnDelayMax { get; private set; } = 3800;
+    public int SpawnDelayMax { get; private set; } = 2400;
 
 }

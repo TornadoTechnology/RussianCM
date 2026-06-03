@@ -12,7 +12,7 @@
   joinNotifyCrew: false
   supervisors: au14-job-supervisors-mobgoon
   accessGroups:
-  - colonist
+  - Colonist
   roleWeight: 0.25
   ranks:
     RMCRankCivilian: []
@@ -60,5 +60,4 @@
     shoes: RMCShoesLaceup
     id: AU14IDCardMobGoon
     back: CMSatchel
-
 

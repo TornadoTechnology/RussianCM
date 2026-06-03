@@ -45,10 +45,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AU14HemostaticGauzePacket
+    - id: CMUPlainGauze10
     - id: AU14Tourniquet
-    - id: AU14Tourniquet
-    - id: CMPacketPillsTricordrazine
     - id: AU14PacketPillsTramadol
+    - id: CMUHemostaticGauze6
+    - id: CMUBurnGelGauze6
     - id: CMUSplintItem
     - id: CMUSplintItem

@@ -130,8 +130,9 @@ jobs:
                 pull_number: pullNumber,
               });
 
-              if (latest.head.sha !== run.head_sha) {
-                core.info(`Skipping PR #${pullNumber}: head moved from ${run.head_sha} to ${latest.head.sha}.`);
+              const runPullHeadSha = pullRequest.head?.sha || run.head_sha;
+              if (latest.head.sha !== runPullHeadSha) {
+                core.info(`Skipping PR #${pullNumber}: head moved from ${runPullHeadSha} to ${latest.head.sha}.`);
                 continue;
               }
 

@@ -89,3 +89,7 @@
       - [ RMCSpaceCash50 ]
       - [ RMCSpaceCash50 ]
       - [ RMCSpaceCash50 ]
+
+- type: playTimeTracker
+  id: AU14JobReturningColonistPlaytime
+  isHumanoid: true

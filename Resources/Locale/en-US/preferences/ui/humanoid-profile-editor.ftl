@@ -96,7 +96,6 @@ humanoid-profile-editor-preference-armor-skull = Skull
 humanoid-profile-editor-preference-armor-smooth = Smooth
 
 
-
 humanoid-profile-editor-government-forces-label = Government Forces / { $segmentTitle }
 
 humanoid-profile-editor-segment-command = Command

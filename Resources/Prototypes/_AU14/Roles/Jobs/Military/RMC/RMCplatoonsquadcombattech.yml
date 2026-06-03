@@ -3,6 +3,8 @@
   id: AU14JobGOVFORSquadCombatTechRMC
   name: au14-job-name-govforsquadcombattechRMC
   spawnMenuRoleName: Combat Tech (TWE RMC)
+  startingGear: AU14GearGOVFORSquadCombatTech
+  dummyStartingGear: AU14GearGOVFORCTDummy
   ranks:
     RMC_Corporal:
     - !type:RoleTimeRequirement
@@ -16,5 +18,7 @@
   special:
   - !type:AddComponentSpecial
     components:
+    - type: Skills
+      preset: AU14SkillPresetPlatoonCombatTechnician
     - type: JobPrefix
       prefix: au14-job-prefix-govforsquadcombattechRMC

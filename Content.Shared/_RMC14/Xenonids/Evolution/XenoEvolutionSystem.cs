@@ -4,6 +4,7 @@ using Content.Shared._RMC14.CCVar;
 using Content.Shared._RMC14.Xenonids.Announce;
 using Content.Shared._RMC14.Xenonids.Egg;
 using Content.Shared._RMC14.Xenonids.Hive;
+using Content.Shared._RMC14.Xenonids.JoinXeno;
 using Content.Shared._RMC14.Xenonids.Weeds;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
@@ -612,8 +613,11 @@ public sealed partial class XenoEvolutionSystem : EntitySystem
 
     private EntityUid TransferXeno(EntityUid xeno, EntProtoId proto)
     {
+        EnsureComp<XenoEvolutionTransferComponent>(xeno);
         var coordinates = _transform.GetMoverCoordinates(xeno);
         var newXeno = Spawn(proto, coordinates);
+        EnsureComp<LarvaQueueClaimBlockedComponent>(newXeno);
+        EnsureComp<XenoEvolutionTransferComponent>(newXeno);
         _xenoHive.SetSameHive(xeno, newXeno);
 
         if (_mind.TryGetMind(xeno, out var mindId, out _))
@@ -621,6 +625,8 @@ public sealed partial class XenoEvolutionSystem : EntitySystem
             _mind.TransferTo(mindId, newXeno);
             _mind.UnVisit(mindId);
         }
+
+        RemCompDeferred<XenoEvolutionTransferComponent>(newXeno);
 
         foreach (var held in _hands.EnumerateHeld(xeno))
         {

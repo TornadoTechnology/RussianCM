@@ -1794,5 +1794,268 @@
   id: 168
   time: '2026-05-30T21:44:37.0000000+00:00'
   url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1136
+- author: RomiGur
+  changes:
+  - message: Add localisation support for GOVFOR job segments label and rank prefixes/names.
+    type: Code
+  id: 169
+  time: '2026-05-31T18:29:23.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1154
+- author: NzzyFk
+  changes:
+  - message: L42A SFX uses CM one
+    type: Tweak
+  - message: ABR-40 also uses L42A SFX for aura points
+    type: Tweak
+  id: 170
+  time: '2026-05-31T23:38:20.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1169
+- author: KeiKiyomi
+  changes:
+  - message: Changed F44AA, removing its bipod
+    type: Tweak
+  id: 171
+  time: '2026-05-31T23:39:15.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1170
+- author: toot521
+  changes:
+  - message: Weyland Yutani Survivor Third Party
+    type: Add
+  id: 172
+  time: '2026-05-31T23:40:18.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1172
+- author: 7-62x54r
+  changes:
+  - message: Added regular drone pheromones (tier 1) to burrower.
+    type: Add
+  id: 173
+  time: '2026-06-01T00:24:57.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1144
+- author: troytroy400
+  changes:
+  - message: Potted plants resprited.
+    type: Tweak
+  - message: Palm trees resprited.
+    type: Tweak
+  id: 174
+  time: '2026-06-01T01:08:40.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1173
+- author: Piticzu
+  changes:
+  - message: Crusher stomp no longer hits through walls, windows, or doors.
+    type: Tweak
+  - message: Crusher charge range increased from 8 to 9 tiles with max-range clamp
+      casting.
+    type: Tweak
+  - message: Crusher charge now flings targets in the correct direction consistently.
+    type: Tweak
+  - message: Crusher charge passes through furniture and small obstacles instead of
+      getting stuck.
+    type: Tweak
+  - message: Crusher Defensive Shield now shows animated shield overlay.
+    type: Tweak
+  - message: Crusher projectile reflect reduced to 10% front only.
+    type: Tweak
+  - message: Crusher Brutalize passive reduced to 15 damage and 5 AP.
+    type: Tweak
+  - message: Crusher charge hit damage reduced from 90 to 80.
+    type: Tweak
+  - message: Fixed melee wide swing ignoring per-entity max target count on the client.
+    type: Fix
+  id: 175
+  time: '2026-06-01T20:56:59.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1179
+- author: Arcticular1
+  changes:
+  - message: Added new loadout options for WY Security Guards and WY Liaison.
+    type: Add
+  id: 176
+  time: '2026-06-01T21:42:19.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1174
+- author: potatoed6
+  changes:
+  - message: fix marine guard not in ua amb console
+    type: Fix
+  - message: fixed survs spawn rates to be higher
+    type: Fix
+  id: 177
+  time: '2026-06-01T21:42:49.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1177
+- author: TheHellFireo
+  changes:
+  - message: '"Added mechanism wounds for 8 injury sources: bullet, stab, slash, crush,
+      burn, blast, fragment, and surgical wounds. Mixed wounds on the same limb now
+      merge into larger wound records."'
+    type: Add
+  - message: '"Added 4 wound sizes based on damage: small under 15, deep at 15+, gaping
+      at 35+, and massive at 60+."'
+    type: Add
+  - message: '"Wound sizes now require 1, 2, 3, and 4 treatment uses respectively,
+      with 0.5s, 1s, 2s, and 4s base treatment delays."'
+    type: Add
+  - message: '"Added limb health caps from active wounds and cleanup issues. Small,
+      deep, gaping, and massive wounds reduce the field-heal cap by 5%, 12%, 20%,
+      and 30% each, clamped to at least 35% limb health."'
+    type: Add
+  - message: '"Added wound recovery after optimal treatment. Clean optimal wounds
+      regenerate linked brute or burn damage at 0.6 damage per second."'
+    type: Add
+  - message: '"Adequate wound treatment restores limb health only up to the current
+      wound cap instead of enabling full recovery."'
+    type: Tweak
+  - message: '"Added separate external bleeding tiers. Minor, moderate, severe, and
+      arterial bleeding drain 0.08, 0.18, 0.35, and 0.70 blood per second."'
+    type: Add
+  - message: '"Wound bleeding durations are now clamped between 5 and 60 seconds."'
+    type: Tweak
+  - message: '"Added 5 field-mixing ingredients in 50-unit stacks: coagulant powder,
+      antiseptic, burn gel, tissue sealant, and trauma foam."'
+    type: Add
+  - message: '"Added packed gauze and packed trauma kits as 50-use base stacks."'
+    type: Add
+  - message: '"Packed gauze instantly controls non-arterial bleeding. Packed trauma
+      kits can also control arterial bleeding with a 1 second base delay."'
+    type: Tweak
+  - message: '"Added 5 prepared gauze stacks with 10 uses each: hemostatic, antiseptic,
+      burn gel, sealing, and compression gauze."'
+    type: Add
+  - message: '"Added 5 prepared trauma dressing stacks with 6 uses each: hemostatic,
+      antiseptic, burn, sealing, and compression trauma dressings."'
+    type: Add
+  - message: '"Prepared gauze is instant and treats 1 wound use per application. Prepared
+      trauma dressings treat 2 wound uses per application and can stop arterial bleeding."'
+    type: Tweak
+  - message: '"Field mixing consumes 1 packed gauze or packed trauma kit use, plus
+      ingredient units based on medical skill: 5 units at medical 0-1, 2 units at
+      medical 2, and 1 unit at medical 3+."'
+    type: Tweak
+  - message: '"Updated corpsman vendors with packed gauze for 1 point, packed trauma
+      kits for 2 points, ingredients for 4 points each, prepared gauze for 2 points
+      each, prepared trauma dressings for 3 points each, and O- blood bags for 4'
+    type: Tweak
+  - message: '"Added limited rifleman equipment-vendor access: packed gauze 5 points,
+      packed trauma kits 8 points, coagulant powder 15 points, burn gel 15 points,
+      hemostatic or burn gauze 8 points, and hemostatic or burn trauma dressings'
+    type: Tweak
+  - message: '"Added ASRS medical purchasables: 20 packed gauze, 16 packed trauma
+      kits, 12 of each ingredient, 16 of each prepared gauze, 10 of each prepared
+      trauma dressing, 16 full O- blood bags, and 8 empty blood bags."'
+    type: Tweak
+  - message: '"Updated medical examine and health analyzer data to show wound mechanisms,
+      treatment quality, cleanup issues, bleeding state, limb health caps, and ordered
+      body-part injury sections."'
+    type: Tweak
+  - message: '"Added trauma routing numbers for deeper injuries: ballistic trauma
+      can hit head organs at 55%, torso organs at 50%, and vascular damage at 3%;
+      piercing trauma can hit bones at 20%, organs at 35%, and vascular damage at
+      4%."'
+    type: Tweak
+  - message: '"Surgery now supports condition-driven injected steps and re-arms after
+      failed or newly inserted steps instead of dropping the whole procedure flow."'
+    type: Tweak
+  - message: '"Fixed retained fragments appearing on every wound instead of being
+      rare cleanup issues."'
+    type: Fix
+  - message: '"Restored knife-based retained-fragment removal through the cleanup
+      flow."'
+    type: Fix
+  - message: '"Updated trauma governor, bone-breaking sounds, and medical item interactions
+      for the new wound and limb recovery foundation."'
+    type: Tweak
+  id: 178
+  time: '2026-06-02T00:37:27.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1184
+- author: troytroy400
+  changes:
+  - message: Xeno spawn rates changed to be more proportional.
+    type: Tweak
+  id: 179
+  time: '2026-06-02T00:50:22.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1186
+- author: KeiKiyomi
+  changes:
+  - message: Fixed Prodigy spawns (again)
+    type: Fix
+  id: 180
+  time: '2026-06-02T01:47:15.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1187
+- author: 7-62x54r
+  changes:
+  - message: Added pheromones to burrower (for real this time i hope)
+    type: Fix
+  id: 181
+  time: '2026-06-02T01:50:29.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1182
+- author: troytroy400
+  changes:
+  - message: Tracer magazines for the M41A Mk1 and M2C.
+    type: Add
+  - message: HAZOPs can now get MK2 from req.
+    type: Add
+  - message: AP rockets are no longer free.
+    type: Fix
+  - message: Modified blowtorch description fixed/loreified.
+    type: Fix
+  - message: Equipment vendors now start with five sandbags and four barbed wire as
+      opposed to one.
+    type: Tweak
+  - message: CT essential kits now have an engineering kit, a stack of wood and full
+      versions of the material stacks.
+    type: Tweak
+  id: 182
+  time: '2026-06-02T04:47:38.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1188
+- author: troytroy400
+  changes:
+  - message: USS Bush Z-Levels, second and third floor.
+    type: Add
+  - message: Slot scaling for AuxTech capped at five.
+    type: Tweak
+  - message: Random lore primer grammar.
+    type: Fix
+  - message: Camo is now correct for certain maps. No more snow camo on Kutjevo.
+    type: Fix
+  id: 183
+  time: '2026-06-02T21:34:25.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1151
+- author: toot521
+  changes:
+  - message: CLF Doctors and Surgeons now start with their Armband on the ground instead
+      of on their neckslot
+    type: Tweak
+  id: 184
+  time: '2026-06-02T23:03:10.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1197
+- author: ver0098
+  changes:
+  - message: M5A1 SLAW Added to UPP Requisitions purchase for 1.5k credits.
+    type: Add
+  - message: Multiple UPP Requisition items purchase tweaked.
+    type: Add
+  id: 185
+  time: '2026-06-02T23:04:06.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1194
+- author: Piticzu
+  changes:
+  - message: M85A1 grenade launcher now requires opening and closing the breech between
+      shots.
+    type: Tweak
+  id: 186
+  time: '2026-06-02T23:05:50.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1192
+- author: troytroy400
+  changes:
+  - message: MultiZ USS Bush now loads properly.
+    type: Fix
+  id: 187
+  time: '2026-06-03T01:46:04.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1201
+- author: toot521
+  changes:
+  - message: CLF survivor third party prototypes
+    type: Add
+  id: 188
+  time: '2026-06-03T09:12:26.0000000+00:00'
+  url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1193
 Name: CMU
 Order: -1

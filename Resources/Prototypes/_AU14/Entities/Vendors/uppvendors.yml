@@ -761,7 +761,7 @@
       choices: { CMUPlatoonMG: 1 }
       entries:
       - id: AU14SmartGunUPP
-      - id: RMCLMGQYJ72
+      - id: RMCWeaponLMGQYJ72
     - name: Belt
       choices: { CMUPlatoonMGBelt: 1 }
       entries:
