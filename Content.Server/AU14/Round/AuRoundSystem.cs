@@ -195,7 +195,8 @@ namespace Content.Server.AU14.Round
                             return;
                         }
 
-                        var vote = BuildPlanetVoteOptions(preset.ID, planetProtos, TimeSpan.FromSeconds(30));
+                        var vote = BuildPlanetVoteOptions(preset.ID, planetProtos, TimeSpan.FromSeconds(30),  //RuMC edit
+                            Loc.GetString("au14-vote-select-planet-title"));
                         vote.SetInitiatorOrServer(null);
                         var planetByMapId = planetProtos
                             .GroupBy(planet => planet.MapId, StringComparer.OrdinalIgnoreCase)
@@ -289,7 +290,8 @@ namespace Content.Server.AU14.Round
         internal static VoteOptions BuildPlanetVoteOptions(
             string presetId,
             IReadOnlyList<RMCPlanetMapPrototypeComponent> planets,
-            TimeSpan duration)
+            TimeSpan duration,
+            string title = "") // RuMC edit
         {
             var options = new List<(string text, object data)>();
             foreach (var planet in planets)
@@ -302,7 +304,7 @@ namespace Content.Server.AU14.Round
 
             return new VoteOptions
             {
-                Title = Loc.GetString("au14-vote-select-planet-title"),
+                Title = title, // RuMC edit
                 Options = options,
                 Duration = duration,
                 CarryoverEnabled = true,
