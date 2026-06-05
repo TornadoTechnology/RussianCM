@@ -421,7 +421,7 @@ public sealed partial class CMUMedicalExamineSystem : EntitySystem
 
         return Loc.GetString(
             "cmu-medical-examine-wound-visible",
-            ("treated", IsWoundTreatedForExamine(wounds, index) ? "true" : "false"),
+            ("treated", wound.Treated ? "true" : "false"),
             ("size", sizeText),
             ("type", kind));
     }
@@ -489,7 +489,7 @@ public sealed partial class CMUMedicalExamineSystem : EntitySystem
         _ => "Moderate",
     };
 
-    private static DetailedWoundDetails GetDetailedWoundDetails(BodyPartWoundComponent wounds, int index)
+    private DetailedWoundDetails GetDetailedWoundDetails(BodyPartWoundComponent wounds, int index)
     {
         var wound = wounds.Wounds[index];
         var size = index < wounds.Sizes.Count ? wounds.Sizes[index] : WoundSize.Deep;
@@ -509,29 +509,6 @@ public sealed partial class CMUMedicalExamineSystem : EntitySystem
                 TreatmentColorFor(wound.Treated)),
         };
 
-        var cleanupText = quality == WoundTreatmentQuality.Adequate
-            ? DescribeCleanup(cleanup)
-            : string.Empty;
-        if (cleanupText.Length > 0)
-            details.Add(Color(cleanupText, DetailedCleanupColor));
-
-        var optimalHint = DescribeOptimalHint(mechanism, wound.Type, cleanup);
-        if (quality != WoundTreatmentQuality.Optimal && optimalHint.Length > 0)
-            details.Add(Color(Loc.GetString("cmu-medical-detailed-hint-label", ("hint", optimalHint)), DetailedHintColor)); // RuMC edit
-
-        return ToDetailedLines(details);
-    }
-
-    private static bool IsWoundTreatedForExamine(BodyPartWoundComponent wounds, int index)
-    {
-        return wounds.Wounds[index].Treated || GetTreatmentQuality(wounds, index) != WoundTreatmentQuality.Untreated;
-    }
-
-    private static WoundTreatmentQuality GetTreatmentQuality(BodyPartWoundComponent wounds, int index)
-    {
-        return index < wounds.TreatmentQualities.Count
-            ? wounds.TreatmentQualities[index]
-            : WoundTreatmentQuality.Untreated;
         return new DetailedWoundDetails(header, ToDetailedLines(details));
     }
 
@@ -598,70 +575,12 @@ public sealed partial class CMUMedicalExamineSystem : EntitySystem
         _ => type == WoundType.Burn ? "burn" : "wound",
     };
 
-    private string DescribeTreatment(WoundTreatmentQuality quality, bool treated) => quality switch // RuMC edit
+    private string DescribeTreatment(bool treated) // RuMC edit
     {
-        // RuMC edit start
-        WoundTreatmentQuality.Optimal  => Loc.GetString("cmu-medical-detailed-treatment-optimal"),
-        WoundTreatmentQuality.Adequate => Loc.GetString("cmu-medical-detailed-treatment-adequate"),
-        _ => treated
+        return treated
             ? Loc.GetString("cmu-medical-detailed-treatment-treated")
-            : Loc.GetString("cmu-medical-detailed-treatment-untreated"),
-        // RuMC edit end
-    };
-
-    private string DescribeCleanup(WoundCleanupFlags cleanup) // RuMC edit
-    {
-        if (cleanup == WoundCleanupFlags.None)
-            return string.Empty;
-
-        // RuMC edit start
-        var entries = new List<string>(5);
-        if ((cleanup & WoundCleanupFlags.RetainedFragment) != WoundCleanupFlags.None)
-            entries.Add(Loc.GetString("cmu-medical-detailed-cleanup-retained-fragment"));
-        if ((cleanup & WoundCleanupFlags.PoorClosure) != WoundCleanupFlags.None)
-            entries.Add(Loc.GetString("cmu-medical-detailed-cleanup-poor-closure"));
-        if ((cleanup & WoundCleanupFlags.CharredTissue) != WoundCleanupFlags.None)
-            entries.Add(Loc.GetString("cmu-medical-detailed-cleanup-charred-tissue"));
-        if ((cleanup & WoundCleanupFlags.CrushDebris) != WoundCleanupFlags.None)
-            entries.Add(Loc.GetString("cmu-medical-detailed-cleanup-crush-debris"));
-        if ((cleanup & WoundCleanupFlags.DirtyDressing) != WoundCleanupFlags.None)
-            entries.Add(Loc.GetString("cmu-medical-detailed-cleanup-dirty-dressing"));
-
-        return Loc.GetString("cmu-medical-detailed-cleanup-needed", ("items", ToSentence(entries)));
-        // RuMC edit end
-}
-
-    private string DescribeOptimalHint(WoundMechanism mechanism, WoundType type, WoundCleanupFlags cleanup) // RuMC edit
-    {
-        // RuMC edit start
-        if ((cleanup & WoundCleanupFlags.RetainedFragment) != WoundCleanupFlags.None)
-            return Loc.GetString("cmu-medical-detailed-hint-remove-shrapnel");
-        if ((cleanup & WoundCleanupFlags.PoorClosure) != WoundCleanupFlags.None)
-            return Loc.GetString("cmu-medical-detailed-hint-sealing-dressing");
-        if ((cleanup & WoundCleanupFlags.CharredTissue) != WoundCleanupFlags.None)
-            return Loc.GetString("cmu-medical-detailed-hint-burn-gel-dressing");
-        if ((cleanup & WoundCleanupFlags.CrushDebris) != WoundCleanupFlags.None)
-            return Loc.GetString("cmu-medical-detailed-hint-compression-dressing");
-
-        return mechanism switch
-        {
-            WoundMechanism.Bullet or WoundMechanism.Stab or WoundMechanism.Fragment
-                => Loc.GetString("cmu-medical-detailed-hint-hemostatic-dressing"),
-            WoundMechanism.Slash or WoundMechanism.Surgical
-                => Loc.GetString("cmu-medical-detailed-hint-sealing-dressing"),
-            WoundMechanism.Crush or WoundMechanism.Blast
-                => Loc.GetString("cmu-medical-detailed-hint-compression-dressing"),
-            WoundMechanism.Burn
-                => Loc.GetString("cmu-medical-detailed-hint-burn-gel-dressing"),
-            _ when type == WoundType.Burn
-                => Loc.GetString("cmu-medical-detailed-hint-burn-gel-dressing"),
-            _ when (cleanup & WoundCleanupFlags.DirtyDressing) != WoundCleanupFlags.None
-                => Loc.GetString("cmu-medical-detailed-hint-antiseptic-dressing"),
-        // RuMC edit end
-            _ => string.Empty,
-        };
+            : Loc.GetString("cmu-medical-detailed-treatment-untreated");
     }
-    private static string DescribeTreatment(bool treated) => treated ? "treated" : "untreated";
 
     private string DescribeBleedTier(ExternalBleedTier tier) => tier switch // RuMC edit
     {
