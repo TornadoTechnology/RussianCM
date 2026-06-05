@@ -1,41 +1,41 @@
-ent-RMCBannerUNWorn = носить флаг ООН
-  .desc = Очень потертый флаг Организации Объединенных Наций. 
-
-ent-RMCBannerUN = Флаг ООН
-  .desc = Флаг ООН. 
-
-ent-RMCBannerTSEWorn = изношенный флаг TSE
-  .desc = Очень потертый флаг Империи Трех Солнц. 
-
-ent-RMCBannerTSE = Флаг TSE
-  .desc = Флаг Империи Трех Солнц. 
-
-ent-RMCBannerSPPWorn = изношенный флаг СПП
-  .desc = Очень потертый флаг Социалистических прогрессивных народов. 
-
-ent-RMCBannerSPP = Флаг СПП
-  .desc = Флаг Социалистических прогрессивных народов. 
-
-ent-RMCBannerCMWorn = носить флаг UNMC
-  .desc = Очень потертый флаг Корпуса Морпеха ООН. 
-
-ent-RMCBannerCM = Флаг UNMC
-  .desc = Флаг Корпуса Морпеха ООН. 
-
-ent-RMCBannerCLFWorn = изношенный флаг CLF
-  .desc = Очень потертый флаг Фронта освобождения колоний. 
-
-ent-RMCBannerCLF = Флаг CLF
-  .desc = Флаг Фронта освобождения колоний. 
-
 ent-RMCBannerBase = базовый знак
 
-ent-RMCBannerCLFAltDraw = Флаг CLF
-  .desc = Флаг Фронта освобождения колоний. 
+ent-RMCBannerUNWorn = изношенный флаг ООН
+  .desc = Очень потертый флаг Организации Объединённых Наций.
 
-ent-RMCBannerWEYA = Флаг ВЭЯ
-  .desc = Флаг корпорации Weston-Yamada. 
+ent-RMCBannerUN = флаг ООН
+  .desc = Флаг ООН.
 
-ent-RMCBannerTSEAlt = старый флаг TSE
-  .desc = Флаг Империи Трех Солнц. 
+ent-RMCBannerTSEWorn = изношенный флаг ИТМ
+  .desc = Очень потертый флаг Империи Трех Миров.
+
+ent-RMCBannerTSE = флаг ИТМ
+  .desc = Флаг Империи Трёх Миров.
+
+ent-RMCBannerTSEAlt = старый флаг ИТМ
+  .desc = Флаг Империи Трёх Миров.
+
+ent-RMCBannerSPPWorn = изношенный флаг СПН
+  .desc = Очень потертый флаг Социалистических Прогрессивных Народов.
+
+ent-RMCBannerSPP = Флаг СПН
+  .desc = Флаг СПН.
+
+ent-RMCBannerCMWorn = изношенный флаг КМП ООН
+  .desc = Очень потертый флаг КМП ООН.
+
+ent-RMCBannerCM = Флаг КМП ООН
+  .desc = Флаг КМП ООН.
+
+ent-RMCBannerCLFWorn = изношенный флаг КОФ
+  .desc = Очень потертый флаг колониального освободительного фронта.
+
+ent-RMCBannerCLF = флаг КОФ
+  .desc = Флаг колониального освободительного фронта.
+
+ent-RMCBannerCLFAltDraw = Флаг КОФ
+  .desc = Флаг колониального освободительного фронта.
+
+ent-RMCBannerWEYA = Флаг Ве-Ю
+  .desc = Флаг корпорации Вейланд-Ютани.
 
