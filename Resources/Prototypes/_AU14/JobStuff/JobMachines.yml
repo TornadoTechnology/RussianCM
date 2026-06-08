@@ -139,7 +139,7 @@
   components:
   - type: SubmissionStorage
     rewards:
-      Fruit: 2
+      Fruit: 2SteelOre
   - type: DisposalUnit
     whitelist:
       tags:
@@ -231,12 +231,6 @@
         tags:
         - Fruit
 # RuCM change end
-
-- type: Tag
-  id: SteelOre
-
-- type: Tag
-  id: AUwood
 
 - type: entity
   parent: RMCCommunicationsConsoleBase
