@@ -797,6 +797,10 @@
       choices: { CMHat: 1 }
       entries:
       - id: CMHeadCapSPPBeret
+    - name: Headgear
+      choices: { CMHat: 1 }
+      entries:
+      - id: RuMCUPPNavalInfantryHeavyHelmet
     - name: Equipment
       takeAll: CMStandard
       entries:
