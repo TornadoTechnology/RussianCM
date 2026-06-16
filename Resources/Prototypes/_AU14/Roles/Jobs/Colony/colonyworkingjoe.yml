@@ -14,6 +14,7 @@
   icon: "AU14JobIconColonyWorkingJoe"
   spawnMenuRoleName: Working Joe (Colony)
   supervisors: au14-job-supervisors-workingjoe-colony
+  jobEntity: AU14MobWorkingJoeColony
   dummyStartingGear: AU14GearColonyWorkingJoe
   usePlayerProfile: false
   hasIcon: false
