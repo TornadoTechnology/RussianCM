@@ -20,6 +20,8 @@
   - AUPlanetStableGarrison
   - AUPlanetTrijent
   - CMUPlanetLament
+  - CMUPlanetHopesRetreat
+  
   rules:
   - AuVoteRule
   - PlatoonSpawn
@@ -44,6 +46,8 @@
     #- AUPlanetLV747
     - AUPlanetSorokyne
     - AuPlanetChances
+    - CMUPlanetHopesRetreat
+
   rules:
   - AuVoteRule
   - PlatoonSpawn
@@ -60,7 +64,7 @@
   requiresGovforVote: true
   supportedPlanets:
 #  - AUPlanetLV747
-  - AUPlanetShepherdsPride
+#  - AUPlanetShepherdsPride
   - AUPlanetSorokyne
   - AUPlanetCorsatStation
   - AUPlanetTrijent
@@ -69,6 +73,8 @@
   - AuPlanetShivasSnowball
   - AUPlanetLV327
   - AuPlanetChances
+  - CMUPlanetHopesRetreat
+
   rules:
   - AuVoteRule
   - PlatoonSpawn
@@ -93,6 +99,8 @@
     - CMUPlanetLament
     - AUPlanetSorokyne
     - AuPlanetChances
+    - CMUPlanetHopesRetreat
+
 
 
 - type: gamePreset
