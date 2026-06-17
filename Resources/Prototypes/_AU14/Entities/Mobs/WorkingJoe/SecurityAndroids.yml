@@ -1,7 +1,7 @@
 - type: entity
   parent: AU14MobSecurityAndroid
   id: AU14MobWYSecurityAndroid
-  suffix: AU14, WY
+  suffix: AU14, WY, M41A/2
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial
@@ -19,7 +19,7 @@
   - type: entity
   parent: AU14MobSecurityAndroid
   id: AU14MobWYSMGSecurityAndroid
-  suffix: AU14, WY
+  suffix: AU14, WY, M39B2
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRoleApplySpecial
