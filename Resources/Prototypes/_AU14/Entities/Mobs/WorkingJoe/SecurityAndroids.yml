@@ -15,21 +15,3 @@
     job: AU14JobWYSecurityAndroid
     raffle:
       settings: short
-
-  - type: entity
-  parent: AU14MobSecurityAndroid
-  id: AU14MobWYSMGSecurityAndroid
-  suffix: AU14, WY, M39B2
-  components:
-  - type: GhostTakeoverAvailable
-  - type: GhostRoleApplySpecial
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    allowMovement: true
-    reregister: false
-    name: Security Android (WY, M39B2)
-    description: au14-job-description-securityandroid
-    job: AU14JobWYSMGSecurityAndroid
-    raffle:
-      settings: short
