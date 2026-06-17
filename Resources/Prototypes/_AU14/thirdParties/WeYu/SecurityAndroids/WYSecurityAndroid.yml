@@ -20,7 +20,7 @@
   icon: "AU14JobIconWYAndroid"
   spawnMenuRoleName: Security Android (WY, M39B2)
   supervisors: au14-job-supervisors-wy
-  dummyStartingGear: AU14GearWYSecurityAndroid
+  dummyStartingGear: AU14GearWYSMGSecurityAndroid
   usePlayerProfile: false
   jobEntity: AU14MobSecurityAndroid
   accessGroups:
