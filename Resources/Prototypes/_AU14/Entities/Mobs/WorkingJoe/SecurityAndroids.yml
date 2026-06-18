@@ -15,8 +15,8 @@
     job: AU14JobWYSecurityAndroid
     raffle:
       settings: short
-- type: Loadout
-  prototypes: [AU14GearWYSecurityAndroid]
+  - type: Loadout
+    prototypes: [AU14GearColonyWorkingJoe]
 
 - type: startingGear
   parent: AU14GearSecurityAndroidBase
