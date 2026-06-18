@@ -3889,6 +3889,10 @@
   id: 303
   time: '2026-06-16T15:49:00.0000000+00:00'
   url: https://github.com/flex5hybrid/RussianCM/pull/241
+- author: coolshows2342342-ctrl
+  changes:
+  - message: British Accent (V0.5!)
+    type: Add
   id: 289
   time: '2026-06-17T02:22:29.0000000+00:00'
   url: https://github.com/AU-14/ColonialMarinesUniverse/pull/1338

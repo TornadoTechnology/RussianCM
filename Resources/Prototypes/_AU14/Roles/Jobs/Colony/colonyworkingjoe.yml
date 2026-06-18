@@ -17,7 +17,6 @@
   jobEntity: AU14MobWorkingJoeColony
   dummyStartingGear: AU14GearColonyWorkingJoe
   usePlayerProfile: false
-  jobEntity: AU14MobWorkingJoeColony
   jobPreviewEntity: AU14MobWorkingJoeDummy
   hasIcon: false
   accessGroups:
