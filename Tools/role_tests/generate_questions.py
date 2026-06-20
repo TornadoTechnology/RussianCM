@@ -412,6 +412,15 @@ def main() -> None:
         "",
     ]
 
+    for role_id in ROLE_LABELS:
+        blocks.extend([
+            "- type: roleTestQuestionPool",
+            f"  id: {role_id}",
+            f"  job: {role_id}",
+            f"  pool: {yaml_string(f'job:{role_id}')}",
+            "",
+        ])
+
     common_facts = select_facts(extract_facts(COMMON_SOURCES), COMMON_COUNT)
     for index, fact in enumerate(common_facts, 1):
         blocks.append(question_block(
