@@ -204,7 +204,10 @@ public sealed class RoleTestEui : BaseEui
     {
         foreach (var (requiredPool, count) in test.RequiredPools)
         {
-            var poolQuestions = questions.Count(question => question.Pools.Contains(requiredPool));
+            var poolQuestions = questions
+                .Where(question => question.Pools.Contains(requiredPool))
+                .DistinctBy(question => NormalizeQuestionText(question.Text), StringComparer.OrdinalIgnoreCase)
+                .Count();
             if (poolQuestions >= count)
                 continue;
 
@@ -226,6 +229,7 @@ public sealed class RoleTestEui : BaseEui
     {
         return questions
             .Where(question => question.Pools.Overlaps(test.QuestionPools))
+            .DistinctBy(question => NormalizeQuestionText(question.Text), StringComparer.OrdinalIgnoreCase)
             .ToList();
     }
 
@@ -234,25 +238,43 @@ public sealed class RoleTestEui : BaseEui
         List<TestQuestion> questions)
     {
         var selected = new List<TestQuestion>();
-        var used = new HashSet<string>();
+        var usedIds = new HashSet<string>();
+        var usedTexts = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var (pool, count) in test.RequiredPools)
         {
             var poolQuestions = questions
                 .Where(question => question.Pools.Contains(pool))
-                .Where(question => used.Add(question.ID))
                 .ToList();
             _random.Shuffle(poolQuestions);
-            selected.AddRange(poolQuestions.Take(count));
+
+            foreach (var question in poolQuestions)
+            {
+                if (!usedIds.Add(question.ID) ||
+                    !usedTexts.Add(NormalizeQuestionText(question.Text)))
+                {
+                    continue;
+                }
+
+                selected.Add(question);
+                if (selected.Count(candidate => candidate.Pools.Contains(pool)) >= count)
+                    break;
+            }
         }
 
         var remaining = GetAvailableQuestions(test, questions)
-            .Where(question => !used.Contains(question.ID))
+            .Where(question => !usedIds.Contains(question.ID))
+            .Where(question => !usedTexts.Contains(NormalizeQuestionText(question.Text)))
             .ToList();
         _random.Shuffle(remaining);
         selected.AddRange(remaining.Take(test.QuestionCount - selected.Count));
         _random.Shuffle(selected);
         return selected;
+    }
+
+    private static string NormalizeQuestionText(string text)
+    {
+        return string.Join(' ', text.Split((char[]) null!, StringSplitOptions.RemoveEmptyEntries));
     }
 
     private List<RoleTestQuestionData> BuildActiveQuestions(List<TestQuestion> selected)
@@ -334,9 +356,10 @@ public sealed class RoleTestEui : BaseEui
 
     private RoleTestDefinition CreateJobRoleTest(JobPrototype job)
     {
-        var responsibility = RoleTestShared.GetResponsibility(job);
+        var pool = _prototypes.Index<RoleTestQuestionPoolPrototype>(job.ID);
+        var responsibility = pool.Responsibility;
         var requiresLaw = RoleTestShared.RequiresLaw(job);
-        var rolePool = GetRoleQuestionPool(job);
+        var rolePool = pool.Pool;
         var questionPools = new HashSet<string>
         {
             RoleTestShared.CommonPool,
@@ -376,11 +399,6 @@ public sealed class RoleTestEui : BaseEui
                 question.Pools))
             .Where(question => question.Pools.Overlaps(test.QuestionPools))
             .ToList();
-    }
-
-    private string GetRoleQuestionPool(JobPrototype job)
-    {
-        return _prototypes.Index<RoleTestQuestionPoolPrototype>(job.ID).Pool;
     }
 
     private sealed record RoleTestDefinition(

@@ -64,6 +64,9 @@ public sealed partial class RoleTestQuestionPoolPrototype : IPrototype
 
     [DataField(required: true)]
     public string Pool = string.Empty;
+
+    [DataField(required: true)]
+    public RoleTestResponsibility Responsibility;
 }
 
 public enum RoleTestResponsibility : byte

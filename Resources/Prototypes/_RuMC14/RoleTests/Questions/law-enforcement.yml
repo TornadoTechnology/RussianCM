@@ -23,6 +23,26 @@
   correctAnswer: 1
   pools: [ "group:cmu-law-enforcement" ]
 - type: roleTestQuestion
+  id: RoleTestCmuLawEnforcement043
+  text: "Согласно SOP, при первом нарушении правил обращения с оружием персоналу должно быть позволено..."
+  answers:
+    - "убрать оружие без дальнейших мер."
+    - "передать оружие гражданскому."
+    - "продолжить носить оружие в руках."
+    - "покинуть место службы."
+  correctAnswer: 0
+  pools: [ "group:cmu-law-enforcement" ]
+- type: roleTestQuestion
+  id: RoleTestCmuLawEnforcement044
+  text: "Согласно ROE, применяемая для принуждения к подчинению сила должна быть..."
+  answers:
+    - "максимально быстрой."
+    - "необходимой и соразмерной."
+    - "одинаковой при любом нарушении."
+    - "летальной при сопротивлении."
+  correctAnswer: 1
+  pools: [ "group:cmu-law-enforcement" ]
+- type: roleTestQuestion
   id: RoleTestCivilianEmergencyResponseOfficer003
   text: "Согласно ROE, враждебный персонал, представляющий непосредственную угрозу, может быть поражён..."
   answers:
