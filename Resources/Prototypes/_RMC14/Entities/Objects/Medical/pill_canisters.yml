@@ -89,11 +89,12 @@
 - type: entity
   parent: RMCPillCanisterNoSkill
   id: CMPillCanister
-  suffix: Skill Required
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  suffix: No Skill
+  # suffix: Skill Required
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
