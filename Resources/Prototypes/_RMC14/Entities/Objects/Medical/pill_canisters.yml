@@ -124,10 +124,10 @@
   parent: RMCPillCanisterBicaridineNoSkill
   id: CMPillCanisterBicaridine
   suffix: Bicaridine, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -157,10 +157,10 @@
   parent: RMCPillCanisterMeralyneBicaridineNoSkill
   id: RMCPillCanisterMeralyneBicaridine
   suffix: Meralyne-Bicaridine, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -190,10 +190,10 @@
   parent: RMCPillCanisterDexalinNoSkill
   id: CMPillCanisterDexalin
   suffix: Dexaline, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -223,10 +223,10 @@
   parent: RMCPillCanisterDyloveneNoSkill
   id: CMPillCanisterDylovene
   suffix: Dylovene, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -256,10 +256,10 @@
   parent: RMCPillCanisterInaprovalineNoSkill
   id: CMPillCanisterInaprovaline
   suffix: Inaprovaline, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -289,10 +289,10 @@
   parent: RMCPillCanisterKelotaneNoSkill
   id: CMPillCanisterKelotane
   suffix: Kelotane, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -322,10 +322,10 @@
   parent: RMCPillCanisterKelotaneDermalineNoSkill
   id: CMPillCanisterKelotaneDermaline
   suffix: Kelotane-Dermaline, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -355,10 +355,10 @@
   parent: RMCPillCanisterTricordrazineNoSkill
   id: CMPillCanisterTricordrazine
   suffix: Tricordrazine, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -386,10 +386,10 @@
   parent: RMCPillCanisterRussianRedNoSkill
   id: RMCPillCanisterRussianRed
   suffix: Russian Red, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -419,10 +419,10 @@
   parent: RMCPillCanisterImidazolineNoSkill
   id: RMCPillCanisterImidazoline
   suffix: Imidazoline, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 # TODO RMC14 peridaxon, tramadol
 
@@ -454,10 +454,10 @@
   parent: RMCPillCanisterDexalinPlusNoSkill
   id: RMCPillCanisterDexalinPlus
   suffix: DexalinPlus, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
 
 - type: entity
   parent: RMCPillCanisterNoSkill
@@ -487,7 +487,7 @@
   parent: RMCPillCanisterIronNoSkill
   id: RMCPillCanisterIron
   suffix: Iron, 16
-  components:
-  - type: StorageSkillRequired
-    skills:
-      RMCSkillMedical: 2
+  # components:
+  # - type: StorageSkillRequired
+  #   skills:
+  #     RMCSkillMedical: 2
