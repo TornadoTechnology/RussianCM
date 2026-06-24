@@ -46,7 +46,7 @@
       AU14JobOPFORRadioTelephoneOperator: 4
       AU14JobOPFORSquadSergeant: 3
       AU14JobOPFORSquadAutomaticRifleman: 3
-#     AU14JobOPFORWeaponsSpecialist: 3 # TODO
+      AU14JobOPFORWeaponsSpecialist: 3 # RuMC edit
       AU14JobOPFORSquadCombatTech: 6
       AU14JobOPFORSquadRifleman: 75
       AU14JobOPFORAuxSupportSynth: 2

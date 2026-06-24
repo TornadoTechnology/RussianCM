@@ -2,12 +2,13 @@
   id: ForceOnForce
   alias:
   - forceonforce
-  name: Force on Force
+  name: au14-preset-forceonforce-title
   showInVote: true
-  description: Two units face each other in combat.
-  minPlayers: 125
+  description: au14-preset-forceonforce-description
+  minPlayers: 100 # RuMC
   requiresOpforVote: true
   requiresGovforVote: true
+  respawnEnabled: false # RuMC
   supportedPlanets:
   #- AUPlanetGixensCaverns Rout of rotation till fixed - eg
   #- AUPlanetShepherdsPride
@@ -31,9 +32,9 @@
   id: Insurgency
   alias:
   - insurgency
-  name: Insurgency
+  name: au14-preset-insurgency-title
   showInVote: true
-  description: Insurgency mode
+  description: au14-preset-insurgency-description
   minPlayers: 40
   requiresGovforVote: true
   supportedPlanets:
@@ -55,9 +56,9 @@
 
 - type: gamePreset
   id: DistressSignal
-  name: Distress Signal
+  name: au14-preset-distresssignal-title
   showInVote: true
-  description: Investigate a mysterious distress signal as government forces.
+  description: au14-preset-distresssignal-description
   requiresGovforVote: true
   supportedPlanets:
 #  - AUPlanetLV747
@@ -81,7 +82,7 @@
   id: ColonyFall
   alias:
   - colonyfall
-  name: Colony Fall
+  name: au14-preset-colonyfall-title
   showInVote: true
   minPlayers: 0
   maxPlayers: 60
