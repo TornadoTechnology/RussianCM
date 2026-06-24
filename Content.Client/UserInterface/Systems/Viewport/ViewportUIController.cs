@@ -20,7 +20,6 @@ public sealed partial class ViewportUIController : UIController
     [Dependency] private IConfigurationManager _configurationManager = default!;
     public static readonly Vector2i ViewportSize = (EyeManager.PixelsPerMeter * 21, EyeManager.PixelsPerMeter * 15);
     public const int ViewportHeight = 15;
-    private Vector2i? _lastViewportPixelSize;
     private MainViewport? Viewport => UIManager.ActiveScreen?.GetWidget<MainViewport>();
     private SharedTransformSystem? _transform;
     private readonly GraphicsEye _fallbackEye = new();
@@ -56,7 +55,7 @@ public sealed partial class ViewportUIController : UIController
 
         if (verticalfit)
         {
-            width = Math.Max(max, GetVerticalFitViewportWidth());
+            width = max;
         }
         else if (width < min || width > max)
         {
